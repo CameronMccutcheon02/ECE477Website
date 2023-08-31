@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Name: Boilerplate
+Version: v1.3
+Last Updated: 8/02/2023
+Author: George Hadley & Phil Walter
+License: Released for free under a Creative Commons Attribution 2.5 License
+
+This website was based upon a number of source materials, which are elaborated upon in credits.txt
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!--Reconfigurable base tag; used to modify the site root location for root-relative links-->
+<!-- Python SimpleHTTPServer Testing -->
+<!--<base href="/http://localhost:8000/" />-->
+<!-- ECE477 preview URL -->
+<!--<base href="/https://engineering.purdue.edu/ece477/preview/" />-->
+<!-- ECE477 final URL -->
+<!--<base href="/https://engineering.purdue.edu/ece477/" />-->
+<!--<base href="https://engineering.purdue.edu/ece477/StudentWebTemplate/" />-->
+    <base href="https://engineering.purdue.edu/477grp16/" /> <!-- Replace the 25 with your team number-->
+	
+<!--Content-->
+<title>ECE477 Homepage</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="Phil Walter">
+<meta name = "format-detection" content = "telephone=no" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<!--CSS-->
+<link rel="stylesheet" href="css/default.css" type="text/css" media="all" />
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/content.css">
+<!--[if IE 6]>
+<link href="/default_ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+</head>
+<body>
+<div id="wrapper_site">
+    <div id="wrapper_page">
+		<!-- Instantiate global site header.-->
+		<div id="header"></div>
+		<!-- Instantiate site global navigation bar.-->
+		<div id="menu"></div>
+		<!-- Instantiate slideshow module. All slideshow images should be 1100px x 500px and stored in ./img/slideshow-->
+		<div id="slideshow"></div>
+		<!-- Instantiate main page content. All page content should be added to about.html -->
+		<div id="content">
+            <h2>Project Name: Autonomous Air Hockey Robot</h2>
+			
+            <h2>Project Description:</h2> An autonomous air hockey robot capable of playing at any skill level, any human speed, and against any play style. Our robot would serve as an attachment to any functioning hockey table. Simply attach the robotic apparatus to an air hockey table, and turn on the device to begin playing. Unlike existing designs, this robot will be capable of attacking you back, rather than simply defending. 
+            <h2>Project Specific Design Requirements (PSDRs):</h2>                
+				<ol>
+                    <li>PSDR #1 (Hardware): An ability to interface a motor controller module with a microcontroller via a serialized asynchronous bus. </li>
+                    <li>PSDR #2 (Hardware): An ability to establish communication and send data between a microcontroller and power PC</li>
+                    <li>PSDR #3 (Hardware): An ability to interface an LCD screen with a microcontroller via an SPI connection. </li>
+                    <li>PSDR #4 (Hardware): An ability to keep score using sensor data.</li>
+                    <li>PSDR #5 (Software): An ability to estimate the position and trajectory of a puck in motion using computer vision.</li>
+                </ol>
+        </div>
+		<!-- Instantiate global footer. Any changes to the footer should be made through the top-level file "footer.html" -->
+		<div id="footer"></div>
+	</div>
+</div>
+
+<!--JS-->
+<script src="js/jquery.js"></script>
+<script src="js/jquery-migrate-1.1.1.js"></script>
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#header").load("header.html");
+	$("#menu").load("navbar.html");
+	$("#slideshow").load("slideshow.html");
+	//$("#content").load("about.html");
+	$("#footer").load("footer.html");
+});
+</script>
+
+</body>
+</html>
