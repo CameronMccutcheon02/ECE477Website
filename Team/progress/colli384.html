@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+This is an example weekly progress report document that team members can use to report their individual progress 
+of their ECE477 senior design projects. Weekly progress reports are expected to follow the general guidelines
+presented in the "Progress Report Policy" document, posted on Brightspace.  
+
+Please create 4 copies of this example, renaming each copy to <PurdueID>.html, where <PurdueID> corresponds to
+the Purdue ITAP Career Account ID given by Purdue to each individual team member. If you have any questions,
+contact course staff.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!--Reconfigurable base tag; used to modify the site root location for root-relative links-->
+<!--<base href="https://engineering.purdue.edu/ece477/StudentWebTemplate/" />-->
+    <base href="https://engineering.purdue.edu/477grp16/" /> <!-- Replace the N with your team number-->
+<!--Content-->
+<title>ECE477 Course Documents</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="George Hadley">
+<meta name = "format-detection" content = "telephone=no" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<!--CSS-->
+<link rel="stylesheet" href="css/default.css" type="text/css" media="all" />
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/content.css">
+<!--[if IE 6]>
+<link href="default_ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+</head>
+<body>
+<div id="wrapper_site">
+    <div id="wrapper_page">
+	<!-- Instantiate global site header.-->
+	<div id="header"></div>
+		<!-- Instantiate site global navigation bar.-->
+		<div id="menu"></div>
+	
+		<!-- Instantiate a page banner image. Page banner images should be 1100x350px and should be located within the local
+			img folder located at this directory level. -->
+		<div id="banner">
+			<img src="Files/img/BannerImgExample.jpg"></img>
+		</div>
+	
+		<!-- Instantiate "tools" needed for a page. Tools are premade functional blocks that can be used to build a page,
+			and include things such as a file lister (for listing out homework assignments or tutorials)
+		-->
+		<div id="content">
+            <h2>Progress Report for Joey Collins</h2>
+            
+            <h4>Weeks 1-2:</h4>
+            <b>Date:</b> 09/01/2023<br>
+            <b>Total hours:</b> 16<br>
+            <b>Cummulative Hours:</b> 16<br>
+            <b>Description of project design efforts:</b><br>
+            I dedicated the first two weeks of my time to my research goals. As the software engineer for this team, I decided that a solid majority of my time would be best spent learning the basics of computer vision to create a strong foundation for our hockey puck tracking software. The rest of my time was spent with miscellaneous endeavors.
+            <br><br>
+            <b>Computer Vision Research</b><br>
+            As stated previously, the majority of my time went into learning the basics of computer vision, as I have not had any experience with the topic. Abby and I will be doing most of the work on the detection and tracking software, so we decided to begin prototyping using the OpenCV library in Python.
+            I started off by watching 2 tutorials on object detection and tracking. The first is called <a href="https://youtu.be/O3b8lVF93jU?si=zo2YENBCpAHVSnqZ"> Object Tracking with Opencv and Python</a>. The second is called <a href="https://youtu.be/GgGro5IV-cs?si=gAnJfifMMWW31Tew"> Object Tracking from scratch with OpenCV and Python</a>. Both were made by a channel called Pysource.
+            These two videos provided good information to begin writing my own versions of object detection. I first began by creating a sample video using the videotestsrc element of gstreamer. It was meant to replicate a puck bouncing back and forth around a table. The code I wrote to detect the puck filtered out stagnant objects, and followed dynamic objects using a technique that creates a "mask". Below is a screenshot of this tracking. <br><br>
+
+            <img src="Team/progress/colli384_files/figure1.png" alt="Object Detection with Oversimplified Video"> <br>
+            <i>Object Detection with Oversimplified Video</i> <br><br>
+            
+            The next step I took was trying to do object detection on a real-world example. Abby shared the video of two people playing <a href="https://youtu.be/e_cz4DaimyM?si=zmTch2UO63U3RgJN"> mini air hockey</a>, which was quite helpful for a test example.
+            The code that I used for the gstreamer example did a horrible job of tracking the puck because it was poorly written and could not handle multiple moving objects at one time. In order to fix this, I had to change the thresholds for a moving object to be classified as an object of interest.
+            The countours on the mask each hold an area value that indicates how many pixels the contour takes up on the screen. I increased the lower limit for the area to classify an object as important. Originally, I had it at 100 pixels, but I increased it to 800 pixels, which did a fairly nice job of filtering out any miscellaneous movement, such as hands. Below is an image demonstrating the accuracy of the previously mentioned method. <br><br>
+
+            <img src="Team/progress/colli384_files/figure2.png" alt="Imperfect Object Detection with Real Video"> <br>
+            <i>Imperfect Object Detection with Real Video</i> <br><br>
+
+            Because motion alone was not enough to distinguish the puck from other objects, I decided to filter out objects by color. To do this, I had to figure out what the hsv range of the puck was. I was not familiar with hsv previously, so I had to look into that. It is similar to an rgb color scheme, but hsv stands for hue, saturation, and value. Once I found the color of the puck through some experimentation, I filtered out any colors that did not fit in that range. I combined the color mask and the motion mask using a bitwise and so that the only things left in the video were moving objects in that color spectrum.
+            This technique turned out to be very successful relative to previous attempts. An image of this technique is shown below. <br><br>
+
+            <img src="Team/progress/colli384_files/figure3.png" alt="Object Detection with Motion and Color Mask"> <br>
+            <i>Object Detection with Motion and Color Mask</i> <br><br>
+            
+            Abby has been working on shape-based filtering, which could work well with color filtering. I believe that if we choose a puck color that is drastically different from the table and paddles, it would be quite simple to locate the puck. It may turn out in the future that we have to remove the motion mask because of the case where the puck sits still in the middle of the table. The software would not detect an object because it would not be moving. The next step in my research will be keeping track of a specific object, which in this case will be the puck.
+            Once we obtain our air hockey table and camera, I would also like to start doing some testing using a live video feed, as opposed to pre-recorded video.
+            I think I made good progress on learning OpenCV basics during weeks 1 and 2, and think that I am where I should be with respect to the completion of PSDR 5.
+            <br><br>
+
+
+            <br>    
+        </div>
+	
+		<!-- Instantiate global footer. Any changes to the footer should be made through the top-level file "footer.html" -->
+		<div id="footer"></div>
+    </div>
+</div>
+
+<!--JS-->
+<script src="js/jquery.js"></script>
+<script src="js/jquery-migrate-1.1.1.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#header").load("header.html");
+	$("#menu").load("navbar.html");
+	$("#footer").load("footer.html");
+});
+</script>
+</body>
+</html>
