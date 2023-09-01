@@ -70,7 +70,7 @@ contact course staff.
             
             The next step I took was trying to do object detection on a real-world example. Abby shared the video of two people playing <a href="https://youtu.be/e_cz4DaimyM?si=zmTch2UO63U3RgJN"> mini air hockey</a>, which was quite helpful for a test example.
             The code that I used for the gstreamer example did a horrible job of tracking the puck because it was poorly written and could not handle multiple moving objects at one time. In order to fix this, I had to change the thresholds for a moving object to be classified as an object of interest.
-            The countours on the mask each hold an area value that indicates how many pixels the contour takes up on the screen. I increased the lower limit for the area to classify an object as important. Originally, I had it at 100 pixels, but I increased it to 800 pixels, which did a fairly nice job of filtering out any miscellaneous movement, such as hands. Below is an image demonstrating the accuracy of the previously mentioned method. <br><br>
+            The contours on the mask each hold an area value that indicates how many pixels the contour takes up on the screen. I increased the lower limit for the area to classify an object as important. Originally, I had it at 100 pixels, but I increased it to anything between 3000 and 5000 pixels, which did a fairly nice job of filtering out any miscellaneous movement, such as hands. Below is an image demonstrating the accuracy of the previously mentioned method. <br><br>
 
             <img src="Team/progress/colli384_files/figure2.png" alt="Imperfect Object Detection with Real Video"> <br>
             <i>Imperfect Object Detection with Real Video</i> <br><br>
