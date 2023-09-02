@@ -65,20 +65,20 @@ contact course staff.
             I started off by watching 2 tutorials on object detection and tracking. The first is called <a href="https://youtu.be/O3b8lVF93jU?si=zo2YENBCpAHVSnqZ"> Object Tracking with Opencv and Python</a>. The second is called <a href="https://youtu.be/GgGro5IV-cs?si=gAnJfifMMWW31Tew"> Object Tracking from scratch with OpenCV and Python</a>. Both were made by a channel called Pysource.
             These two videos provided good information to begin writing my own versions of object detection. I first began by creating a sample video using the videotestsrc element of gstreamer. It was meant to replicate a puck bouncing back and forth around a table. The code I wrote to detect the puck filtered out stagnant objects, and followed dynamic objects using a technique that creates a "mask". Below is a screenshot of this tracking. <br><br>
 
-            <img src="Team/progress/colli384_files/figure1.png" alt="Object Detection with Oversimplified Video"> <br>
+            <img src="Team/progress/colli384_files/figure1.png" alt="Object Detection with Oversimplified Video" width="390" height="338"> <br>
             <i>Object Detection with Oversimplified Video</i> <br><br>
             
             The next step I took was trying to do object detection on a real-world example. Abby shared the video of two people playing <a href="https://youtu.be/e_cz4DaimyM?si=zmTch2UO63U3RgJN"> mini air hockey</a>, which was quite helpful for a test example.
             The code that I used for the gstreamer example did a horrible job of tracking the puck because it was poorly written and could not handle multiple moving objects at one time. In order to fix this, I had to change the thresholds for a moving object to be classified as an object of interest.
             The contours on the mask each hold an area value that indicates how many pixels the contour takes up on the screen. I increased the lower limit for the area to classify an object as important. Originally, I had it at 100 pixels, but I increased it to anything between 3000 and 5000 pixels, which did a fairly nice job of filtering out any miscellaneous movement, such as hands. Below is an image demonstrating the accuracy of the previously mentioned method. <br><br>
 
-            <img src="Team/progress/colli384_files/figure2.png" alt="Imperfect Object Detection with Real Video"> <br>
+            <img src="Team/progress/colli384_files/figure2.png" alt="Imperfect Object Detection with Real Video" width="529" height="309"> <br>
             <i>Imperfect Object Detection with Real Video</i> <br><br>
 
             Because motion alone was not enough to distinguish the puck from other objects, I decided to filter out objects by color. To do this, I had to figure out what the hsv range of the puck was. I was not familiar with hsv previously, so I had to look into that. It is similar to an rgb color scheme, but hsv stands for hue, saturation, and value. Once I found the color of the puck through some experimentation, I filtered out any colors that did not fit in that range. I combined the color mask and the motion mask using a bitwise and so that the only things left in the video were moving objects in that color spectrum.
             This technique turned out to be very successful relative to previous attempts. An image of this technique is shown below. <br><br>
 
-            <img src="Team/progress/colli384_files/figure3.png" alt="Object Detection with Motion and Color Mask"> <br>
+            <img src="Team/progress/colli384_files/figure3.png" alt="Object Detection with Motion and Color Mask" width="529" height="309"> <br>
             <i>Object Detection with Motion and Color Mask</i> <br><br>
             
             Abby has been working on shape-based filtering, which could work well with color filtering. I believe that if we choose a puck color that is drastically different from the table and paddles, it would be quite simple to locate the puck. It may turn out in the future that we have to remove the motion mask because of the case where the puck sits still in the middle of the table. The software would not detect an object because it would not be moving. The next step in my research will be keeping track of a specific object, which in this case will be the puck.
