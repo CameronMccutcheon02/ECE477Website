@@ -53,11 +53,39 @@ contact course staff.
 		<div id="content">
             <h2>Progress Report for Joey Collins</h2>
             
+            <h4>Week 3:</h4>
+            <b>Date:</b> 09/08/2023<br>
+            <b>Total Hours:</b> 8<br>
+            <b>Cummulative Hours:</b> 24<br>
+            <b>Description of Project Design Efforts:</b><br>
+            This week, the focus remained on the computer vision software. I worked on fine tuning the tracks to ensure that the puck is the only object being tracked, and it is being tracked with high accuracy. I also began implementing frame by frame predictions on future puck location.
+            <br><br>
+            <b>Object Detection vs Object Tracking</b><br>
+            A large chunk of my time went into changing the methods and parameters of the tracking software. I started by researching object detection vs object tracking.
+            At the surface level, it appears that object tracking should be more efficient than object detection. According to <a href="https://learnopencv.com/the-complete-guide-to-object-tracking-in-computer-vision/#:~:text=Usually%20tracking%20algorithms%20are%20faster,and%20speed%20of%20its%20motion."> The Complete Guide to Object Tracking</a>, this is due to the fact that you can use the previous frames of the video to extract information about location and direction of objects. 
+            I agree that this would be true for applications with multiple objects in motion and at relatively low speeds. However, I found that using purely object detection resulted in faster results than object tracking for the air hockey application. 
+            I tested this by comparing color based detection to color based detection with a CSRT (Discriminative Correlation Filter with Channel and Spatial Reliability) tracker. With the CRST tracker, I got a playback speed that was slower than the original video speed. This means that the processing was occuring slower than the frames were coming in. In a live video, this would create delays that would not be acceptable for an air hockey application. Shown below is a video of the software that uses the CSRT tracker. <br><br>
+
+            <video width="530" height="310"> <source src="Team/progress/colli384_files/CSRT Tracking.mp4" type="video/mp4"> </video><br>
+            <i>Puck Tracking with CSRT</i>
+            <br><br>
+
+            Due to this discovery, I shifted my focus to completely object detection based methods. I found that because the puck moves so fast and is often occluded by human limbs and goals, tracking would not necessarily be reasonable. We do not care if it is the same puck as before, we just want to find the only moving puck.<br><br>
+
+            <b>Track Tuning</b><br>
+            
+            
+
+
+
+
+
+
             <h4>Weeks 1-2:</h4>
             <b>Date:</b> 09/01/2023<br>
-            <b>Total hours:</b> 16<br>
+            <b>Total Hours:</b> 16<br>
             <b>Cummulative Hours:</b> 16<br>
-            <b>Description of project design efforts:</b><br>
+            <b>Description of Project Design efforts:</b><br>
             I dedicated the first two weeks of my time to my research goals. As the software engineer for this team, I decided that a solid majority of my time would be best spent learning the basics of computer vision to create a strong foundation for our hockey puck tracking software. The rest of my time was spent with miscellaneous endeavors.
             <br><br>
             <b>Computer Vision Research</b><br>
