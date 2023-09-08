@@ -54,11 +54,18 @@ This website was based upon a number of source materials, which are elaborated u
 		<div id="content">
             <h2>Project Name: Autonomous Air Hockey Robot</h2>
 			
-            <h2>Project Description:</h2> An autonomous air hockey robot capable of playing at any skill level, any human speed, and against any play style. Our robot would serve as an attachment to any functioning hockey table. Simply attach the robotic apparatus to an air hockey table, and turn on the device to begin playing. Unlike existing designs, this robot will be capable of attacking you back, rather than simply defending. 
+            <h2>Project Description:</h2> The autonomous air hockey robot is a project dedicated to improving the training experience of air hockey hobbyists and enthusiasts. This project will involve a system composed of a PC, a microcontroller, a camera sensor, two laser sensors, two motors, six pulleys, and an LCD. The motors will be attached to cables via a CoreXY system. The cables will also be attached to a paddle, so that the paddle can be moved to block and attack a puck. 
+
+			The camera sensor will be placed above the air hockey table so that it looks down on the playing field resembling a bird's-eye view. The camera sensor will detect and track a hockey puck in motion, providing the pucks coordinates to the PC. 
+			
+			The PC will use this data and an algorithm to predict the trajectory of the moving puck. Following this, the PC will communicate with the microcontroller to share data on the pucks position and trajectory. 
+			
+			The microcontroller will determine where the paddle is in relation to the puck, and will command the motors to move the paddle in a defensive position. If a puck is at any point scored, the laser sensors will detect the score and transmit the data to the microcontroller. The microcontroller will then communicate with the LCD so that the LCD display reflects the correct score for the user. 
+			 
             <h2>Project Specific Design Requirements (PSDRs):</h2>                
 				<ol>
                     <li>PSDR #1 (Hardware): An ability to interface a motor controller module with a microcontroller via a serialized asynchronous bus.</li>
-                    <li>PSDR #2 (Hardware): An ability to establish communication and send data between a microcontroller and power PC.</li>
+                    <li>PSDR #2 (Hardware): An ability to establish communication and send data between a microcontroller and a PC via UART.</li>
                     <li>PSDR #3 (Hardware): An ability to interface an LCD screen with a microcontroller via an SPI connection.</li>
                     <li>PSDR #4 (Hardware): An ability to keep score with a microcontroller by counting the number of times an infrared laser beam is broken.</li>
                     <li>PSDR #5 (Software): An ability to estimate the position and trajectory of a puck in motion using computer vision.</li>
