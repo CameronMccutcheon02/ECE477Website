@@ -52,7 +52,46 @@ contact course staff.
 		-->
 		<div id="content">
             <h2>Progress Report for Joey Collins</h2>
-            
+
+            <h4>Week 4:</h4>
+            <b>Date:</b> 09/15/2023<br>
+            <b>Total Hours:</b> 7<br>
+            <b>Cumulative Hours:</b> 31<br>
+            <b>Description of Project Design Efforts:</b><br>
+            This week, I started working on how the tracking software should be making predictions on final puck location. Specifically, I worked on handling collisions with walls. Unfortunately because of Industrial Roundtable, I was not able to progress as far as I wanted to this week.
+            <br><br>
+            <b>Table Detector</b><br>
+            In order to determine when a puck is going to collide with a wall, the software needs to know where the walls are located. To do this, I want to locate the corners and determine the edges using those points. My initial idea for doing this was using the OpenCV object detector. I wrote some code to detect any objects with 4 edges in the video, but occlusion became quite a significant problem in this method. 
+            The limbs crossing the edges of the table prevented the algorithms from recognizing the table as a rectangle. I decided that this was enough of an issue to pivot and determine a new method for detecting the table. My new idea for table detection is placing 4 colored stickers in the corners. Every several seconds, I will find the location of those colored circles, which will update the location of the walls in the software. This should work even if one of the stickers is hidden by some object. 
+            The reason that I want to update the location of the table every several seconds is because of the chance that a high-energy player might bump the table and shift the perspective of the camera. Because I am currently developing an algorithm with the use of a pre-recorded video, I do not have access to the physical table and cannot implement this sticker idea. Instead, I have hard-coded the corners of the table and marked them with blue dots in the video. This is demonstrated below. <br><br>
+
+            <img src="Team\progress\colli384_files\cornerDots.png" alt="Blue Dots Marking Corners" width="530" height="310"><br>
+            <i>Blue Dots Marking Corners</i><br><br>
+            With these dots in place, I could start determining the approximate position of the walls on the table.<br><br>
+
+            <b>Motion Prediction</b><br>
+            Once the wall locations were determined, I started working on how to provide a graphical representation of the predicted movement of the puck. I started by making use of the pseudo-velocity vector that I created last week. This vector used the displacement between the previous frame and current frame to 
+            create an estimation on the position in the next frame. Using this vector, I placed a line on top of the puck to indicate the direction it was headed and the magnitude of the predicted displacement. This is shown below. <br><br>
+
+            <video autoplay muted loop width="530" height="310"> <source src="Team\progress\colli384_files\Velo Vector.mp4" type="video/mp4"></video><br>
+            <i>Velocity Vector Overlay</i><br><br>
+
+            This line would help me further understand how the images are being processed by giving me a visual representation of where the puck might be going. Next, I wanted to figure out how to predict when and where a puck might strike a wall. 
+            To do this, I made use of the velocity vector as well as the wall locations. I am currently using a coordinate system derived from the pixel locations according to OpenCV. This means that left to right is the positive x-direction and top to bottom is the positive y-direction. 
+            I created a class for the puck that contained information about slope from the velocity and some intercept from the puck location. Then, I made 4 of the same objects for each of the walls. For example, the top wall had a slope of 0 and an intercept determined from the location of the table in the video. 
+            Now that I had an equation for the puck line that was constantly being updated, and 4 equations for the 4 lines that the walls formed, I could start predicting intersection points. This was done using simple algebra. I set the equations equal to each other and marked the points where the puck line 
+            intersected with the wall lines. However, this did not provide much information because all 5 lines were infinite, so unless they were parallel, they would intersect at some point no matter what. In order to combat this, I determined 4 different movement cases: (+x, +y), (+x, -y), (-x, +y), and (-x, -y). 
+            If the puck was moving in the positive x-direction and the positive y-direction, I really only needed to worry about intersections with the top wall and the right wall. After narrowing the choices down to two walls, I determined that the best way to predict which of the two walls the puck would collide with was by 
+            using the distance equation to compare the distance from the puck to each of the two wall intersection points. Once a single point was determined, I marked that location with a red dot using OpenCV. This is shown below. <br><br>
+
+            <video autoplay muted loop width="530" height="310"> <source src="Team\progress\colli384_files\Wall Location.mp4" type="video/mp4"></video><br>
+            <i>Wall Bounce Predictions</i><br><br>
+
+            This week, I learned that we will need some way to track the tables location within the field of view of the camera. I believe the method of placing colored stickers in the corner will suffice, but I will not be sure until I can test with the actual table. 
+            As far as next steps go, I would like to begin working on predictions for what might happen after collision with a wall. The route I would like to pursue is measuring the angle that the puck strikes the wall, and then using the same angle as the angle of reflection coming off the wall. 
+            After calculating that angle, I would like to draw out the path that it might take for a visual representation. I believe I am getting close to being able to determine the final location of the puck. The goal is to implement the aforementioned features by the end of next week. <br><br>
+
+
             <h4>Week 3:</h4>
             <b>Date:</b> 09/08/2023<br>
             <b>Total Hours:</b> 8<br>
