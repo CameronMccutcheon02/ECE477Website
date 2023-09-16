@@ -7,6 +7,9 @@
 <!--
  /* Font Definitions */
  @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
 	{font-family:"Cambria Math";
 	panose-1:2 4 5 3 5 4 6 3 2 4;}
 @font-face
@@ -33,6 +36,11 @@ p.MsoCaption, li.MsoCaption, div.MsoCaption
 a:link, span.MsoHyperlink
 	{color:#0563C1;
 	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
 .MsoChpDefault
 	{font-family:"Calibri",sans-serif;}
 .MsoPapDefault
@@ -51,6 +59,103 @@ div.WordSection1
 <body lang=EN-US link="#0563C1" vlink="#954F72" style='word-wrap:break-word'>
 
 <div class=WordSection1>
+
+<p class=MsoNormal><b><u>Week 4 Progress Report</u></b></p>
+
+<p class=MsoNormal><b>Date:</b> 9/11-9/17/2023</p>
+
+<p class=MsoNormal><b>Total Hours:</b> 13</p>
+
+<p class=MsoNormal><b>Description of Design Efforts:</b></p>
+
+<p class=MsoNormal>This weeks primary focus was defining the interfacing
+between each of the different subsystems. More specifically, deciding exactly
+how the microcontroller will send out/receive data and which IO pins must be
+reserved to accomplish this. </p>
+
+<p class=MsoNormal><b>PC to Microcontroller (USB to UART) (4 hours)</b></p>
+
+<p class=MsoNormal>Per Abby’s request, the PC would hopefully use the easily
+accessible USB ports on the side of whatever computer we end up going with
+(PowerPC? Powerful PC? Much debate on what we should call it). Abby seems to
+already have the data transfer set up using USB, and John had mentioned that he
+was using UART for another subsystem on the microcontroller so hopefully we can
+proto before finalizing the PCB. </p>
+
+<p class=MsoNormal>All that to say, it fell on me to research and layout the
+USB <span style='font-family:Wingdings'>à</span> UART translator. My initial
+thought with this was to go with the ECE362 module (FT232R chipset). After some
+research, it appears this chipset is limited to 3 MBaud which I misinterpreted
+to be a significantly slower data rate than it actually is. Normally I wouldn’t
+include an error in a report, but my error cost me nearly an hour trying to
+find a faster chipset before re-doing my math and realizing that 3MBaud would
+have plenty of throughput for the application. See <a
+href="https://www.wevolver.com/article/baud-rates-the-most-common-baud-rates">this
+article</a> for learning process on baud rates. </p>
+
+<p class=MsoNormal>After making this decision, I then found the footprint and
+hooked it up into the current iteration of the PCB schematic. Note that I’ve
+also added the JTAG programmer connection in the bottom right. </p>
+
+<p class=MsoNormal><img border=0 width=624 height=337
+src="mccutchc_files/image001.png"
+alt="A diagram of a circuit board&#10;&#10;Description automatically generated"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>Microcontroller to 7 Segment Display (3 hours)</b></p>
+
+<p class=MsoNormal>For the heads-up display (HUD) we will be using the existing
+but broken hardware that came with the table. Having done some low-cost
+displays like this before, it fell on me to understand how to interface with
+the existing PCB via the 2 8 pin connectors. Took about an hour in the lab with
+the benchtop power supplies (and a good amount of research on the operating
+voltages of the 7 segment displays to make sure I didn’t burn them out) to
+reverse engineer my way into lighting the displays. Once this was done, I began
+making a prototype connection to run this off of the microcontroller. </p>
+
+<p class=MsoNormal>In short, the two 8 pin connectors are the display selector
+and the segment selectors respectively. Meaning that if you pull the display
+selector low (as the displays are common cathode) and n many of the segment selectors
+high, you can turn on any n of the 7 segments in a single one of the displays.
+For the control of this, we will therefore be exploiting persistence of vision to
+briefly turn each display on in sequence in the required pattern for score
+display. </p>
+
+<p class=MsoNormal>To accomplish this, I have drawn up a simple SPI/shift
+register interface for the microcontroller. </p>
+
+<p class=MsoNormal><img border=0 width=624 height=377
+src="mccutchc_files/image002.png"
+alt="A screenshot of a computer&#10;&#10;Description automatically generated"></p>
+
+<p class=MsoNormal>Note that there will be an inverter after the display
+selector, but I need to proto physically before designing in schematic. </p>
+
+<p class=MsoNormal><b>Other work (6 hours)</b></p>
+
+<p class=MsoNormal>Once again did a bunch of work to sort physical issues out
+on the table. Filling the original goal hole so that we can move it back was
+almost the entire lab section this week. Once again, my forearms burn from the
+physical labor involved in cutting the new surface to size. </p>
+
+<p class=MsoNormal>I was also responsible for the electrical overview, and
+spent roughly 3 hours on that over the course of the week. </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b><u><span style='text-decoration:none'>&nbsp;</span></u></b></p>
+
+<p class=MsoNormal>Sources Cited:</p>
+
+<p style='margin-left:28.35pt;text-indent:-28.35pt'>(No date) <i>Wevolver.com</i>.
+Available at:
+https://www.wevolver.com/article/baud-rates-the-most-common-baud-rates
+(Accessed: 15 September 2023). </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b><u><span style='text-decoration:none'>&nbsp;</span></u></b></p>
 
 <p class=MsoNormal><b><u>Week 3 Progress Report</u></b></p>
 
@@ -76,7 +181,8 @@ idler pulleys, and a set of horizontal rollers. To minimize the number of belt
 crossings to be done over the play surface, the motors will be mounted near the
 center line of the table. </p>
 
-<p class=MsoNormal><img width=321 height=199 src="mccutchc_files/image001.png"
+<p class=MsoNormal><img border=0 width=321 height=199
+src="mccutchc_files/image003.png"
 alt="A diagram of a hockey game with Ice hockey rink in the background&#10;&#10;Description automatically generated"></p>
 
 <p class=MsoNormal>Unfortunately for me, that meant removing the siding on the
@@ -85,7 +191,8 @@ structure of the table. Due to the angles at play on the underside of the
 table, screws were inaccessible to a drill and had to be done manually. In
 total removing the sideboards took nearly 6 hours and an intense arm workout. </p>
 
-<p class=MsoNormal><img width=274 height=206 src="mccutchc_files/image002.jpg"
+<p class=MsoNormal><img border=0 width=274 height=206
+src="mccutchc_files/image004.jpg"
 alt="A table with tools on it&#10;&#10;Description automatically generated"></p>
 
 <p class=MsoNormal><b>PCB Progress</b></p>
@@ -94,8 +201,8 @@ alt="A table with tools on it&#10;&#10;Description automatically generated"></p>
 same one used for ECE362), I was able to start doing preliminary setup for the
 PCB power control and programming in KiCad. Immediately after writing this
 report I will be communicating with the software side of our team to decide
-whether we want to program on I2C or USART and will connect the programming pins
-accordingly. </p>
+whether we want to program on I2C or USART and will connect the programming
+pins accordingly. </p>
 
 <p class=MsoNormal>&nbsp;</p>
 
@@ -103,7 +210,8 @@ accordingly. </p>
 slightly incorrectly. F091 seemingly has some issues with the pin length on the
 footprint. Will include in next week’s progress report once fixed. </p>
 
-<p class=MsoNormal><img width=288 height=332 src="mccutchc_files/image003.png"
+<p class=MsoNormal><img border=0 width=288 height=332
+src="mccutchc_files/image005.png"
 alt="A diagram of a circuit board&#10;&#10;Description automatically generated"></p>
 
 <p class=MsoNormal>&nbsp;</p>
@@ -142,7 +250,7 @@ rather than cables and cable spools. This should increase the XY motion
 accuracy of the system.</p>
 
 <p class=MsoNormal style='page-break-after:avoid'><img border=0 width=252
-height=262 id="Picture 1" src="mccutchc_files/image004.png"
+height=262 id="Picture 1" src="mccutchc_files/image006.png"
 alt="A diagram of a circuit&#10;&#10;Description automatically generated"></p>
 
 <p class=MsoCaption>Figure 1: CoreXY Motion Control Theory</p>
