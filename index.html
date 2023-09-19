@@ -54,13 +54,28 @@ This website was based upon a number of source materials, which are elaborated u
 		<div id="content">
             <h2>Project Name: Autonomous Air Hockey Robot</h2>
 			
-            <h2>Project Description:</h2> The autonomous air hockey robot is a project dedicated to improving the training experience of air hockey hobbyists and enthusiasts. This project will involve a system composed of a PC, a microcontroller, a camera sensor, two laser sensors, two motors, six pulleys, and an LCD. The motors will be attached to cables via a CoreXY system. The cables will also be attached to a paddle, so that the paddle can be moved to block and attack a puck. 
+            <h2>Project Description:</h2> The autonomous air hockey robot is a project dedicated to improving the training experience of air hockey hobbyists and enthusiasts. This project will involve a system composed of a microcontroller, a camera sensor, a PC, two IR proximity sensors, two stepper motors, six pulleys, and 8 7-segment displays. The motors will be attached to cables via a CoreXY system. The cables will also be attached to a paddle, so that the paddle can be moved in the X and Y directions to block and attack a puck.
 
-			The camera sensor will be placed above the air hockey table so that it looks down on the playing field resembling a bird's-eye view. The camera sensor will detect and track a hockey puck in motion, providing the pucks coordinates to the PC. 
+
+			Two power supplies will be used to power the robot: 1 5-volt power supply and 1 24-volt power supply. A LDO will be used to bring the 5-volt power supply down to 3.3 volts, which will power the PCB, the microcontroller, the IR sensors, and the 7-segment displays. The 24-volt power supply will plug into the wall and power the motor control box and the two stepper motors. 
 			
-			The PC will use this data and an algorithm to predict the trajectory of the moving puck. Following this, the PC will communicate with the microcontroller to share data on the pucks position and trajectory. 
 			
-			The microcontroller will determine where the paddle is in relation to the puck, and will command the motors to move the paddle in a defensive position. If a puck is at any point scored, the laser sensors will detect the score and transmit the data to the microcontroller. The microcontroller will then communicate with the LCD so that the LCD display reflects the correct score for the user. 
+			The camera being used in this project is the ELP high-speed wide-angle global shutter USP camera module. This camera shoots 120 frames per second and sends data over USB2.0. The camera will be placed above the air hockey table so that it looks down on the playing field resembling a bird's-eye view. The camera will send image data to the PC over USB2.0. 
+			
+			
+			The PC being used in this project is the ___. The PC will leverage a python script and openCV to accept the data sent from the camera as input. The script will use the input frames to identify the puck’s current position along with the trajectory and predicted future location. Data detailing the puck’s future location will be sent to the microcontroller as an 8-bit packet over a USB-to-UART serial adapter. 
+			
+			
+			The USB-to-UART IC being used in this project is the HiLetGo FTDI USB to TTL serial converter module. This component will be used in transferring serial data from the PC to the microcontroller. 
+			
+			
+			The microcontroller being used in this project is the STM32F091RCT6. This microcontroller will determine where the paddle is in relation to the puck using serial data received from the PC. The microcontroller will then control the motor control module so that the motors move the paddle in a defensive position.  This will lead the paddle to block or strike the puck. 
+			
+			
+			The IR sensors being used in this project are IR break beam sensors. If a puck is at any point scored, the puck will fall down a funnel and in between two IR sensors. The IR sensors will detect the score and transmit the data to the microcontroller over _ . 
+			
+			
+			The 7-segment displays used in this project are second-hand from a pre-existing air hockey table. The microcontroller will control the 7-segment displays using two 74HC595 8-bit shift registers. To ensure appropriate current flow, a TLC sink driver along with 8 PN2907A transistors will be used in supporting the functionality of the displays. Four of the 7-segment displays will be used in recording the current score - 2 displays reflect each player’s individual score. The remaining four displays will be used in displaying the remaining time left in the game. Each game will last 5-minutes. To restart the game, the pre-existing on/off switch will be used. 			
 			 
             <h2>Stretch Project Specific Design Requirements (SPSDRs):</h2>                
 				<ol>
