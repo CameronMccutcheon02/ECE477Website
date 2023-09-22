@@ -60,6 +60,76 @@ div.WordSection1
 
 <div class=WordSection1>
 
+<p class=MsoNormal><b><u>Week 5 Progress Report</u></b></p>
+
+<p class=MsoNormal><b>Date:</b> 9/18-9/24/2023</p>
+
+<p class=MsoNormal><b>Total Hours:</b> 10</p>
+
+<p class=MsoNormal><b>Description of Design Efforts:</b></p>
+
+<p class=MsoNormal>This week was primarily focused on getting the mechanical
+systems mounted to the surface of the table along with continuing to sift
+through documentation relevant to the PCB.</p>
+
+<p class=MsoNormal><b>Mechanical Mounting Systems (6 hours)</b></p>
+
+<p class=MsoNormal>The trick with the mounting systems is that we want the
+motors to be at adjustable heights. To support this functionality, I needed to
+design a new bracketing system for the motors along with designing what
+material will need to be removed from the table to accommodate this system. Below
+is a drawing of the bracket system along with an image of what it will look
+like when mounted on the table edging. </p>
+
+<p class=MsoNormal><img width=267 height=242 src="mccutchc_files/image001.png"
+alt="A grey metal piece with holes&#10;&#10;Description automatically generated with medium confidence"></p>
+
+<p class=MsoNormal><img width=260 height=227 src="mccutchc_files/image002.png"
+alt="A blue object with a hole in the middle&#10;&#10;Description automatically generated"></p>
+
+<p class=MsoNormal>Where the bracket is in white, the edging is in blue, and
+the motor is in gray. </p>
+
+<p class=MsoNormal>Notably the reason that this was a large time sink this week
+was iterating on the design according to the recommendations of Chuck down in
+the machine shop. Additionally, communicating with him to ensure that the
+elements he was doing for us(namely drilling the holes in the table edging and potentially
+fabricating the motor brackets in aluminum) were done with the correct dimensions
+and constraints in mind. As of Friday afternoon when I am writing this, holes
+have been drilled in one side of the table edging and will hopefully be ready
+for pickup and remounting on Monday. </p>
+
+<p class=MsoNormal><img width=218 height=290 src="mccutchc_files/image003.jpg"
+alt=Image></p>
+
+<p class=MsoNormal><img width=214 height=285 id="Picture 2"
+src="mccutchc_files/image004.jpg" alt=Image></p>
+
+<p class=MsoNormal>Once again, I spent ~2 hours under the table unscrewing the
+siding. All 64 screws are now removed from the underside of the table. </p>
+
+<p class=MsoNormal><b>PCB Design and Documentation (4 hours)</b></p>
+
+<p class=MsoNormal>Schematics for the PCB have been moving along smoothly, but
+I spent a good deal of time reading documentation and datasheets for the micro,
+the USB <span style='font-family:Wingdings'>à</span> UART converter, and the
+LDO we plan on using. Additionally, worked with Abby to get better driving for
+the 7-segment display. Using HC595’s will not work for our purposes because
+they cannot source enough current fast enough. We will most likely be using the
+DM13A or doing a transistor network to increase the current capacity of these
+systems. As such, the PCB currently sits in the following state. </p>
+
+<p class=MsoNormal><img width=625 height=278 src="mccutchc_files/image005.png"
+alt="A computer graphics with numbers and lines&#10;&#10;Description automatically generated with medium confidence"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<b><u><span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span></u></b>
+
+<p class=MsoNormal><b><u><span style='text-decoration:none'>&nbsp;</span></u></b></p>
+
 <p class=MsoNormal><b><u>Week 4 Progress Report</u></b></p>
 
 <p class=MsoNormal><b>Date:</b> 9/11-9/17/2023</p>
@@ -98,7 +168,7 @@ hooked it up into the current iteration of the PCB schematic. Note that I’ve
 also added the JTAG programmer connection in the bottom right. </p>
 
 <p class=MsoNormal><img border=0 width=624 height=337
-src="mccutchc_files/image001.png"
+src="mccutchc_files/image006.png"
 alt="A diagram of a circuit board&#10;&#10;Description automatically generated"></p>
 
 <p class=MsoNormal>&nbsp;</p>
@@ -126,7 +196,7 @@ display. </p>
 register interface for the microcontroller. </p>
 
 <p class=MsoNormal><img border=0 width=624 height=377
-src="mccutchc_files/image002.png"
+src="mccutchc_files/image007.png"
 alt="A screenshot of a computer&#10;&#10;Description automatically generated"></p>
 
 <p class=MsoNormal>Note that there will be an inverter after the display
@@ -153,9 +223,12 @@ Available at:
 https://www.wevolver.com/article/baud-rates-the-most-common-baud-rates
 (Accessed: 15 September 2023). </p>
 
-<p class=MsoNormal>&nbsp;</p>
+<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
 
-<p class=MsoNormal><b><u><span style='text-decoration:none'>&nbsp;</span></u></b></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'>&nbsp;</span></p>
 
 <p class=MsoNormal><b><u>Week 3 Progress Report</u></b></p>
 
@@ -182,7 +255,7 @@ crossings to be done over the play surface, the motors will be mounted near the
 center line of the table. </p>
 
 <p class=MsoNormal><img border=0 width=321 height=199
-src="mccutchc_files/image003.png"
+src="mccutchc_files/image008.png"
 alt="A diagram of a hockey game with Ice hockey rink in the background&#10;&#10;Description automatically generated"></p>
 
 <p class=MsoNormal>Unfortunately for me, that meant removing the siding on the
@@ -192,7 +265,7 @@ table, screws were inaccessible to a drill and had to be done manually. In
 total removing the sideboards took nearly 6 hours and an intense arm workout. </p>
 
 <p class=MsoNormal><img border=0 width=274 height=206
-src="mccutchc_files/image004.jpg"
+src="mccutchc_files/image009.jpg"
 alt="A table with tools on it&#10;&#10;Description automatically generated"></p>
 
 <p class=MsoNormal><b>PCB Progress</b></p>
@@ -211,7 +284,7 @@ slightly incorrectly. F091 seemingly has some issues with the pin length on the
 footprint. Will include in next week’s progress report once fixed. </p>
 
 <p class=MsoNormal><img border=0 width=288 height=332
-src="mccutchc_files/image005.png"
+src="mccutchc_files/image010.png"
 alt="A diagram of a circuit board&#10;&#10;Description automatically generated"></p>
 
 <p class=MsoNormal>&nbsp;</p>
@@ -250,7 +323,7 @@ rather than cables and cable spools. This should increase the XY motion
 accuracy of the system.</p>
 
 <p class=MsoNormal style='page-break-after:avoid'><img border=0 width=252
-height=262 id="Picture 1" src="mccutchc_files/image006.png"
+height=262 id="Picture 1" src="mccutchc_files/image011.png"
 alt="A diagram of a circuit&#10;&#10;Description automatically generated"></p>
 
 <p class=MsoCaption>Figure 1: CoreXY Motion Control Theory</p>
