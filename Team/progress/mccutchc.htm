@@ -1,0 +1,385 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	font-size:9.0pt;
+	font-family:"Calibri",sans-serif;
+	color:#44546A;
+	font-style:italic;}
+a:link, span.MsoHyperlink
+	{color:#0563C1;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link="#0563C1" vlink="#954F72" style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal><b><u>Week 5 Progress Report</u></b></p>
+
+<p class=MsoNormal><b>Date:</b> 9/18-9/24/2023</p>
+
+<p class=MsoNormal><b>Total Hours:</b> 10</p>
+
+<p class=MsoNormal><b>Description of Design Efforts:</b></p>
+
+<p class=MsoNormal>This week was primarily focused on getting the mechanical
+systems mounted to the surface of the table along with continuing to sift
+through documentation relevant to the PCB.</p>
+
+<p class=MsoNormal><b>Mechanical Mounting Systems (6 hours)</b></p>
+
+<p class=MsoNormal>The trick with the mounting systems is that we want the
+motors to be at adjustable heights. To support this functionality, I needed to
+design a new bracketing system for the motors along with designing what
+material will need to be removed from the table to accommodate this system. Below
+is a drawing of the bracket system along with an image of what it will look
+like when mounted on the table edging. </p>
+
+<p class=MsoNormal><img width=267 height=242 src="mccutchc_files/image001.png"
+alt="A grey metal piece with holes&#10;&#10;Description automatically generated with medium confidence"></p>
+
+<p class=MsoNormal><img width=260 height=227 src="mccutchc_files/image002.png"
+alt="A blue object with a hole in the middle&#10;&#10;Description automatically generated"></p>
+
+<p class=MsoNormal>Where the bracket is in white, the edging is in blue, and
+the motor is in gray. </p>
+
+<p class=MsoNormal>Notably the reason that this was a large time sink this week
+was iterating on the design according to the recommendations of Chuck down in
+the machine shop. Additionally, communicating with him to ensure that the
+elements he was doing for us(namely drilling the holes in the table edging and potentially
+fabricating the motor brackets in aluminum) were done with the correct dimensions
+and constraints in mind. As of Friday afternoon when I am writing this, holes
+have been drilled in one side of the table edging and will hopefully be ready
+for pickup and remounting on Monday. </p>
+
+<p class=MsoNormal><img width=218 height=290 src="mccutchc_files/image003.jpg"
+alt=Image></p>
+
+<p class=MsoNormal><img width=214 height=285 id="Picture 2"
+src="mccutchc_files/image004.jpg" alt=Image></p>
+
+<p class=MsoNormal>Once again, I spent ~2 hours under the table unscrewing the
+siding. All 64 screws are now removed from the underside of the table. </p>
+
+<p class=MsoNormal><b>PCB Design and Documentation (4 hours)</b></p>
+
+<p class=MsoNormal>Schematics for the PCB have been moving along smoothly, but
+I spent a good deal of time reading documentation and datasheets for the micro,
+the USB <span style='font-family:Wingdings'>à</span> UART converter, and the
+LDO we plan on using. Additionally, worked with Abby to get better driving for
+the 7-segment display. Using HC595’s will not work for our purposes because
+they cannot source enough current fast enough. We will most likely be using the
+DM13A or doing a transistor network to increase the current capacity of these
+systems. As such, the PCB currently sits in the following state. </p>
+
+<p class=MsoNormal><img width=625 height=278 src="mccutchc_files/image005.png"
+alt="A computer graphics with numbers and lines&#10;&#10;Description automatically generated with medium confidence"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<b><u><span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span></u></b>
+
+<p class=MsoNormal><b><u><span style='text-decoration:none'>&nbsp;</span></u></b></p>
+
+<p class=MsoNormal><b><u>Week 4 Progress Report</u></b></p>
+
+<p class=MsoNormal><b>Date:</b> 9/11-9/17/2023</p>
+
+<p class=MsoNormal><b>Total Hours:</b> 13</p>
+
+<p class=MsoNormal><b>Description of Design Efforts:</b></p>
+
+<p class=MsoNormal>This weeks primary focus was defining the interfacing
+between each of the different subsystems. More specifically, deciding exactly
+how the microcontroller will send out/receive data and which IO pins must be
+reserved to accomplish this. </p>
+
+<p class=MsoNormal><b>PC to Microcontroller (USB to UART) (4 hours)</b></p>
+
+<p class=MsoNormal>Per Abby’s request, the PC would hopefully use the easily
+accessible USB ports on the side of whatever computer we end up going with
+(PowerPC? Powerful PC? Much debate on what we should call it). Abby seems to
+already have the data transfer set up using USB, and John had mentioned that he
+was using UART for another subsystem on the microcontroller so hopefully we can
+proto before finalizing the PCB. </p>
+
+<p class=MsoNormal>All that to say, it fell on me to research and layout the
+USB <span style='font-family:Wingdings'>à</span> UART translator. My initial
+thought with this was to go with the ECE362 module (FT232R chipset). After some
+research, it appears this chipset is limited to 3 MBaud which I misinterpreted
+to be a significantly slower data rate than it actually is. Normally I wouldn’t
+include an error in a report, but my error cost me nearly an hour trying to
+find a faster chipset before re-doing my math and realizing that 3MBaud would
+have plenty of throughput for the application. See <a
+href="https://www.wevolver.com/article/baud-rates-the-most-common-baud-rates">this
+article</a> for learning process on baud rates. </p>
+
+<p class=MsoNormal>After making this decision, I then found the footprint and
+hooked it up into the current iteration of the PCB schematic. Note that I’ve
+also added the JTAG programmer connection in the bottom right. </p>
+
+<p class=MsoNormal><img border=0 width=624 height=337
+src="mccutchc_files/image006.png"
+alt="A diagram of a circuit board&#10;&#10;Description automatically generated"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>Microcontroller to 7 Segment Display (3 hours)</b></p>
+
+<p class=MsoNormal>For the heads-up display (HUD) we will be using the existing
+but broken hardware that came with the table. Having done some low-cost
+displays like this before, it fell on me to understand how to interface with
+the existing PCB via the 2 8 pin connectors. Took about an hour in the lab with
+the benchtop power supplies (and a good amount of research on the operating
+voltages of the 7 segment displays to make sure I didn’t burn them out) to
+reverse engineer my way into lighting the displays. Once this was done, I began
+making a prototype connection to run this off of the microcontroller. </p>
+
+<p class=MsoNormal>In short, the two 8 pin connectors are the display selector
+and the segment selectors respectively. Meaning that if you pull the display
+selector low (as the displays are common cathode) and n many of the segment selectors
+high, you can turn on any n of the 7 segments in a single one of the displays.
+For the control of this, we will therefore be exploiting persistence of vision to
+briefly turn each display on in sequence in the required pattern for score
+display. </p>
+
+<p class=MsoNormal>To accomplish this, I have drawn up a simple SPI/shift
+register interface for the microcontroller. </p>
+
+<p class=MsoNormal><img border=0 width=624 height=377
+src="mccutchc_files/image007.png"
+alt="A screenshot of a computer&#10;&#10;Description automatically generated"></p>
+
+<p class=MsoNormal>Note that there will be an inverter after the display
+selector, but I need to proto physically before designing in schematic. </p>
+
+<p class=MsoNormal><b>Other work (6 hours)</b></p>
+
+<p class=MsoNormal>Once again did a bunch of work to sort physical issues out
+on the table. Filling the original goal hole so that we can move it back was
+almost the entire lab section this week. Once again, my forearms burn from the
+physical labor involved in cutting the new surface to size. </p>
+
+<p class=MsoNormal>I was also responsible for the electrical overview, and
+spent roughly 3 hours on that over the course of the week. </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b><u><span style='text-decoration:none'>&nbsp;</span></u></b></p>
+
+<p class=MsoNormal>Sources Cited:</p>
+
+<p style='margin-left:28.35pt;text-indent:-28.35pt'>(No date) <i>Wevolver.com</i>.
+Available at:
+https://www.wevolver.com/article/baud-rates-the-most-common-baud-rates
+(Accessed: 15 September 2023). </p>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><u>Week 3 Progress Report</u></b></p>
+
+<p class=MsoNormal><b>Date:</b> 9/4-9/10/2023</p>
+
+<p class=MsoNormal><b>Total Hours:</b> 15</p>
+
+<p class=MsoNormal><b>Description of Design Efforts:</b></p>
+
+<p class=MsoNormal>Primary design focus for me this week was fleshing out the
+design and ordering the parts for the CoreXY gantry system. However, most of my
+hours this week were spent under the table removing 1.5in screws from the
+underside of the table such that the mounting points for the motors could
+actually be accessed. </p>
+
+<p class=MsoNormal>Additional work was also done setting up the PCB footprints,
+baseline schematics, and power control systems for the microcontroller system. </p>
+
+<p class=MsoNormal><b>Mechanical Systems Progress (3 hours)</b></p>
+
+<p class=MsoNormal>As shown in week 2, the CoreXY system requires 2 motors, 6
+idler pulleys, and a set of horizontal rollers. To minimize the number of belt
+crossings to be done over the play surface, the motors will be mounted near the
+center line of the table. </p>
+
+<p class=MsoNormal><img border=0 width=321 height=199
+src="mccutchc_files/image008.png"
+alt="A diagram of a hockey game with Ice hockey rink in the background&#10;&#10;Description automatically generated"></p>
+
+<p class=MsoNormal>Unfortunately for me, that meant removing the siding on the
+edge of the table which, for obvious reasons, is very tightly screwed into the
+structure of the table. Due to the angles at play on the underside of the
+table, screws were inaccessible to a drill and had to be done manually. In
+total removing the sideboards took nearly 6 hours and an intense arm workout. </p>
+
+<p class=MsoNormal><img border=0 width=274 height=206
+src="mccutchc_files/image009.jpg"
+alt="A table with tools on it&#10;&#10;Description automatically generated"></p>
+
+<p class=MsoNormal><b>PCB Progress</b></p>
+
+<p class=MsoNormal>After deciding to use the STM32F091 microcontroller (the
+same one used for ECE362), I was able to start doing preliminary setup for the
+PCB power control and programming in KiCad. Immediately after writing this
+report I will be communicating with the software side of our team to decide
+whether we want to program on I2C or USART and will connect the programming
+pins accordingly. </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Note that the PCB footprints still seem to be mapped
+slightly incorrectly. F091 seemingly has some issues with the pin length on the
+footprint. Will include in next week’s progress report once fixed. </p>
+
+<p class=MsoNormal><img border=0 width=288 height=332
+src="mccutchc_files/image010.png"
+alt="A diagram of a circuit board&#10;&#10;Description automatically generated"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<b><u><span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span></u></b>
+
+<p class=MsoNormal><b><u><span style='text-decoration:none'>&nbsp;</span></u></b></p>
+
+<p class=MsoNormal><b><u>Week 2 Progress Report</u></b></p>
+
+<p class=MsoNormal><b>Date:</b> 8/28-9/3/2023</p>
+
+<p class=MsoNormal><b>Total Hours:</b> 15</p>
+
+<p class=MsoNormal><b>Description of Design Efforts:</b></p>
+
+<p class=MsoNormal>This week’s primary task was to narrow the exact scope of
+the project to write complete PSDRs, continue investigating the mechanical
+systems to find the method of XY control, and start learning KiCad. The
+narrowing of scope was a team effort and can be summarized by reading the A1
+documentation on the group website. </p>
+
+<p class=MsoNormal><b>Continuing investigation of mechanical systems</b></p>
+
+<p class=MsoNormal>While the motors and motor power systems were set last week,
+the actual arrangement of pulleys/gantry needed to be finalized this week.
+Ultimately, we settled on the <a href="https://corexy.com/theory.html">CoreXY</a>
+system for rapid motion in a 2D space. This method allows both motors to be
+fixed in space (unlike a classical gantry system<b> </b>which requires one of
+the two motors to be moved). Hopefully, this should allow for much faster
+acceleration of the mallet on the surface of the table. Additionally, it is
+important to note with this system that teethed belts and pulleys will be used
+rather than cables and cable spools. This should increase the XY motion
+accuracy of the system.</p>
+
+<p class=MsoNormal style='page-break-after:avoid'><img border=0 width=252
+height=262 id="Picture 1" src="mccutchc_files/image011.png"
+alt="A diagram of a circuit&#10;&#10;Description automatically generated"></p>
+
+<p class=MsoCaption>Figure 1: CoreXY Motion Control Theory</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>My final element of progress doesn’t fit into design efforts
+but was still a significant time sink this week. That being getting the table
+from a man on Facebook marketplace. </p>
+
+<p class=MsoNormal><b><u><span style='text-decoration:none'>&nbsp;</span></u></b></p>
+
+<p class=MsoNormal><b><u>Week 1 Progress Report</u></b></p>
+
+<p class=MsoNormal><b>Date:</b> 8/21-8/27/2023</p>
+
+<p class=MsoNormal><b>Total Hours:</b> 10</p>
+
+<p class=MsoNormal><b>Description of Design Efforts:</b></p>
+
+<p class=MsoNormal>First week of the semester was fairly uneventful in terms of
+actual design work. Primary task focused on setting up the course-required
+website and design journals. </p>
+
+<p class=MsoNormal><b>Research of mechanical systems</b></p>
+
+<p class=MsoNormal>I took charge of mechanical systems research to find the
+required torque, speed, and accuracy we need out of our stepper motors along
+with the pulley/gantry arrangement and motor power/control systems. We are
+hoping for a rough max acceleration of 20 m/s^2 and a max speed of 27.2 m/s
+(60mph) while also maintaining a step accuracy down to .5 inches (I.E., one
+step of the motor will produce .5 inches or less of linear motion). For this system,
+I believe that I have settled on a <a
+href="https://www.amazon.com/dp/B00PNEPI0A/?coliid=I2IK5XXKHHFAWV&amp;colid=259AWC7BQWWH4&amp;psc=1&amp;ref_=list_c_wl_lv_ov_lig_dp_it">NEMA
+23 Bipolar Lathe Router</a>, a <a
+href="https://www.amazon.com/STEPPERONLINE-1-0-4-2A-20-50VDC-Micro-step-Resolutions/dp/B06Y5VPSFN/?_encoding=UTF8&amp;pd_rd_w=MOL3z&amp;content-id=amzn1.sym.5f7e0a27-49c0-47d3-80b2-fd9271d863ca%3Aamzn1.symc.e5c80209-769f-4ade-a325-2eaec14b8e0e&amp;pf_rd_p=5f7e0a27-49c0-47d3-80b2-fd9271d863ca&amp;pf_rd_r=FZS01HW5DRFT8PRR0X7R&amp;pd_rd_wg=m1T8q&amp;pd_rd_r=b692d71a-b557-4f6e-bb0c-88f8b787191b&amp;ref_=pd_gw_ci_mcx_mr_hp_atf_m">DM542T
+CNC Stepper Driver</a>, and am still doing research into the exact pulley
+system to be implemented. </p>
+
+<p class=MsoNormal><b>Website Setup</b></p>
+
+<p class=MsoNormal>I also took charge of the setup of the group website. From
+the provided template, I added all team-member information and set up the
+github repositories (one for website data, one for source code) in a format
+that would be easily accessed by my team members to update their own progress
+reports. </p>
+
+<p class=MsoNormal>One note on this, git for windows will not preserve
+soft-symbolic links which are required for the functioning of the website as
+windows sees them as a security threat. To re-enable the symbolic link requires
+a linux command (<i>ln -s /web/entities/477grp16 web</i>). This can only be
+accessed with ssh’ing into the 477grp16 machine, which must be accessed using
+ssh to career account and then su to the 477grp16 account. </p>
+
+</div>
+
+</body>
+
+</html>
