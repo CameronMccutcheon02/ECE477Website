@@ -53,6 +53,38 @@ contact course staff.
 		<div id="content">
             <h2>Progress Report for Joey Collins</h2>
 
+            <h4>Week 5:</h4>
+            <b>Date:</b> 09/22/2023<br>
+            <b>Total Hours:</b> 9<br>
+            <b>Cumulative Hours:</b> 40<br>
+            <b>Description of Project Design Efforts:</b><br>
+            This week, I continued working on the tracking software. The components I worked on this week were the ability to predict future bounces on the table and a system to detect when and where the puck will potentially cross some threshold that indicates potential for a goal.<br><br>
+            <b>Future Bounce Prediction</b><br>
+            As of last week, the tracking software was able to determine where a puck might hit a wall based on its current trajectory. This week, I wanted to expand on that capability by predicting where the puck might go after that bounce. 
+            In order to realize this goal, I used some knowledge of geometry. Shown below is the formula for finding the <a href="https://www.onlinemathlearning.com/anglebetweentwolines.html">angle of intersection</a> between two infinite lines using slope.<br><br>
+            <img src="Team\progress\colli384_files\angle.png" width="220" height="115"><br>
+            <i>Angle of Intersection Formula</i><br><br>
+            
+            After observing this formula, it can be shown that a line intersecting another line with an undefined or 0 slope will result in a reflection with the negative of the original slope. 
+            Once this was determined, I could use the same function I had been using for bounce detection, but this time with the new reflection line. I would also have to update the velocity so the function knew which way the puck was traveling along that line. This was simple to do because if the puck bounces off of the top or bottom walls, then the x component stays the same and the y component is negated. The opposite is true for bounces off of the left or right walls. 
+            I found that I could recursively use this function to predict as many future bounces as I want. I have the number currently capped at 3 for observational purposes. This seems like a good number to use for testing as well because pucks appear to slow down significantly after 3 bounces. 
+            Shown below is video demonstrating the bounce prediction functionality. The three red dots indicate the 3 places where the puck will strike if no other external forces act upon it.<br><br>
+
+            <video autoplay muted loop width="530" height="310"> <source src="Team\progress\colli384_files\future bounce.mp4" type="video/mp4"></video><br>
+            <i>Future Bounce Prediction</i><br><br>
+            <b>Goal Potential Detection</b><br>
+            The next component that I worked on was trying to determine when the puck has a chance of coming near the robot's goal. The current method that I have for doing this is establishing a line segment slightly in front of the physical goal that represents a "danger zone". 
+            Currently, this line segment goes from the top of the table to the bottom of the table and rests about 100 pixels in front of the goal. I edited the function that predicts future bounces to include the software that checks if the current path or any reflections will cross that line into the "danger zone". 
+            It also checks to make sure the puck is moving towards the robot goal before indicating that there is potential for a goal. In the future, I think this will be an important function to prevent the motors from having to twitch at every movement of the puck and instead wait until there is an apparent scoring chance. 
+            Shown below is video demonstrating this functionality. Any time there is a red line segment with a green dot at the end of it, the puck is predicted to cross into this "danger zone" within 3 collisions of its current path. The red line segment shows what bounce the scoring chance will come from.<br><br>
+            
+            <video autoplay muted loop width="530" height="310"> <source src="Team\progress\colli384_files\danger zone.mp4" type="video/mp4"></video><br>
+            <i>Goal Scoring Potential Prediction</i><br><br>
+
+            I think that good progress was made this week in terms of tracking software development. I would really like to begin working with live video as soon as we can get the camera mounted above our table. I believe that my current code can be easily edited to theoretically work with live video, 
+            but sometimes things do not work that way. Next week, I hope to begin optimizing my current code so the predictions do not jump around as much. I want to do this because I want to prevent unnecessary motor movement.<br><br>
+
+
             <h4>Week 4:</h4>
             <b>Date:</b> 09/15/2023<br>
             <b>Total Hours:</b> 7<br>
