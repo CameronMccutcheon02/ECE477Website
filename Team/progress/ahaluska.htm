@@ -871,8 +871,7 @@ polling method using the receivers signal as GPIO input. Next week, I plan to
 improve this method by generating an <span class=GramE>interrupt</span> versus
 polling. I referenced <a
 href="https://deepbluembedded.com/stm32-hal-library-tutorial-examples/">this
-overview of the HAL library</a> when writing this script. <span
-style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
+overview of the HAL library</a> when writing this script.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='font-family:"Times New Roman",serif;color:black'><o:p>&nbsp;</o:p></span></p>
@@ -894,8 +893,7 @@ shift registers were the input signals of the sink drivers. In theory, sink
 drivers should provide current for controlling the LEDs of the display.
 Additionally, I purchased a <a
 href="https://www.mouser.com/ProductDetail/Analog-Devices-Maxim-Integrated/MAX6971ANG%2B?qs=p6VZ%252BklCkRRwXnFscTbmRQ%3D%3D">MAX6971ANG+
-LED driver</a> from Mouser. It should arrive by Tuesday. <span
-style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
+LED driver</a> from Mouser. It should arrive by Tuesday.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='font-family:"Times New Roman",serif;color:black'><o:p>&nbsp;</o:p></span></p>
@@ -909,10 +907,44 @@ we will need space for either 2 HC595s <i>or </i>1 16-channel LED driver. With
 this said, we plan to rely on the HC595 shift registers to drive the 7-segment
 display. As mentioned last week, this setup works and can be used to display the
 score; however, it is <span class=GramE>dim</span> and we plan to allocate more
-time <span class=GramE>in</span> trying to improve it. <o:p></o:p></span></p>
+time <span class=GramE>in</span> trying to improve it.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><b><span
-style='font-family:"Times New Roman",serif;color:black'>&nbsp;</span></b><o:p></o:p></p>
+style='font-family:"Times New Roman",serif;color:black'>&nbsp;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1042" type="#_x0000_t75" alt="A white rectangular object with black text&#10;&#10;Description automatically generated"
+ style='width:96pt;height:154.5pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="ahaluska_files/image005.png" o:title="A white rectangular object with black text&#10;&#10;Description automatically generated"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=128 height=206
+src="ahaluska_files/image006.gif"
+alt="A white rectangular object with black text&#10;&#10;Description automatically generated"
+v:shapes="_x0000_i1042"><![endif]></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><i>MAX6917 LED
+Driver Pinout<o:p></o:p></i></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><i><o:p>&nbsp;</o:p></i></p>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><b><span
 style='font-family:"Times New Roman",serif;color:black'>Results and Impact</span></b><o:p></o:p></p>
@@ -933,40 +965,19 @@ broken. <o:p></o:p></span></p>
 style='font-family:"Times New Roman",serif;color:black'><o:p>&nbsp;</o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
-style='font-family:"Times New Roman",serif;color:black;mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype
- id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
- path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
- <v:stroke joinstyle="miter"/>
- <v:formulas>
-  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
-  <v:f eqn="sum @0 1 0"/>
-  <v:f eqn="sum 0 0 @1"/>
-  <v:f eqn="prod @2 1 2"/>
-  <v:f eqn="prod @3 21600 pixelWidth"/>
-  <v:f eqn="prod @3 21600 pixelHeight"/>
-  <v:f eqn="sum @0 0 1"/>
-  <v:f eqn="prod @6 1 2"/>
-  <v:f eqn="prod @7 21600 pixelWidth"/>
-  <v:f eqn="sum @8 21600 0"/>
-  <v:f eqn="prod @7 21600 pixelHeight"/>
-  <v:f eqn="sum @10 21600 0"/>
- </v:formulas>
- <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
- <o:lock v:ext="edit" aspectratio="t"/>
-</v:shapetype><v:shape id="_x0000_i1041" type="#_x0000_t75" alt="A hand holding wires with wires attached to a circuit board&#10;&#10;Description automatically generated"
+style='font-family:"Times New Roman",serif;color:black;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1041" type="#_x0000_t75" alt="A hand holding wires with wires attached to a circuit board&#10;&#10;Description automatically generated"
  style='width:126pt;height:143.7pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="ahaluska_files/image001.png" o:title="A hand holding wires with wires attached to a circuit board&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=168 height=192
-src="ahaluska_files/image005.gif"
+src="ahaluska_files/image007.gif"
 alt="A hand holding wires with wires attached to a circuit board&#10;&#10;Description automatically generated"
-v:shapes="_x0000_i1041"><![endif]></span><span style='mso-no-proof:yes'><span
-style='mso-spacerun:yes'> </span></span><span style='font-family:"Times New Roman",serif;
-color:black;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_1"
+v:shapes="_x0000_i1041"><![endif]><!--[if gte vml 1]><v:shape id="Picture_x0020_1"
  o:spid="_x0000_i1040" type="#_x0000_t75" alt="A person holding wires with a circuit board in the background&#10;&#10;Description automatically generated"
- style='width:111pt;height:143.4pt;visibility:visible;mso-wrap-style:square'>
+ style='width:111.3pt;height:143.7pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="ahaluska_files/image003.png" o:title="A person holding wires with a circuit board in the background&#10;&#10;Description automatically generated"/>
-</v:shape><![endif]--><![if !vml]><img border=0 width=148 height=191
-src="ahaluska_files/image006.gif"
+</v:shape><![endif]--><![if !vml]><img border=0 width=148 height=192
+src="ahaluska_files/image008.gif"
 alt="A person holding wires with a circuit board in the background&#10;&#10;Description automatically generated"
 v:shapes="Picture_x0020_1"><![endif]></span><span style='mso-no-proof:yes'><o:p></o:p></span></p>
 
@@ -1009,24 +1020,23 @@ style='font-family:"Times New Roman",serif;color:black'>Next Steps</span></b><o:
 <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
 margin-left:.5in;text-indent:-.25in;line-height:normal'><span style='font-family:
 "Times New Roman",serif;color:black'>-</span><span style='font-size:7.0pt;
-font-family:"Times New Roman",serif;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+font-family:"Times New Roman",serif;color:black'>&nbsp;&nbsp;</span><span
 style='font-family:"Times New Roman",serif;color:black'>Improve IR script by
 switching from polling to interrupts<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
 margin-left:.5in;text-indent:-.25in;line-height:normal'><span style='font-family:
-"Times New Roman",serif;color:black'>- <span style='mso-spacerun:yes'>  </span>Add
-support for interfacing with the 7-segment to the STM32Cube project / workspace<o:p></o:p></span></p>
+"Times New Roman",serif;color:black'>- Add support for interfacing with the
+7-segment to the STM32Cube project / workspace<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
 margin-left:.5in;text-indent:-.25in;line-height:normal'><span style='font-family:
-"Times New Roman",serif;color:black'>-<span style='mso-spacerun:yes'>   </span>3D
-print a camera mount <o:p></o:p></span></p>
+"Times New Roman",serif;color:black'>- 3D print a camera mount <o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
 margin-left:.5in;text-indent:-.25in;line-height:normal'><span style='font-family:
-"Times New Roman",serif;color:black'>-<span style='mso-spacerun:yes'>  
-</span>Resin print motor mounts to support high thermal constraints</span><o:p></o:p></p>
+"Times New Roman",serif;color:black'>- Resin print motor mounts to support high
+thermal constraints</span><o:p></o:p></p>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><b><span
 style='font-family:"Times New Roman",serif;color:black'>------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span></b><o:p></o:p></p>
