@@ -53,6 +53,36 @@ contact course staff.
 		<div id="content">
             <h2>Progress Report for Joey Collins</h2>
 
+            <h4>Week 6:</h4>
+            <b>Date:</b> 09/29/2023<br>
+            <b>Total Hours:</b> 8<br>
+            <b>Cumulative Hours:</b> 48<br>
+            <b>Description of Project Design Efforts:</b><br>
+            This week, I started making additions to the puck tracking software with the motor application in mind. I wanted to make sure that the motor is not constantly twitching due to non-essential puck data. I also started developing a plan for how the coordinate system 
+            on the table should be executed.<br><br>
+
+            <b>Smoothing Predictions</b><br>
+            I noticed that the predictions last week were quite accurate, but the fact that the puck coordinates were constantly jumping around would put quite a strain on the motors. I tried to address this issue by implementing some averaging on the locations where the puck might cross into the "danger zone". 
+            To do this, a history of previous locations where the puck crossed into that zone is kept. The length of this history can be changed, but for now I have it keeping the 3 most recent intersections. Using this history, I average out the 3 previous intersection points and output one singular point that takes advantage of the previous data. This should 
+            provide more accurate predictions because of the fact that it is no longer relying on just two consecutive frames. It should also decrease the likelihood of the motor making a sporadic movement due to some outlying frame. Keeping the motors in mind, I also created a sort of tolerance to ensure that the micro is not being sent useless data. Essentially, 
+            the last location sent is compared to the new location waiting to be sent. If the two differ by more than the tolerance amount, then the new location will be sent. Otherwise, it will not be sent and the motor will stay where it is. This is to ensure that the motors are not being sent information that will result in unnecessary movement. I am not totally sure that these additions will be completely necessary in the final product. 
+            It could turn out that the motors can handle extra movement completely fine, and it is preferable to have no averaging. I implemented this functionality just so that we have it in case we need it. It also allows for some customization later on. Shown below is a demonstration of the averaging being used with a history of 3 frames and a tolerance of 30 pixels. <br><br>
+
+            <video autoplay muted loop width="530" height="310"><source src="colli384_files\point averaging.mp4" type="video/mp4"></video><br>
+            <i>Puck Location Averaging</i><br><br>
+
+            <b>Grid Planning</b><br>
+            The next piece that I worked on this week was developing a plan for how the table will be divided into coordinates for the purpose of moving the robot mallet. The ideal solution would be using the pixel values for the coordinate system. 
+            I believe that this would not be easy to execute because of the number of pixels in the image, requiring a large amount of precision in the motor movement. Instead, I think it would be beneficial to scale the pixel values down into smaller values. For example, the top of the table in 
+            the pre-recorded video is at pixel value 90. The bottom of the table is at pixel value 625. If we let the top of the table be 0 and let the bottom of the table be 25, then we can use the equation new y-coordinate = 0.0467(old y-coordinate) - 4.21, then we can translate the pixel value into a coordinate system that goes from 0-15. The same can be done for the x-direction. 
+            I think that using a coordinate system like this would also decrease the amount of twitching in the motors. For example, a puck prediction that varies by several pixels might cause a jerk in the motor, but several pixels translated to a grid system with fewer discrete points would not make a difference and the motor would not necessarily have to move. 
+            I think that a grid with more than 0-15 would be necessary, but that was an easy example to use. This week I learned that it might be more difficult than I thought it would be 
+            to optimize the puck detection process. I may have to spend many hours in the future doing some calibration once we move to a live feed.<br><br>
+            
+            I did not do any testing with live video this week because work is still being done on the table for the mechanical components. I hope that next week, we will be able to mount the camera at the top of the table to start testing live video. If this is not possible, 
+            I plan to begin developing a plan on the exact data to send to the microcontroller to move the motors. Unfortunately, this will require knowledge of where the robot mallet is located. In live feed, I was planning on doing this using color differentiation, but in the pre-recorded video the puck and mallets are the same color. I would have to write the code without being able to test it.
+
+
             <h4>Week 5:</h4>
             <b>Date:</b> 09/22/2023<br>
             <b>Total Hours:</b> 9<br>
