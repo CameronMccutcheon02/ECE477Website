@@ -23,16 +23,16 @@ w\:* {behavior:url(#default#VML);}
   <o:Author>Abby Haluska</o:Author>
   <o:Template>Normal</o:Template>
   <o:LastAuthor>Abby Haluska</o:LastAuthor>
-  <o:Revision>4</o:Revision>
-  <o:TotalTime>70</o:TotalTime>
-  <o:Created>2023-09-30T00:07:00Z</o:Created>
-  <o:LastSaved>2023-10-06T21:04:00Z</o:LastSaved>
+  <o:Revision>3</o:Revision>
+  <o:TotalTime>75</o:TotalTime>
+  <o:Created>2023-10-06T21:05:00Z</o:Created>
+  <o:LastSaved>2023-10-06T21:09:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
   <o:Words>6488</o:Words>
-  <o:Characters>36982</o:Characters>
+  <o:Characters>36985</o:Characters>
   <o:Lines>308</o:Lines>
   <o:Paragraphs>86</o:Paragraphs>
-  <o:CharactersWithSpaces>43384</o:CharactersWithSpaces>
+  <o:CharactersWithSpaces>43387</o:CharactersWithSpaces>
   <o:Version>16.00</o:Version>
  </o:DocumentProperties>
  <o:OfficeDocumentSettings>
@@ -1110,11 +1110,10 @@ href="https://github.com/CameronMccutcheon02/ECE477/blob/main/Personals/Abby/stm
 The callback function increments the score variables corresponding to the GPIO
 pin that triggered the interrupt. Following that, I used the <i><a
 href="https://www.tutorialspoint.com/c_standard_library/c_function_sprintf.htm">sprint</a>f(<b>)
-</b></i>function from Cs &lt;stdio.h&gt; <span
-style='mso-spacerun:yes'> </span>library to convert the integer to a string so
-that I can then transmit the data to a terminal for verification. This method
-worked well and will soon be combined with the 7-segment interfacing to display
-the score. </span><span style='font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+</b></i>function from Cs &lt;stdio.h&gt; library to convert the integer to a
+string so that I can then transmit the data to a terminal for verification.
+This method worked well and will soon be combined with the 7-segment
+interfacing to display the score. </span><span style='font-family:"Times New Roman",serif'><o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><b><i><span
 style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
@@ -1154,7 +1153,7 @@ color:black;mso-font-kerning:0pt;mso-ligatures:none'><o:p>&nbsp;</o:p></span></p
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
 color:black;mso-font-kerning:0pt;mso-ligatures:none'>I connected 8 LEDs to
-GPIOA ports 4 – 11 and configured them as outputs. I then modified the <i>HAL_UART_RxCpltCallback()</i>
+GPIOA ports 4 through 11 and configured them as outputs. I then modified the <i>HAL_UART_RxCpltCallback()</i>
 function within main.c to reset these LEDs so they clear whenever the UART
 receives data. I wrote a function called <i>remove_char()</i> to strip certain characters
 from a string. In this case, I call this function to remove miscellaneous
@@ -1212,7 +1211,7 @@ yes'><!--[if gte vml 1]><v:shapetype id="_x0000_t75" coordsize="21600,21600"
  <v:imagedata src="ahaluska_files/image002.png" o:title="A screen shot of a computer program&#10;&#10;Description automatically generated"
   croptop="44610f" cropbottom="1429f"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=406 height=112
-src="ahaluska_files/image004.png"
+src="ahaluska_files/image039.png"
 alt="A screen shot of a computer program&#10;&#10;Description automatically generated"
 v:shapes="_x0000_i1043"><![endif]></span><span style='font-family:"Times New Roman",serif;
 mso-fareast-font-family:"Times New Roman";color:black;mso-font-kerning:0pt;
@@ -1255,7 +1254,7 @@ yes'><!--[if gte vml 1]><v:shape id="_x0000_i1042" type="#_x0000_t75" alt="A scr
  style='width:321.9pt;height:271.8pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="ahaluska_files/image006.png" o:title="A screenshot of a computer program&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=429 height=362
-src="ahaluska_files/image008.png"
+src="ahaluska_files/image040.png"
 alt="A screenshot of a computer program&#10;&#10;Description automatically generated"
 v:shapes="_x0000_i1042"><![endif]></span><b><i><span style='font-family:"Times New Roman",serif;
 mso-fareast-font-family:"Times New Roman";color:black;mso-font-kerning:0pt;
@@ -1288,7 +1287,7 @@ in a way that the UART callback function cannot parse it. In the coming days, I
 will be focusing on ensuring that the pyserial port configurations are the
 exact same as the<i> RealTerm</i> configurations, in which the serial
 communication task should be complete. This supports the team in accomplishing
-PSDR #2.<b><i> </i></b><span style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
+PSDR #2.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
@@ -1569,7 +1568,7 @@ mso-font-kerning:0pt;mso-ligatures:none;mso-no-proof:yes'><!--[if gte vml 1]><v:
  style='width:113.4pt;height:175.5pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="ahaluska_files/image001.png" o:title="A white rectangular object with black text&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=151 height=234
-src="ahaluska_files/image010.png"
+src="ahaluska_files/image041.png"
 alt="A white rectangular object with black text&#10;&#10;Description automatically generated"
 v:shapes="Picture_x0020_17"><![endif]></span><span style='mso-ascii-font-family:
 Calibri;mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
@@ -1632,7 +1631,7 @@ mso-font-kerning:0pt;mso-ligatures:none;mso-no-proof:yes'><!--[if gte vml 1]><v:
  style='width:255.9pt;height:156pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="ahaluska_files/image003.png" o:title="A hand holding a wire&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=341 height=208
-src="ahaluska_files/image012.png"
+src="ahaluska_files/image042.png"
 alt="A hand holding a wire&#10;&#10;Description automatically generated"
 v:shapes="Picture_x0020_16"><![endif]></span><span style='mso-ascii-font-family:
 Calibri;mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
@@ -2024,7 +2023,7 @@ mso-font-kerning:0pt;mso-ligatures:none;mso-no-proof:yes'><!--[if gte vml 1]><v:
  style='width:279pt;height:184.2pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="ahaluska_files/image005.png" o:title="A circuit board with wires and a digital clock&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=372 height=246
-src="ahaluska_files/image014.png"
+src="ahaluska_files/image043.png"
 alt="A circuit board with wires and a digital clock&#10;&#10;Description automatically generated"
 v:shapes="Picture_x0020_15"><![endif]></span><span style='mso-ascii-font-family:
 Calibri;mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
@@ -2077,7 +2076,7 @@ mso-font-kerning:0pt;mso-ligatures:none;mso-no-proof:yes'><!--[if gte vml 1]><v:
  style='width:383.1pt;height:141pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="ahaluska_files/image007.png" o:title="A close up of a device&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=511 height=188
-src="ahaluska_files/image016.png"
+src="ahaluska_files/image044.png"
 alt="A close up of a device&#10;&#10;Description automatically generated"
 v:shapes="Picture_x0020_14"><![endif]></span><span style='mso-ascii-font-family:
 Calibri;mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
@@ -2129,7 +2128,7 @@ mso-font-kerning:0pt;mso-ligatures:none;mso-no-proof:yes'><!--[if gte vml 1]><v:
  style='width:375pt;height:50.4pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="ahaluska_files/image009.png" o:title="A yellow square with black numbers&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=500 height=67
-src="ahaluska_files/image018.png"
+src="ahaluska_files/image045.png"
 alt="A yellow square with black numbers&#10;&#10;Description automatically generated"
 v:shapes="Picture_x0020_13"><![endif]></span><span style='mso-ascii-font-family:
 Calibri;mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
@@ -2695,7 +2694,7 @@ color:black;mso-font-kerning:0pt;mso-ligatures:none;mso-no-proof:yes'><!--[if gt
  style='width:567.3pt;height:256.5pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="ahaluska_files/image011.png" o:title="A screenshot of a computer screen&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=756 height=342
-src="ahaluska_files/image020.png"
+src="ahaluska_files/image046.png"
 alt="A screenshot of a computer screen&#10;&#10;Description automatically generated"
 v:shapes="Picture_x0020_12"><![endif]></span><span style='font-family:"Times New Roman",serif;
 mso-fareast-font-family:"Times New Roman";color:black;mso-font-kerning:0pt;
@@ -2748,7 +2747,7 @@ color:black;mso-font-kerning:0pt;mso-ligatures:none;mso-no-proof:yes'><!--[if gt
  style='width:247.8pt;height:284.1pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="ahaluska_files/image013.png" o:title="A silver pipe with white band&#10;&#10;Description automatically generated with medium confidence"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=330 height=379
-src="ahaluska_files/image022.png"
+src="ahaluska_files/image047.png"
 alt="A silver pipe with white band&#10;&#10;Description automatically generated with medium confidence"
 v:shapes="Picture_x0020_11"><![endif]></span><span style='font-family:"Times New Roman",serif;
 mso-fareast-font-family:"Times New Roman";color:black;mso-font-kerning:0pt;
@@ -2765,7 +2764,7 @@ mso-font-kerning:0pt;mso-ligatures:none;mso-no-proof:yes'><!--[if gte vml 1]><v:
  style='width:354.6pt;height:300pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="ahaluska_files/image015.png" o:title="A red and silver object on a white surface&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=473 height=400
-src="ahaluska_files/image024.png"
+src="ahaluska_files/image048.png"
 alt="A red and silver object on a white surface&#10;&#10;Description automatically generated"
 v:shapes="Picture_x0020_10"><![endif]></span><span style='mso-ascii-font-family:
 Calibri;mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
@@ -3334,7 +3333,7 @@ mso-font-kerning:0pt;mso-ligatures:none;mso-no-proof:yes'><!--[if gte vml 1]><v:
  style='width:553.5pt;height:174.9pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="ahaluska_files/image017.png" o:title="A screenshot of a computer&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=738 height=233
-src="ahaluska_files/image026.png"
+src="ahaluska_files/image049.png"
 alt="A screenshot of a computer&#10;&#10;Description automatically generated"
 v:shapes="Picture_x0020_9"><![endif]></span><span style='mso-ascii-font-family:
 Calibri;mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
@@ -3380,7 +3379,7 @@ mso-font-kerning:0pt;mso-ligatures:none;mso-no-proof:yes'><!--[if gte vml 1]><v:
  style='width:435.6pt;height:4in;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="ahaluska_files/image019.png" o:title="A screenshot of a computer&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=581 height=384
-src="ahaluska_files/image028.png"
+src="ahaluska_files/image050.png"
 alt="A screenshot of a computer&#10;&#10;Description automatically generated"
 v:shapes="Picture_x0020_8"><![endif]></span><span style='mso-ascii-font-family:
 Calibri;mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
@@ -3746,7 +3745,7 @@ mso-font-kerning:0pt;mso-ligatures:none;mso-no-proof:yes'><!--[if gte vml 1]><v:
  style='width:319.5pt;height:194.4pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="ahaluska_files/image021.png" o:title="A hand drawing a circle on a graph paper&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=426 height=259
-src="ahaluska_files/image030.png"
+src="ahaluska_files/image051.png"
 alt="A hand drawing a circle on a graph paper&#10;&#10;Description automatically generated"
 v:shapes="Picture_x0020_7"><![endif]></span><span style='mso-ascii-font-family:
 Calibri;mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
@@ -3804,7 +3803,7 @@ mso-ligatures:none;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x00
  style='width:295.2pt;height:151.5pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="ahaluska_files/image023.png" o:title="A black background with white circles&#10;&#10;Description automatically generated with medium confidence"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=394 height=202
-src="ahaluska_files/image032.png"
+src="ahaluska_files/image052.png"
 alt="A black background with white circles&#10;&#10;Description automatically generated with medium confidence"
 v:shapes="Picture_x0020_6"><![endif]></span></i><i><span style='font-family:
 "Times New Roman",serif;mso-fareast-font-family:"Times New Roman";color:black;
@@ -3865,7 +3864,7 @@ mso-font-kerning:0pt;mso-ligatures:none;mso-no-proof:yes'><!--[if gte vml 1]><v:
  style='width:300pt;height:186.9pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="ahaluska_files/image025.png" o:title="A close up of a game&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=400 height=249
-src="ahaluska_files/image034.png"
+src="ahaluska_files/image053.png"
 alt="A close up of a game&#10;&#10;Description automatically generated" v:shapes="Picture_x0020_5"><![endif]></span><span
 style='mso-ascii-font-family:Calibri;mso-fareast-font-family:"Times New Roman";
 mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;color:black;
@@ -3908,7 +3907,7 @@ mso-font-kerning:0pt;mso-ligatures:none;mso-no-proof:yes'><!--[if gte vml 1]><v:
  style='width:296.4pt;height:179.4pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="ahaluska_files/image027.png" o:title="A red circle on a white surface with Ice hockey rink in the background&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=395 height=239
-src="ahaluska_files/image035.png"
+src="ahaluska_files/image054.png"
 alt="A red circle on a white surface with Ice hockey rink in the background&#10;&#10;Description automatically generated"
 v:shapes="Picture_x0020_4"><![endif]></span><span style='mso-ascii-font-family:
 Calibri;mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
@@ -3965,7 +3964,7 @@ mso-font-kerning:0pt;mso-ligatures:none;mso-no-proof:yes'><!--[if gte vml 1]><v:
  style='width:309pt;height:160.2pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="ahaluska_files/image029.png" o:title="A person playing a hockey game&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=412 height=214
-src="ahaluska_files/image036.png"
+src="ahaluska_files/image055.png"
 alt="A person playing a hockey game&#10;&#10;Description automatically generated"
 v:shapes="Picture_x0020_3"><![endif]></span><span style='mso-ascii-font-family:
 Calibri;mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
@@ -4020,7 +4019,7 @@ mso-font-kerning:0pt;mso-ligatures:none;mso-no-proof:yes'><!--[if gte vml 1]><v:
  height:42.9pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="ahaluska_files/image031.png" o:title=""/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=608 height=57
-src="ahaluska_files/image037.png" v:shapes="Picture_x0020_2"><![endif]></span><span
+src="ahaluska_files/image056.png" v:shapes="Picture_x0020_2"><![endif]></span><span
 style='mso-ascii-font-family:Calibri;mso-fareast-font-family:"Times New Roman";
 mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;color:black;
 mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
@@ -4090,7 +4089,7 @@ mso-font-kerning:0pt;mso-ligatures:none;mso-no-proof:yes'><!--[if gte vml 1]><v:
  style='width:159pt;height:219pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="ahaluska_files/image033.png" o:title="A air hockey table in a garage&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=212 height=292
-src="ahaluska_files/image038.png"
+src="ahaluska_files/image057.png"
 alt="A air hockey table in a garage&#10;&#10;Description automatically generated"
 v:shapes="Picture_x0020_1"><![endif]></span><span style='mso-ascii-font-family:
 Calibri;mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
