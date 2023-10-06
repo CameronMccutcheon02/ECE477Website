@@ -23,16 +23,16 @@ w\:* {behavior:url(#default#VML);}
   <o:Author>Abby Haluska</o:Author>
   <o:Template>Normal</o:Template>
   <o:LastAuthor>Abby Haluska</o:LastAuthor>
-  <o:Revision>4</o:Revision>
-  <o:TotalTime>70</o:TotalTime>
+  <o:Revision>1</o:Revision>
+  <o:TotalTime>1</o:TotalTime>
   <o:Created>2023-09-30T00:07:00Z</o:Created>
-  <o:LastSaved>2023-10-06T21:04:00Z</o:LastSaved>
+  <o:LastSaved>2023-09-30T00:08:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
-  <o:Words>6488</o:Words>
-  <o:Characters>36982</o:Characters>
-  <o:Lines>308</o:Lines>
-  <o:Paragraphs>86</o:Paragraphs>
-  <o:CharactersWithSpaces>43384</o:CharactersWithSpaces>
+  <o:Words>5462</o:Words>
+  <o:Characters>31139</o:Characters>
+  <o:Lines>259</o:Lines>
+  <o:Paragraphs>73</o:Paragraphs>
+  <o:CharactersWithSpaces>36528</o:CharactersWithSpaces>
   <o:Version>16.00</o:Version>
  </o:DocumentProperties>
  <o:OfficeDocumentSettings>
@@ -65,7 +65,6 @@ w\:* {behavior:url(#default#VML);}
    <w:DontFlipMirrorIndents/>
    <w:OverrideTableStyleHps/>
   </w:Compatibility>
-  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
   <m:mathPr>
    <m:mathFont m:val="Cambria Math"/>
    <m:brkBin m:val="before"/>
@@ -663,13 +662,6 @@ w\:* {behavior:url(#default#VML);}
 <!--
  /* Font Definitions */
  @font-face
-	{font-family:Wingdings;
-	panose-1:5 0 0 0 0 0 0 0 0 0;
-	mso-font-charset:2;
-	mso-generic-font-family:auto;
-	mso-font-pitch:variable;
-	mso-font-signature:0 268435456 0 0 -2147483648 0;}
-@font-face
 	{font-family:"Cambria Math";
 	panose-1:2 4 5 3 5 4 6 3 2 4;
 	mso-font-charset:0;
@@ -692,7 +684,7 @@ w\:* {behavior:url(#default#VML);}
 	margin-right:0in;
 	margin-bottom:8.0pt;
 	margin-left:0in;
-	line-height:106%;
+	line-height:107%;
 	mso-pagination:widow-orphan;
 	font-size:11.0pt;
 	font-family:"Calibri",sans-serif;
@@ -707,7 +699,8 @@ w\:* {behavior:url(#default#VML);}
 	mso-font-kerning:1.0pt;
 	mso-ligatures:standardcontextual;}
 a:link, span.MsoHyperlink
-	{mso-style-priority:99;
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
 	color:blue;
 	text-decoration:underline;
 	text-underline:single;}
@@ -718,113 +711,6 @@ a:visited, span.MsoHyperlinkFollowed
 	mso-themecolor:followedhyperlink;
 	text-decoration:underline;
 	text-underline:single;}
-p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
-	{mso-style-priority:34;
-	mso-style-unhide:no;
-	mso-style-qformat:yes;
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:8.0pt;
-	margin-left:.5in;
-	mso-add-space:auto;
-	line-height:106%;
-	mso-pagination:widow-orphan;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;
-	mso-ascii-font-family:Calibri;
-	mso-ascii-theme-font:minor-latin;
-	mso-fareast-font-family:Calibri;
-	mso-fareast-theme-font:minor-latin;
-	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;
-	mso-font-kerning:1.0pt;
-	mso-ligatures:standardcontextual;}
-p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
-	{mso-style-priority:34;
-	mso-style-unhide:no;
-	mso-style-qformat:yes;
-	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.5in;
-	mso-add-space:auto;
-	line-height:106%;
-	mso-pagination:widow-orphan;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;
-	mso-ascii-font-family:Calibri;
-	mso-ascii-theme-font:minor-latin;
-	mso-fareast-font-family:Calibri;
-	mso-fareast-theme-font:minor-latin;
-	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;
-	mso-font-kerning:1.0pt;
-	mso-ligatures:standardcontextual;}
-p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
-	{mso-style-priority:34;
-	mso-style-unhide:no;
-	mso-style-qformat:yes;
-	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.5in;
-	mso-add-space:auto;
-	line-height:106%;
-	mso-pagination:widow-orphan;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;
-	mso-ascii-font-family:Calibri;
-	mso-ascii-theme-font:minor-latin;
-	mso-fareast-font-family:Calibri;
-	mso-fareast-theme-font:minor-latin;
-	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;
-	mso-font-kerning:1.0pt;
-	mso-ligatures:standardcontextual;}
-p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
-	{mso-style-priority:34;
-	mso-style-unhide:no;
-	mso-style-qformat:yes;
-	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:8.0pt;
-	margin-left:.5in;
-	mso-add-space:auto;
-	line-height:106%;
-	mso-pagination:widow-orphan;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;
-	mso-ascii-font-family:Calibri;
-	mso-ascii-theme-font:minor-latin;
-	mso-fareast-font-family:Calibri;
-	mso-fareast-theme-font:minor-latin;
-	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;
-	mso-font-kerning:1.0pt;
-	mso-ligatures:standardcontextual;}
-p.msonormal0, li.msonormal0, div.msonormal0
-	{mso-style-name:msonormal;
-	mso-style-unhide:no;
-	mso-margin-top-alt:auto;
-	margin-right:0in;
-	mso-margin-bottom-alt:auto;
-	margin-left:0in;
-	mso-pagination:widow-orphan;
-	font-size:12.0pt;
-	font-family:"Times New Roman",serif;
-	mso-fareast-font-family:"Times New Roman";
-	mso-fareast-theme-font:minor-fareast;}
 span.grame
 	{mso-style-name:grame;
 	mso-style-unhide:no;}
@@ -834,9 +720,6 @@ span.spelle
 .MsoChpDefault
 	{mso-style-type:export-only;
 	mso-default-props:yes;
-	font-size:10.0pt;
-	mso-ansi-font-size:10.0pt;
-	mso-bidi-font-size:10.0pt;
 	font-family:"Calibri",sans-serif;
 	mso-ascii-font-family:Calibri;
 	mso-ascii-theme-font:minor-latin;
@@ -845,9 +728,11 @@ span.spelle
 	mso-hansi-font-family:Calibri;
 	mso-hansi-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;
-	mso-font-kerning:0pt;
-	mso-ligatures:none;}
+	mso-bidi-theme-font:minor-bidi;}
+.MsoPapDefault
+	{mso-style-type:export-only;
+	margin-bottom:8.0pt;
+	line-height:107%;}
 @page WordSection1
 	{size:8.5in 11.0in;
 	margin:1.0in 1.0in 1.0in 1.0in;
@@ -858,117 +743,8 @@ div.WordSection1
 	{page:WordSection1;}
  /* List Definitions */
  @list l0
-	{mso-list-id:843204731;
-	mso-list-type:hybrid;
-	mso-list-template-ids:389998538 1426855622 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
-@list l0:level1
-	{mso-level-start-at:0;
-	mso-level-number-format:bullet;
-	mso-level-text:-;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-.25in;
-	font-family:"Times New Roman",serif;
-	mso-fareast-font-family:"Times New Roman";
-	mso-ansi-font-weight:bold;}
-@list l0:level2
-	{mso-level-number-format:bullet;
-	mso-level-text:o;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-.25in;
-	font-family:"Courier New";}
-@list l0:level3
-	{mso-level-number-format:bullet;
-	mso-level-text:\F0A7;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-.25in;
-	font-family:Wingdings;}
-@list l0:level4
-	{mso-level-number-format:bullet;
-	mso-level-text:\F0B7;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-.25in;
-	font-family:Symbol;}
-@list l0:level5
-	{mso-level-number-format:bullet;
-	mso-level-text:o;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-.25in;
-	font-family:"Courier New";}
-@list l0:level6
-	{mso-level-number-format:bullet;
-	mso-level-text:\F0A7;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-.25in;
-	font-family:Wingdings;}
-@list l0:level7
-	{mso-level-number-format:bullet;
-	mso-level-text:\F0B7;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-.25in;
-	font-family:Symbol;}
-@list l0:level8
-	{mso-level-number-format:bullet;
-	mso-level-text:o;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-.25in;
-	font-family:"Courier New";}
-@list l0:level9
-	{mso-level-number-format:bullet;
-	mso-level-text:\F0A7;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-.25in;
-	font-family:Wingdings;}
-@list l1
-	{mso-list-id:1838229075;
-	mso-list-template-ids:-118591416;}
-@list l2
 	{mso-list-id:1943218022;
 	mso-list-template-ids:1495302932;}
-@list l2:level1
-	{mso-level-tab-stop:.5in;
-	mso-level-number-position:left;
-	text-indent:-.25in;}
-@list l2:level2
-	{mso-level-tab-stop:1.0in;
-	mso-level-number-position:left;
-	text-indent:-.25in;}
-@list l2:level3
-	{mso-level-tab-stop:1.5in;
-	mso-level-number-position:left;
-	text-indent:-.25in;}
-@list l2:level4
-	{mso-level-tab-stop:2.0in;
-	mso-level-number-position:left;
-	text-indent:-.25in;}
-@list l2:level5
-	{mso-level-tab-stop:2.5in;
-	mso-level-number-position:left;
-	text-indent:-.25in;}
-@list l2:level6
-	{mso-level-tab-stop:3.0in;
-	mso-level-number-position:left;
-	text-indent:-.25in;}
-@list l2:level7
-	{mso-level-tab-stop:3.5in;
-	mso-level-number-position:left;
-	text-indent:-.25in;}
-@list l2:level8
-	{mso-level-tab-stop:4.0in;
-	mso-level-number-position:left;
-	text-indent:-.25in;}
-@list l2:level9
-	{mso-level-tab-stop:4.5in;
-	mso-level-number-position:left;
-	text-indent:-.25in;}
 ol
 	{margin-bottom:0in;}
 ul
@@ -986,16 +762,22 @@ ul
 	mso-style-priority:99;
 	mso-style-parent:"";
 	mso-padding-alt:0in 5.4pt 0in 5.4pt;
-	mso-para-margin:0in;
+	mso-para-margin-top:0in;
+	mso-para-margin-right:0in;
+	mso-para-margin-bottom:8.0pt;
+	mso-para-margin-left:0in;
+	line-height:107%;
 	mso-pagination:widow-orphan;
-	font-size:10.0pt;
+	font-size:11.0pt;
 	font-family:"Calibri",sans-serif;
 	mso-ascii-font-family:Calibri;
 	mso-ascii-theme-font:minor-latin;
 	mso-hansi-font-family:Calibri;
 	mso-hansi-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;
+	mso-ligatures:standardcontextual;}
 </style>
 <![endif]--><!--[if gte mso 9]><xml>
  <o:shapedefaults v:ext="edit" spidmax="1026"/>
@@ -1009,360 +791,6 @@ ul
 break-word'>
 
 <div class=WordSection1>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><b><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>Week:</span></b><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>&nbsp;7<o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><b><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>Date Reported:&nbsp;</span></b><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>10/06/2023<o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><b><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>Project Hours since Last
-Report:&nbsp;</span></b><span style='font-family:"Times New Roman",serif;
-mso-fareast-font-family:"Times New Roman";color:black;mso-font-kerning:0pt;
-mso-ligatures:none'>10<o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><b><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>Cumulative Semester
-Project Hours:&nbsp;</span></b><span style='font-family:"Times New Roman",serif;
-mso-fareast-font-family:"Times New Roman";color:black;mso-font-kerning:0pt;
-mso-ligatures:none'>66<o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><b><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>Description of Individual
-Project Work Efforts:<o:p></o:p></span></b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><b><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'><o:p>&nbsp;</o:p></span></b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><b><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>What I worked on</span></b><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>This weeks time was put
-towards prototyping with the IR sensors and the USB-to-UART converter. While I
-verified that both of these components interface well with the STM32 in
-previous weeks, the purpose of this week was to expand upon that initial
-verification by writing code that can be used by the team in the final
-prototype. This involved updating the .ioc file in STM32CubeIDE to reflect the
-incorporation of 2 IR sensors. Additionally, it involved modifying last weeks
-script to switch from active polling to the use of an interrupt triggered by
-the IR sensors. Finally, I spent a lot of time identifying how an 8-bit packet
-of data can best be sent from python and parsed in STM32CubeIDE. The remainder
-of my week went towards updating the team website to include our reports and data
-sheets. <o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><b><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>Method</span></b><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><b><i><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>IR Sensors / Score Keeping<o:p></o:p></span></i></b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>Last week I was able to make
-an LED light up whenever an IR sensor detected a broken beam. While this was
-helpful in ensuring the interfacing between the IR sensors and the STM32Cube,
-it was not a long term approach as I used general GPIO polling to write my
-script. This week, I switched to an interrupt-based approach. I started by
-configuring GPIO pins 10 and 11 as EXTI interrupts with falling edge triggers
-and pull up resistors. The code I ended up writing only works with pull-up resistors
-in place. I initialized the EXTI4_15 IRQ handler to correspond with these GPIO
-pins. I then wrote code within the <i>HAL_GPIO_EXTI_Callback </i>function,
-which is called in the <i>HAL_GPIO_EXTI_IRQHandler </i>function that is written
-in stm32f0xx.h. This IRQhandler is then called in the <i>EXTI4_15IRQHandler </i>in
-stm32f0xx_it.c. Both of these files are currently on the lab PC, but I will
-make sure to push those to Github within the coming week. <o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>Within the <i>HAL_GPIO_EXTI_Callback,
-</i>I referenced two variables: <i>player1score </i>and <i>player2score. </i>Both
-of these variables are initialized as integers and set to 0 at the beginning of
-<a
-href="https://github.com/CameronMccutcheon02/ECE477/blob/main/Personals/Abby/stm_files/main.c">main.c</a>.
-The callback function increments the score variables corresponding to the GPIO
-pin that triggered the interrupt. Following that, I used the <i><a
-href="https://www.tutorialspoint.com/c_standard_library/c_function_sprintf.htm">sprint</a>f(<b>)
-</b></i>function from Cs &lt;stdio.h&gt; <span
-style='mso-spacerun:yes'> </span>library to convert the integer to a string so
-that I can then transmit the data to a terminal for verification. This method
-worked well and will soon be combined with the 7-segment interfacing to display
-the score. </span><span style='font-family:"Times New Roman",serif'><o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><b><i><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'><o:p>&nbsp;</o:p></span></i></b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><b><i><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>Serial Communications / Parsing
-and Storing Data<o:p></o:p></span></i></b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>In previous weeks, I
-verified serial communication over UART by sending data from a Python script
-using pyserial. I then wrote code on the STM32 to read data from the serial
-port and transmit that data back over UART. This method was used to ensure
-interfacing with the USB-to-UART IC was feasible. This week, I worked on
-parsing received data and using that data to control outputs. <o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>Because data will be sent over
-UART in the form of an 8-bit packet, I approached this task by identifying the
-most effective method of formatting data to be sent. The <i>HAL_UART_Receive_DMA(&amp;huart2,
-rxdata, sizeof(rxdata)) </i>function is called in main() to tell the STM32 to
-look for incoming data. This function stores received data in the <i>rxdata </i>variable,
-which is initialized as uint8_t.<o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>I connected 8 LEDs to
-GPIOA ports 4 – 11 and configured them as outputs. I then modified the <i>HAL_UART_RxCpltCallback()</i>
-function within main.c to reset these LEDs so they clear whenever the UART
-receives data. I wrote a function called <i>remove_char()</i> to strip certain characters
-from a string. In this case, I call this function to remove miscellaneous
-characters from rxdata before converting it to an integer. I then use <i><a
-href="https://www.tutorialspoint.com/c_standard_library/c_function_sscanf.htm">sscanf</a>
-</i>to convert rxdata to an integer and write that integer to GPIOAs BSRR. The
-integer written to GPIOA -&gt; BSRR corresponds to an 8-bit value representing
-the state of LEDs connected to GPIOA ports 4-11.<o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>I created a file called <i>comms_test.py
-</i>in my personal folder to prompt the user to enter an 8-bit packet of 0s or
-1s to control the output LEDs. This script creates a serial port object using
-pyserial, asks the user for data, left shifts the data by 4 to correspond to
-GPIO ports 4-11, converts that data to an integer and then a string, encodes
-the data, and sends it over UART. If a user wants to light up all LEDs, they
-would enter 11111111 and the script would send b4080 over UART. In the image
-below, the bxxxx\n\r is the data that is sent to the STM32 given the users
-input. <o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
-style='font-family:"Times New Roman",serif;color:black;border:none windowtext 1.0pt;
-mso-border-alt:none windowtext 0in;padding:0in;mso-no-proof:yes'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
-style='font-family:"Times New Roman",serif;color:black;border:none windowtext 1.0pt;
-mso-border-alt:none windowtext 0in;padding:0in;mso-ligatures:none;mso-no-proof:
-yes'><!--[if gte vml 1]><v:shapetype id="_x0000_t75" coordsize="21600,21600"
- o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f"
- stroked="f">
- <v:stroke joinstyle="miter"/>
- <v:formulas>
-  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
-  <v:f eqn="sum @0 1 0"/>
-  <v:f eqn="sum 0 0 @1"/>
-  <v:f eqn="prod @2 1 2"/>
-  <v:f eqn="prod @3 21600 pixelWidth"/>
-  <v:f eqn="prod @3 21600 pixelHeight"/>
-  <v:f eqn="sum @0 0 1"/>
-  <v:f eqn="prod @6 1 2"/>
-  <v:f eqn="prod @7 21600 pixelWidth"/>
-  <v:f eqn="sum @8 21600 0"/>
-  <v:f eqn="prod @7 21600 pixelHeight"/>
-  <v:f eqn="sum @10 21600 0"/>
- </v:formulas>
- <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
- <o:lock v:ext="edit" aspectratio="t"/>
-</v:shapetype><v:shape id="_x0000_i1043" type="#_x0000_t75" alt="A screen shot of a computer program&#10;&#10;Description automatically generated"
- style='width:304.2pt;height:84.3pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="ahaluska_files/image002.png" o:title="A screen shot of a computer program&#10;&#10;Description automatically generated"
-  croptop="44610f" cropbottom="1429f"/>
-</v:shape><![endif]--><![if !vml]><img border=0 width=406 height=112
-src="ahaluska_files/image004.png"
-alt="A screen shot of a computer program&#10;&#10;Description automatically generated"
-v:shapes="_x0000_i1043"><![endif]></span><span style='font-family:"Times New Roman",serif;
-mso-fareast-font-family:"Times New Roman";color:black;mso-font-kerning:0pt;
-mso-ligatures:none'><o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><i><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>Sending Strings of Data
-over UART<o:p></o:p></span></i></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><b><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>Results and Impact<o:p></o:p></span></b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><b><i><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>IR Sensors / Score Keeping<o:p></o:p></span></i></b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>By the end of the week,
-both IR sensors are working and can be used to track two players scores. The script
-below shows the callback function called when an interrupt is triggered by a
-sensor. This function will be modified slightly and used in the final prototype
-to display the users score onto the 7-segment display. This supports the team
-in accomplishing PSDR #4. <o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
-style='font-family:"Times New Roman",serif;color:black;border:none windowtext 1.0pt;
-mso-border-alt:none windowtext 0in;padding:0in;mso-ligatures:none;mso-no-proof:
-yes'><!--[if gte vml 1]><v:shape id="_x0000_i1042" type="#_x0000_t75" alt="A screenshot of a computer program&#10;&#10;Description automatically generated"
- style='width:321.9pt;height:271.8pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="ahaluska_files/image006.png" o:title="A screenshot of a computer program&#10;&#10;Description automatically generated"/>
-</v:shape><![endif]--><![if !vml]><img border=0 width=429 height=362
-src="ahaluska_files/image008.png"
-alt="A screenshot of a computer program&#10;&#10;Description automatically generated"
-v:shapes="_x0000_i1042"><![endif]></span><b><i><span style='font-family:"Times New Roman",serif;
-mso-fareast-font-family:"Times New Roman";color:black;mso-font-kerning:0pt;
-mso-ligatures:none'><o:p></o:p></span></i></b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><i><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>Keeping Score with IR Sensors
-and an EXTI_callback Function<o:p></o:p></span></i></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><b><i><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>Serial Communications / Parsing
-and Storing Data<o:p></o:p></span></i></b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>I encountered some issues
-with parsing the data sent by python. This led me to realize that the <i>pyserial
-</i>module is sending the data in an unspecified way. By the end of the week, I
-was able to use <i><a href="https://realterm.sourceforge.io/">RealTerm</a></i> to
-send a string of data from the PC over UART to the STM32, in which the STM32
-then controlled the LEDs based on the received data. I was also able to send
-the correct data from python using pyserial; however, pyserial encodes the data
-in a way that the UART callback function cannot parse it. In the coming days, I
-will be focusing on ensuring that the pyserial port configurations are the
-exact same as the<i> RealTerm</i> configurations, in which the serial
-communication task should be complete. This supports the team in accomplishing
-PSDR #2.<b><i> </i></b><span style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>The video below
-demonstrates my use of <i>RealTerm </i>to send a string that controls 8 LEDs. <o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><b><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>Learnings<o:p></o:p></span></b></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>This weeks work was
-helpful in better understanding interrupts and UART-triggered events. I also learned
-how to more effectively debug code using the STM32CubeIDE and external programs
-like <i>RealTerm. <o:p></o:p></i></span></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><b><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>&nbsp;</span></b><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><b><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>Next Steps<o:p></o:p></span></b></p>
-
-<p class=MsoListParagraphCxSpFirst style='margin-bottom:0in;mso-add-space:auto;
-text-indent:-.25in;line-height:normal;mso-list:l0 level1 lfo4'><![if !supportLists]><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'><span style='mso-list:
-Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]><span style='font-family:"Times New Roman",serif;
-mso-fareast-font-family:"Times New Roman";color:black;mso-font-kerning:0pt;
-mso-ligatures:none'>Work on PCB presentation<o:p></o:p></span></p>
-
-<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;mso-add-space:
-auto;text-indent:-.25in;line-height:normal;mso-list:l0 level1 lfo4'><![if !supportLists]><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'><span style='mso-list:
-Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]><span style='font-family:"Times New Roman",serif;
-mso-fareast-font-family:"Times New Roman";color:black;mso-font-kerning:0pt;
-mso-ligatures:none'>Improve the format of data being sent from the PC via
-Python<o:p></o:p></span></p>
-
-<p class=MsoListParagraphCxSpLast style='margin-bottom:0in;mso-add-space:auto;
-text-indent:-.25in;line-height:normal;mso-list:l0 level1 lfo4'><![if !supportLists]><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'><span style='mso-list:
-Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]><span style='font-family:"Times New Roman",serif;
-mso-fareast-font-family:"Times New Roman";color:black;mso-font-kerning:0pt;
-mso-ligatures:none'>Prototype the 7-segment display using this weeks progress
-with the IR sensors <o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><b><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span></b><span
-style='mso-ascii-font-family:Calibri;mso-fareast-font-family:"Times New Roman";
-mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;color:black;
-mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><b><span
-style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'><o:p>&nbsp;</o:p></span></b></p>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><b><span
 style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
@@ -1426,8 +854,8 @@ mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>I spent my time this week focusing
-on interfacing with&nbsp;<a
+color:black;mso-font-kerning:0pt;mso-ligatures:none'>I spent my time this week
+focusing on interfacing with&nbsp;<a
 href="https://learn.adafruit.com/ir-breakbeam-sensors/arduino">IR&nbsp;breakbeam&nbsp;sensors</a>&nbsp;and
 the 7-segment display. The IR sensors arrived on Wednesday, in which I began
 prototyping with an&nbsp;<a
@@ -1545,10 +973,10 @@ color:black;mso-font-kerning:0pt;mso-ligatures:none'>At this point, we know
 that the microcontroller and PCB will need to allocate 3 extra pins for the
 7-segment display: one for serial data input (SER), one for the clock input
 (CLK), and one for the input terminal of data strobe (latch). We also know that
-we will need space for either 2 HC595s&nbsp;<i>or&nbsp;</i>1 16-channel LED driver.
-With this said, we plan to rely on the HC595 shift registers to drive the
-7-segment display. As mentioned last week, this setup works and can be used to
-display the score; however, it is&nbsp;dim&nbsp;and we plan to allocate more
+we will need space for either 2 HC595s&nbsp;<i>or&nbsp;</i>1 16-channel LED
+driver. With this said, we plan to rely on the HC595 shift registers to drive
+the 7-segment display. As mentioned last week, this setup works and can be used
+to display the score; however, it is&nbsp;dim&nbsp;and we plan to allocate more
 time&nbsp;in&nbsp;trying to improve it.</span><span style='mso-ascii-font-family:
 Calibri;mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
 mso-bidi-font-family:Calibri;color:black;mso-font-kerning:0pt;mso-ligatures:
@@ -1564,12 +992,32 @@ mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='mso-ascii-font-family:Calibri;mso-fareast-font-family:"Times New Roman";
 mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;color:black;
-mso-font-kerning:0pt;mso-ligatures:none;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
- id="Picture_x0020_17" o:spid="_x0000_i1041" type="#_x0000_t75" alt="A white rectangular object with black text&#10;&#10;Description automatically generated"
+mso-font-kerning:0pt;mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="Picture_x0020_17" o:spid="_x0000_i1041" type="#_x0000_t75"
+ alt="A white rectangular object with black text&#10;&#10;Description automatically generated"
  style='width:113.4pt;height:175.5pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="ahaluska_files/image001.png" o:title="A white rectangular object with black text&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=151 height=234
-src="ahaluska_files/image010.png"
+src="ahaluska_files/image001.png"
 alt="A white rectangular object with black text&#10;&#10;Description automatically generated"
 v:shapes="Picture_x0020_17"><![endif]></span><span style='mso-ascii-font-family:
 Calibri;mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
@@ -1627,12 +1075,12 @@ mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='mso-ascii-font-family:Calibri;mso-fareast-font-family:"Times New Roman";
 mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;color:black;
-mso-font-kerning:0pt;mso-ligatures:none;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
- id="Picture_x0020_16" o:spid="_x0000_i1040" type="#_x0000_t75" alt="A hand holding a wire&#10;&#10;Description automatically generated"
+mso-font-kerning:0pt;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_16"
+ o:spid="_x0000_i1040" type="#_x0000_t75" alt="A hand holding a wire&#10;&#10;Description automatically generated"
  style='width:255.9pt;height:156pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="ahaluska_files/image003.png" o:title="A hand holding a wire&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=341 height=208
-src="ahaluska_files/image012.png"
+src="ahaluska_files/image003.png"
 alt="A hand holding a wire&#10;&#10;Description automatically generated"
 v:shapes="Picture_x0020_16"><![endif]></span><span style='mso-ascii-font-family:
 Calibri;mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
@@ -1890,8 +1338,8 @@ mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
 style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
 color:black;mso-font-kerning:0pt;mso-ligatures:none'>The second approach was
 explored by&nbsp;Camerons&nbsp;work, in which he implemented a similar circuit
-design and used HC595 shift registers&nbsp;<i>without</i>&nbsp;the sink driver and
-transistors to drive the 7-segment. I modified this design to experiment.</span><span
+design and used HC595 shift registers&nbsp;<i>without</i>&nbsp;the sink driver
+and transistors to drive the 7-segment. I modified this design to experiment.</span><span
 style='mso-ascii-font-family:Calibri;mso-fareast-font-family:"Times New Roman";
 mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;color:black;
 mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
@@ -1961,17 +1409,16 @@ none'><o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>I updated
-the&nbsp;teams&nbsp;project description on the website to provide more detail
-on how the project will be powered and interfaced. I also updated the teams
-PSDR #4 on the website to reflect the&nbsp;teams&nbsp;choice to use IR break
-sensors. Additionally, I visited the EE shop several times throughout the week
-to acquire the sink drivers and shift registers. I also visited to see if they
-had IR break sensors. They did not, so I submitted a purchase request form
-through the business office.</span><span style='mso-ascii-font-family:Calibri;
-mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
-mso-bidi-font-family:Calibri;color:black;mso-font-kerning:0pt;mso-ligatures:
-none'><o:p></o:p></span></p>
+color:black;mso-font-kerning:0pt;mso-ligatures:none'>I updated the&nbsp;teams&nbsp;project
+description on the website to provide more detail on how the project will be
+powered and interfaced. I also updated the teams PSDR #4 on the website to
+reflect the&nbsp;teams&nbsp;choice to use IR break sensors. Additionally, I
+visited the EE shop several times throughout the week to acquire the sink
+drivers and shift registers. I also visited to see if they had IR break
+sensors. They did not, so I submitted a purchase request form through the
+business office.</span><span style='mso-ascii-font-family:Calibri;mso-fareast-font-family:
+"Times New Roman";mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;
+color:black;mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><b><span
 style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
@@ -2005,26 +1452,25 @@ none'><o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>While
-I&nbsp;couldnt&nbsp;complete my goal of interfacing the 7-segment with the STM
-this week, I made progress with interfacing with the Arduino Nano. While using
-transistors and a sink driver worked great in terms of driving the 7-segments,
-it was decided that this design was not ideal as it would require a
-significant&nbsp;amount&nbsp;of discrete components to be soldered to the PCB.
-The 7-segment shown below is common-anode.</span><span style='mso-ascii-font-family:
-Calibri;mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
-mso-bidi-font-family:Calibri;color:black;mso-font-kerning:0pt;mso-ligatures:
-none'><o:p></o:p></span></p>
+color:black;mso-font-kerning:0pt;mso-ligatures:none'>While I&nbsp;couldnt&nbsp;complete
+my goal of interfacing the 7-segment with the STM this week, I made progress
+with interfacing with the Arduino Nano. While using transistors and a sink
+driver worked great in terms of driving the 7-segments, it was decided that
+this design was not ideal as it would require a significant&nbsp;amount&nbsp;of
+discrete components to be soldered to the PCB. The 7-segment shown below is
+common-anode.</span><span style='mso-ascii-font-family:Calibri;mso-fareast-font-family:
+"Times New Roman";mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;
+color:black;mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='mso-ascii-font-family:Calibri;mso-fareast-font-family:"Times New Roman";
 mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;color:black;
-mso-font-kerning:0pt;mso-ligatures:none;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
- id="Picture_x0020_15" o:spid="_x0000_i1039" type="#_x0000_t75" alt="A circuit board with wires and a digital clock&#10;&#10;Description automatically generated"
+mso-font-kerning:0pt;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_15"
+ o:spid="_x0000_i1039" type="#_x0000_t75" alt="A circuit board with wires and a digital clock&#10;&#10;Description automatically generated"
  style='width:279pt;height:184.2pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="ahaluska_files/image005.png" o:title="A circuit board with wires and a digital clock&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=372 height=246
-src="ahaluska_files/image014.png"
+src="ahaluska_files/image005.png"
 alt="A circuit board with wires and a digital clock&#10;&#10;Description automatically generated"
 v:shapes="Picture_x0020_15"><![endif]></span><span style='mso-ascii-font-family:
 Calibri;mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
@@ -2072,12 +1518,12 @@ mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='mso-ascii-font-family:Calibri;mso-fareast-font-family:"Times New Roman";
 mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;color:black;
-mso-font-kerning:0pt;mso-ligatures:none;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
- id="Picture_x0020_14" o:spid="_x0000_i1038" type="#_x0000_t75" alt="A close up of a device&#10;&#10;Description automatically generated"
+mso-font-kerning:0pt;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_14"
+ o:spid="_x0000_i1038" type="#_x0000_t75" alt="A close up of a device&#10;&#10;Description automatically generated"
  style='width:383.1pt;height:141pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="ahaluska_files/image007.png" o:title="A close up of a device&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=511 height=188
-src="ahaluska_files/image016.png"
+src="ahaluska_files/image007.png"
 alt="A close up of a device&#10;&#10;Description automatically generated"
 v:shapes="Picture_x0020_14"><![endif]></span><span style='mso-ascii-font-family:
 Calibri;mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
@@ -2108,10 +1554,10 @@ mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>Cameron provided me a DM13A
-LED driver, in which I followed the DM13A pinout to connect this to the tables
-7-segment display. I then experimented with the constant-current value by
-testing different resistance values between REXT and GND (see below).
+color:black;mso-font-kerning:0pt;mso-ligatures:none'>Cameron provided me a
+DM13A LED driver, in which I followed the DM13A pinout to connect this to the
+tables 7-segment display. I then experimented with the constant-current value
+by testing different resistance values between REXT and GND (see below).
 Ultimately, I was unable to get the DM13A to drive the tables 7-segment
 display. Upon researching, I found that the DM13A&nbsp;<a
 href="https://forum.arduino.cc/t/need-help-with-dm13a-16-bit-shift-register-ic/580565">might
@@ -2124,12 +1570,12 @@ mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='mso-ascii-font-family:Calibri;mso-fareast-font-family:"Times New Roman";
 mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;color:black;
-mso-font-kerning:0pt;mso-ligatures:none;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
- id="Picture_x0020_13" o:spid="_x0000_i1037" type="#_x0000_t75" alt="A yellow square with black numbers&#10;&#10;Description automatically generated"
+mso-font-kerning:0pt;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_13"
+ o:spid="_x0000_i1037" type="#_x0000_t75" alt="A yellow square with black numbers&#10;&#10;Description automatically generated"
  style='width:375pt;height:50.4pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="ahaluska_files/image009.png" o:title="A yellow square with black numbers&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=500 height=67
-src="ahaluska_files/image018.png"
+src="ahaluska_files/image009.png"
 alt="A yellow square with black numbers&#10;&#10;Description automatically generated"
 v:shapes="Picture_x0020_13"><![endif]></span><span style='mso-ascii-font-family:
 Calibri;mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
@@ -2190,11 +1636,10 @@ style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Ro
 color:black;mso-font-kerning:0pt;mso-ligatures:none'>I submitted an order
 through the procurement office to purchase&nbsp;<a
 href="https://www.adafruit.com/product/2168">IR break beam sensors</a>. These
-sensors should be in by the middle of next week. I also modified PSDR #4 so
-that is set in stone.</span><span style='mso-ascii-font-family:Calibri;
-mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
-mso-bidi-font-family:Calibri;color:black;mso-font-kerning:0pt;mso-ligatures:
-none'><o:p></o:p></span></p>
+sensors should be in by the middle of next week. I also modified PSDR #4 so that
+is set in stone.</span><span style='mso-ascii-font-family:Calibri;mso-fareast-font-family:
+"Times New Roman";mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;
+color:black;mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
@@ -2490,11 +1935,10 @@ style='font-family:"Times New Roman",serif'>script</span></a></span><span
 style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
 color:black;mso-font-kerning:0pt;mso-ligatures:none'>&nbsp;that uses the serial
 and&nbsp;infi.devicemanager&nbsp;libraries. This script defines three
-functions:&nbsp;setup_serialobject(),&nbsp;serial_write(),
-and&nbsp;serial_read().</span><span style='mso-ascii-font-family:Calibri;
-mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
-mso-bidi-font-family:Calibri;color:black;mso-font-kerning:0pt;mso-ligatures:
-none'><o:p></o:p></span></p>
+functions:&nbsp;setup_serialobject(),&nbsp;serial_write(), and&nbsp;serial_read().</span><span
+style='mso-ascii-font-family:Calibri;mso-fareast-font-family:"Times New Roman";
+mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;color:black;
+mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
 margin-left:.5in;line-height:normal'><span style='font-family:"Times New Roman",serif;
@@ -2507,12 +1951,12 @@ none'><o:p></o:p></span></p>
 <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
 margin-left:.5in;line-height:normal'><span style='font-family:"Times New Roman",serif;
 mso-fareast-font-family:"Times New Roman";color:black;mso-font-kerning:0pt;
-mso-ligatures:none'>The&nbsp;setup_serialobject() function uses
-the&nbsp;infi.devicemanager&nbsp;API to identify which COM port a USB device is
-connected to. This COM port is then passed as an argument into a serial
-object,&nbsp;<i>ser,&nbsp;</i>with baud rate of 115200. The script then wipes
-the serial port and resets it to ensure accurate data transfer. The&nbsp;<i>ser&nbsp;</i>object
-is returned. This function is used in transmitting data from PC to micro.</span><span
+mso-ligatures:none'>The&nbsp;setup_serialobject() function uses the&nbsp;infi.devicemanager&nbsp;API
+to identify which COM port a USB device is connected to. This COM port is then
+passed as an argument into a serial object,&nbsp;<i>ser,&nbsp;</i>with baud
+rate of 115200. The script then wipes the serial port and resets it to ensure
+accurate data transfer. The&nbsp;<i>ser&nbsp;</i>object is returned. This
+function is used in transmitting data from PC to micro.</span><span
 style='mso-ascii-font-family:Calibri;mso-fareast-font-family:"Times New Roman";
 mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;color:black;
 mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
@@ -2674,11 +2118,10 @@ location to the USBs COM port. The window on the bottom is printing the sent
 data in the form of&nbsp;<i>Prediction: (x,y)</i>&nbsp;and the received data in
 the form of&nbsp;<i>b(x, y)\n</i>. The slight delay is because the python
 script is waiting to read the acknowledgement sent by the STM, so this would
-not be existent in the final prototype. This work contributes to
-the&nbsp;teams&nbsp;achievement of PSDR #2.</span><span style='mso-ascii-font-family:
-Calibri;mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
-mso-bidi-font-family:Calibri;color:black;mso-font-kerning:0pt;mso-ligatures:
-none'><o:p></o:p></span></p>
+not be existent in the final prototype. This work contributes to the&nbsp;teams&nbsp;achievement
+of PSDR #2.</span><span style='mso-ascii-font-family:Calibri;mso-fareast-font-family:
+"Times New Roman";mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;
+color:black;mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
 margin-left:.5in;line-height:normal'><b><i><span style='font-family:"Times New Roman",serif;
@@ -2690,12 +2133,12 @@ none'><o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+color:black;mso-font-kerning:0pt;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
  id="Picture_x0020_12" o:spid="_x0000_i1036" type="#_x0000_t75" alt="A screenshot of a computer screen&#10;&#10;Description automatically generated"
  style='width:567.3pt;height:256.5pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="ahaluska_files/image011.png" o:title="A screenshot of a computer screen&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=756 height=342
-src="ahaluska_files/image020.png"
+src="ahaluska_files/image011.png"
 alt="A screenshot of a computer screen&#10;&#10;Description automatically generated"
 v:shapes="Picture_x0020_12"><![endif]></span><span style='font-family:"Times New Roman",serif;
 mso-fareast-font-family:"Times New Roman";color:black;mso-font-kerning:0pt;
@@ -2730,25 +2173,25 @@ mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
 color:black;mso-font-kerning:0pt;mso-ligatures:none'>I printed two prototypes
-of scoreboard extenders. One of which would be screwed onto the top of the tables
-border, and the other of which slides into the existing hole in the tables
-border. Upon testing both prototypes, I decided to move forward with the second
-version, which can be seen below. These extenders successfully increase the
-height of the scoreboard by about 4 inches, allowing the camera to achieve a
-full field of view. I am still designing the puck return system. This progress
-contributes to the&nbsp;teams&nbsp;overall progress with modifying the hockey
-table.</span><span style='mso-ascii-font-family:Calibri;mso-fareast-font-family:
+of scoreboard extenders. One of which would be screwed onto the top of the
+tables border, and the other of which slides into the existing hole in the
+tables border. Upon testing both prototypes, I decided to move forward with the
+second version, which can be seen below. These extenders successfully increase
+the height of the scoreboard by about 4 inches, allowing the camera to achieve
+a full field of view. I am still designing the puck return system. This
+progress contributes to the&nbsp;teams&nbsp;overall progress with modifying the
+hockey table.</span><span style='mso-ascii-font-family:Calibri;mso-fareast-font-family:
 "Times New Roman";mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;
 color:black;mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+color:black;mso-font-kerning:0pt;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
  id="Picture_x0020_11" o:spid="_x0000_i1035" type="#_x0000_t75" alt="A silver pipe with white band&#10;&#10;Description automatically generated with medium confidence"
  style='width:247.8pt;height:284.1pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="ahaluska_files/image013.png" o:title="A silver pipe with white band&#10;&#10;Description automatically generated with medium confidence"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=330 height=379
-src="ahaluska_files/image022.png"
+src="ahaluska_files/image013.png"
 alt="A silver pipe with white band&#10;&#10;Description automatically generated with medium confidence"
 v:shapes="Picture_x0020_11"><![endif]></span><span style='font-family:"Times New Roman",serif;
 mso-fareast-font-family:"Times New Roman";color:black;mso-font-kerning:0pt;
@@ -2760,12 +2203,12 @@ none'><o:p></o:p></span></p>
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='mso-ascii-font-family:Calibri;mso-fareast-font-family:"Times New Roman";
 mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;color:black;
-mso-font-kerning:0pt;mso-ligatures:none;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
- id="Picture_x0020_10" o:spid="_x0000_i1034" type="#_x0000_t75" alt="A red and silver object on a white surface&#10;&#10;Description automatically generated"
+mso-font-kerning:0pt;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_10"
+ o:spid="_x0000_i1034" type="#_x0000_t75" alt="A red and silver object on a white surface&#10;&#10;Description automatically generated"
  style='width:354.6pt;height:300pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="ahaluska_files/image015.png" o:title="A red and silver object on a white surface&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=473 height=400
-src="ahaluska_files/image024.png"
+src="ahaluska_files/image015.png"
 alt="A red and silver object on a white surface&#10;&#10;Description automatically generated"
 v:shapes="Picture_x0020_10"><![endif]></span><span style='mso-ascii-font-family:
 Calibri;mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
@@ -2901,8 +2344,8 @@ mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>The main challenge that I overcame
-this week was learning how to encode and send serial data in python.
+color:black;mso-font-kerning:0pt;mso-ligatures:none'>The main challenge that I
+overcame this week was learning how to encode and send serial data in python.
 Originally, the data that I was sending was being received in the wrong format
 by the STM. This caused the data to not be readable, so I was unable to verify
 that the STM received the correct data. To fix this problem, I had to set the
@@ -3220,9 +2663,9 @@ mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><b><i><span
 style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>PC Transmitting and
-Receiving Data with Python</span></i></b><span style='mso-ascii-font-family:
-Calibri;mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
+color:black;mso-font-kerning:0pt;mso-ligatures:none'>PC Transmitting and Receiving
+Data with Python</span></i></b><span style='mso-ascii-font-family:Calibri;
+mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
 mso-bidi-font-family:Calibri;color:black;mso-font-kerning:0pt;mso-ligatures:
 none'><o:p></o:p></span></p>
 
@@ -3256,8 +2699,8 @@ none'><o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>In addition to my work with
-serial communications, I took dimensions of the score board so I can get
+color:black;mso-font-kerning:0pt;mso-ligatures:none'>In addition to my work
+with serial communications, I took dimensions of the score board so I can get
 started with printing extenders to give the score board more height. This was
 done because the camera that we ordered from Amazon does not view the entire
 table at the score&nbsp;boards&nbsp;current height. By printing extenders, I
@@ -3277,8 +2720,8 @@ mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><b><i><span
 style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>Team Organization and
-Component Acquisition</span></i></b><span style='mso-ascii-font-family:Calibri;
+color:black;mso-font-kerning:0pt;mso-ligatures:none'>Team Organization and Component
+Acquisition</span></i></b><span style='mso-ascii-font-family:Calibri;
 mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
 mso-bidi-font-family:Calibri;color:black;mso-font-kerning:0pt;mso-ligatures:
 none'><o:p></o:p></span></p>
@@ -3329,12 +2772,12 @@ mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='mso-ascii-font-family:Calibri;mso-fareast-font-family:"Times New Roman";
 mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;color:black;
-mso-font-kerning:0pt;mso-ligatures:none;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
- id="Picture_x0020_9" o:spid="_x0000_i1033" type="#_x0000_t75" alt="A screenshot of a computer&#10;&#10;Description automatically generated"
+mso-font-kerning:0pt;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_9"
+ o:spid="_x0000_i1033" type="#_x0000_t75" alt="A screenshot of a computer&#10;&#10;Description automatically generated"
  style='width:553.5pt;height:174.9pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="ahaluska_files/image017.png" o:title="A screenshot of a computer&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=738 height=233
-src="ahaluska_files/image026.png"
+src="ahaluska_files/image017.png"
 alt="A screenshot of a computer&#10;&#10;Description automatically generated"
 v:shapes="Picture_x0020_9"><![endif]></span><span style='mso-ascii-font-family:
 Calibri;mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
@@ -3375,12 +2818,12 @@ mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='mso-ascii-font-family:Calibri;mso-fareast-font-family:"Times New Roman";
 mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;color:black;
-mso-font-kerning:0pt;mso-ligatures:none;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
- id="Picture_x0020_8" o:spid="_x0000_i1032" type="#_x0000_t75" alt="A screenshot of a computer&#10;&#10;Description automatically generated"
+mso-font-kerning:0pt;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_8"
+ o:spid="_x0000_i1032" type="#_x0000_t75" alt="A screenshot of a computer&#10;&#10;Description automatically generated"
  style='width:435.6pt;height:4in;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="ahaluska_files/image019.png" o:title="A screenshot of a computer&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=581 height=384
-src="ahaluska_files/image028.png"
+src="ahaluska_files/image019.png"
 alt="A screenshot of a computer&#10;&#10;Description automatically generated"
 v:shapes="Picture_x0020_8"><![endif]></span><span style='mso-ascii-font-family:
 Calibri;mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
@@ -3430,16 +2873,15 @@ none'><o:p></o:p></span></p>
 style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
 color:black;mso-font-kerning:0pt;mso-ligatures:none'>I have not yet verified
 that my python script successfully writes to the specified port given the
-inability to use&nbsp;RealTerm&nbsp;or&nbsp;TeraTerm&nbsp;in parallel with running
-my python script. Whenever I tried using either of the apps while my script
-was&nbsp;ran, I was unable to open the COM port given that it was being used in
-a different application. I plan to spend more time working on this task
-throughout the coming week. I also plan to&nbsp;look
-into&nbsp;using&nbsp;PyUSB,&nbsp;LibUSB, or&nbsp;infi&nbsp;in supporting this
-task. This task supports progress with PSDR #2.</span><span style='mso-ascii-font-family:
-Calibri;mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
-mso-bidi-font-family:Calibri;color:black;mso-font-kerning:0pt;mso-ligatures:
-none'><o:p></o:p></span></p>
+inability to use&nbsp;RealTerm&nbsp;or&nbsp;TeraTerm&nbsp;in parallel with
+running my python script. Whenever I tried using either of the apps while my
+script was&nbsp;ran, I was unable to open the COM port given that it was being
+used in a different application. I plan to spend more time working on this task
+throughout the coming week. I also plan to&nbsp;look into&nbsp;using&nbsp;PyUSB,&nbsp;LibUSB,
+or&nbsp;infi&nbsp;in supporting this task. This task supports progress with
+PSDR #2.</span><span style='mso-ascii-font-family:Calibri;mso-fareast-font-family:
+"Times New Roman";mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;
+color:black;mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
@@ -3486,16 +2928,16 @@ mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
 style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
 color:black;mso-font-kerning:0pt;mso-ligatures:none'>I spent&nbsp;the&nbsp;most
 time working on transmitting and receiving serial data over UART with the
-STM32, and I learned the most in this process.&nbsp;In particular,
-I&nbsp;learned how to use and optimize the use of STM32Cubes IDE. I had a
-little bit of experience with this IDE from my job this&nbsp;summer,
-but&nbsp;levered this&nbsp;weeks&nbsp;work to familiarize myself with it more.
-I also learned how to use different serial data programs such as those
-described above. While I had a little bit of experience with&nbsp;TeraTerm, I
-found a lot of value in using&nbsp;RealTerm&nbsp;to validate my work.</span><span
-style='mso-ascii-font-family:Calibri;mso-fareast-font-family:"Times New Roman";
-mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;color:black;
-mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
+STM32, and I learned the most in this process.&nbsp;In particular, I&nbsp;learned
+how to use and optimize the use of STM32Cubes IDE. I had a little bit of
+experience with this IDE from my job this&nbsp;summer, but&nbsp;levered
+this&nbsp;weeks&nbsp;work to familiarize myself with it more. I also learned
+how to use different serial data programs such as those described above. While
+I had a little bit of experience with&nbsp;TeraTerm, I found a lot of value in
+using&nbsp;RealTerm&nbsp;to validate my work.</span><span style='mso-ascii-font-family:
+Calibri;mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
+mso-bidi-font-family:Calibri;color:black;mso-font-kerning:0pt;mso-ligatures:
+none'><o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><b><span
 style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
@@ -3518,11 +2960,11 @@ mso-font-kerning:0pt;mso-ligatures:none'>-</span><span style='font-size:7.0pt;
 font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
 color:black;mso-font-kerning:0pt;mso-ligatures:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
 style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>Make progress
-with&nbsp;PySerial&nbsp;to successfully send data to the STM32 from the PC over
-UART.</span><span style='mso-ascii-font-family:Calibri;mso-fareast-font-family:
-"Times New Roman";mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;
-color:black;mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
+color:black;mso-font-kerning:0pt;mso-ligatures:none'>Make progress with&nbsp;PySerial&nbsp;to
+successfully send data to the STM32 from the PC over UART.</span><span
+style='mso-ascii-font-family:Calibri;mso-fareast-font-family:"Times New Roman";
+mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;color:black;
+mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
 margin-left:1.0in;text-indent:-.25in;line-height:normal'><span
@@ -3531,11 +2973,11 @@ color:black;mso-font-kerning:0pt;mso-ligatures:none'>o</span><span
 style='font-size:7.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
 "Times New Roman";color:black;mso-font-kerning:0pt;mso-ligatures:none'>&nbsp;&nbsp;&nbsp;</span><span
 style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>Experiment with other libraries
-and packages to determine most efficient method of sending serial data.</span><span
-style='mso-ascii-font-family:Calibri;mso-fareast-font-family:"Times New Roman";
-mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;color:black;
-mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
+color:black;mso-font-kerning:0pt;mso-ligatures:none'>Experiment with other
+libraries and packages to determine most efficient method of sending serial
+data.</span><span style='mso-ascii-font-family:Calibri;mso-fareast-font-family:
+"Times New Roman";mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;
+color:black;mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
 margin-left:1.0in;text-indent:-.25in;line-height:normal'><span
@@ -3678,7 +3120,7 @@ mso-font-kerning:0pt;mso-ligatures:none'>&nbsp;<o:p></o:p></span></p>
 
 <ol style='margin-top:0in' start=1 type=1>
  <li class=MsoNormal style='color:black;margin-bottom:0in;line-height:normal;
-     mso-list:l2 level1 lfo3;tab-stops:list .5in;vertical-align:baseline'><b><span
+     mso-list:l0 level1 lfo1;tab-stops:list .5in;vertical-align:baseline'><b><span
      style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
      mso-font-kerning:0pt;mso-ligatures:none'>Object Detection and Tracking
      using Computer Vision and OpenCV</span></b><span style='mso-ascii-font-family:
@@ -3690,11 +3132,11 @@ mso-font-kerning:0pt;mso-ligatures:none'>&nbsp;<o:p></o:p></span></p>
 <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
 margin-left:.5in;line-height:normal'><span style='font-family:"Times New Roman",serif;
 mso-fareast-font-family:"Times New Roman";color:black;mso-font-kerning:0pt;
-mso-ligatures:none'>I spent about 11 of the 16 worked hours studying and
-implementing computer vision techniques and strategies.</span><span
-style='mso-ascii-font-family:Calibri;mso-fareast-font-family:"Times New Roman";
-mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;color:black;
-mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
+mso-ligatures:none'>I spent about 11 of the 16 worked hours studying and implementing
+computer vision techniques and strategies.</span><span style='mso-ascii-font-family:
+Calibri;mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
+mso-bidi-font-family:Calibri;color:black;mso-font-kerning:0pt;mso-ligatures:
+none'><o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
@@ -3726,8 +3168,8 @@ air hockey table, I used an&nbsp;</span><span style='mso-ascii-font-family:
 Calibri;mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
 mso-bidi-font-family:Calibri;color:black;mso-font-kerning:0pt;mso-ligatures:
 none'><a href="https://www.youtube.com/watch?v=e_cz4DaimyM"><span
-style='font-family:"Times New Roman",serif;color:#1155CC'>external birds-eye video
-of two people playing air hockey</span></a></span><span style='font-family:
+style='font-family:"Times New Roman",serif;color:#1155CC'>external birds-eye
+video of two people playing air hockey</span></a></span><span style='font-family:
 "Times New Roman",serif;mso-fareast-font-family:"Times New Roman";color:black;
 mso-font-kerning:0pt;mso-ligatures:none'>&nbsp;to test and verify this script.
 The image below is a screenshot of the output of this script, in which the
@@ -3741,12 +3183,12 @@ style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-fareast-font-fam
 "Times New Roman";color:black;mso-font-kerning:0pt;mso-ligatures:none'><br>
 </span><span style='mso-ascii-font-family:Calibri;mso-fareast-font-family:"Times New Roman";
 mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;color:black;
-mso-font-kerning:0pt;mso-ligatures:none;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
- id="Picture_x0020_7" o:spid="_x0000_i1031" type="#_x0000_t75" alt="A hand drawing a circle on a graph paper&#10;&#10;Description automatically generated"
+mso-font-kerning:0pt;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_7"
+ o:spid="_x0000_i1031" type="#_x0000_t75" alt="A hand drawing a circle on a graph paper&#10;&#10;Description automatically generated"
  style='width:319.5pt;height:194.4pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="ahaluska_files/image021.png" o:title="A hand drawing a circle on a graph paper&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=426 height=259
-src="ahaluska_files/image030.png"
+src="ahaluska_files/image021.png"
 alt="A hand drawing a circle on a graph paper&#10;&#10;Description automatically generated"
 v:shapes="Picture_x0020_7"><![endif]></span><span style='mso-ascii-font-family:
 Calibri;mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
@@ -3799,12 +3241,12 @@ none'><o:p></o:p></span></p>
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><i
 style='mso-bidi-font-style:normal'><span style='font-family:"Times New Roman",serif;
 mso-fareast-font-family:"Times New Roman";color:black;mso-font-kerning:0pt;
-mso-ligatures:none;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_6"
- o:spid="_x0000_i1030" type="#_x0000_t75" alt="A black background with white circles&#10;&#10;Description automatically generated with medium confidence"
+mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_6" o:spid="_x0000_i1030"
+ type="#_x0000_t75" alt="A black background with white circles&#10;&#10;Description automatically generated with medium confidence"
  style='width:295.2pt;height:151.5pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="ahaluska_files/image023.png" o:title="A black background with white circles&#10;&#10;Description automatically generated with medium confidence"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=394 height=202
-src="ahaluska_files/image032.png"
+src="ahaluska_files/image023.png"
 alt="A black background with white circles&#10;&#10;Description automatically generated with medium confidence"
 v:shapes="Picture_x0020_6"><![endif]></span></i><i><span style='font-family:
 "Times New Roman",serif;mso-fareast-font-family:"Times New Roman";color:black;
@@ -3839,9 +3281,9 @@ mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
 <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
 margin-left:.5in;line-height:normal'><span style='font-family:"Times New Roman",serif;
 mso-fareast-font-family:"Times New Roman";color:black;mso-font-kerning:0pt;
-mso-ligatures:none'>For the most part, this technique was successful in detecting
-a hockey puck at high speed. However, because the technique involves searching
-for objects in motion, I encountered the problem of not recognizing
+mso-ligatures:none'>For the most part, this technique was successful in
+detecting a hockey puck at high speed. However, because the technique involves
+searching for objects in motion, I encountered the problem of not recognizing
 the&nbsp;puck&nbsp;if it is at a stop. Below is a frame in which the hockey
 puck was not moving according to its last relative position, in which the
 script does not recognize the hockey puck.&nbsp;&nbsp;</span><span
@@ -3860,12 +3302,12 @@ mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
 <p class=MsoNormal style='margin-bottom:12.0pt;line-height:normal'><span
 style='mso-ascii-font-family:Calibri;mso-fareast-font-family:"Times New Roman";
 mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;color:black;
-mso-font-kerning:0pt;mso-ligatures:none;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
- id="Picture_x0020_5" o:spid="_x0000_i1029" type="#_x0000_t75" alt="A close up of a game&#10;&#10;Description automatically generated"
+mso-font-kerning:0pt;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_5"
+ o:spid="_x0000_i1029" type="#_x0000_t75" alt="A close up of a game&#10;&#10;Description automatically generated"
  style='width:300pt;height:186.9pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="ahaluska_files/image025.png" o:title="A close up of a game&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=400 height=249
-src="ahaluska_files/image034.png"
+src="ahaluska_files/image025.png"
 alt="A close up of a game&#10;&#10;Description automatically generated" v:shapes="Picture_x0020_5"><![endif]></span><span
 style='mso-ascii-font-family:Calibri;mso-fareast-font-family:"Times New Roman";
 mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;color:black;
@@ -3903,12 +3345,12 @@ style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-fareast-font-fam
 <br>
 </span><span style='mso-ascii-font-family:Calibri;mso-fareast-font-family:"Times New Roman";
 mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;color:black;
-mso-font-kerning:0pt;mso-ligatures:none;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
- id="Picture_x0020_4" o:spid="_x0000_i1028" type="#_x0000_t75" alt="A red circle on a white surface with Ice hockey rink in the background&#10;&#10;Description automatically generated"
+mso-font-kerning:0pt;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_4"
+ o:spid="_x0000_i1028" type="#_x0000_t75" alt="A red circle on a white surface with Ice hockey rink in the background&#10;&#10;Description automatically generated"
  style='width:296.4pt;height:179.4pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="ahaluska_files/image027.png" o:title="A red circle on a white surface with Ice hockey rink in the background&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=395 height=239
-src="ahaluska_files/image035.png"
+src="ahaluska_files/image027.png"
 alt="A red circle on a white surface with Ice hockey rink in the background&#10;&#10;Description automatically generated"
 v:shapes="Picture_x0020_4"><![endif]></span><span style='mso-ascii-font-family:
 Calibri;mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
@@ -3960,12 +3402,12 @@ color:black;mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='mso-ascii-font-family:Calibri;mso-fareast-font-family:"Times New Roman";
 mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;color:black;
-mso-font-kerning:0pt;mso-ligatures:none;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
- id="Picture_x0020_3" o:spid="_x0000_i1027" type="#_x0000_t75" alt="A person playing a hockey game&#10;&#10;Description automatically generated"
+mso-font-kerning:0pt;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_3"
+ o:spid="_x0000_i1027" type="#_x0000_t75" alt="A person playing a hockey game&#10;&#10;Description automatically generated"
  style='width:309pt;height:160.2pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="ahaluska_files/image029.png" o:title="A person playing a hockey game&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=412 height=214
-src="ahaluska_files/image036.png"
+src="ahaluska_files/image029.png"
 alt="A person playing a hockey game&#10;&#10;Description automatically generated"
 v:shapes="Picture_x0020_3"><![endif]></span><span style='mso-ascii-font-family:
 Calibri;mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
@@ -4015,20 +3457,20 @@ none'><o:p></o:p></span></p>
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='mso-ascii-font-family:Calibri;mso-fareast-font-family:"Times New Roman";
 mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;color:black;
-mso-font-kerning:0pt;mso-ligatures:none;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
- id="Picture_x0020_2" o:spid="_x0000_i1026" type="#_x0000_t75" style='width:455.7pt;
- height:42.9pt;visibility:visible;mso-wrap-style:square'>
+mso-font-kerning:0pt;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_2"
+ o:spid="_x0000_i1026" type="#_x0000_t75" style='width:455.7pt;height:42.9pt;
+ visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="ahaluska_files/image031.png" o:title=""/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=608 height=57
-src="ahaluska_files/image037.png" v:shapes="Picture_x0020_2"><![endif]></span><span
+src="ahaluska_files/image031.png" v:shapes="Picture_x0020_2"><![endif]></span><span
 style='mso-ascii-font-family:Calibri;mso-fareast-font-family:"Times New Roman";
 mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;color:black;
 mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;text-indent:.5in;line-height:normal'><i><span
 style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-font-kerning:0pt;mso-ligatures:none'>Creating a Video Object with
-Recorded Video vs. Live Webcam Footage</span></i><span style='mso-ascii-font-family:
+color:black;mso-font-kerning:0pt;mso-ligatures:none'>Creating a Video Object
+with Recorded Video vs. Live Webcam Footage</span></i><span style='mso-ascii-font-family:
 Calibri;mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
 mso-bidi-font-family:Calibri;color:black;mso-font-kerning:0pt;mso-ligatures:
 none'><o:p></o:p></span></p>
@@ -4076,8 +3518,8 @@ selected table as it is large enough to allow for ample time in between puck
 attacks. Additionally, it will cost our team around $100 of our budget. I
 contacted the seller on Facebook Marketplace and arranged a time to purchase
 the table. I drove myself and John to Lafayette to confirm the tables
-functionality. The table is expected to be delivered by early next week. This
-work helps our team progress with physical prototyping.&nbsp;</span><span
+functionality. The table is expected to be delivered by early next week. This work
+helps our team progress with physical prototyping.&nbsp;</span><span
 style='mso-ascii-font-family:Calibri;mso-fareast-font-family:"Times New Roman";
 mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;color:black;
 mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
@@ -4085,12 +3527,12 @@ mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='mso-ascii-font-family:Calibri;mso-fareast-font-family:"Times New Roman";
 mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;color:black;
-mso-font-kerning:0pt;mso-ligatures:none;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
- id="Picture_x0020_1" o:spid="_x0000_i1025" type="#_x0000_t75" alt="A air hockey table in a garage&#10;&#10;Description automatically generated"
+mso-font-kerning:0pt;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_1"
+ o:spid="_x0000_i1025" type="#_x0000_t75" alt="A air hockey table in a garage&#10;&#10;Description automatically generated"
  style='width:159pt;height:219pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="ahaluska_files/image033.png" o:title="A air hockey table in a garage&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=212 height=292
-src="ahaluska_files/image038.png"
+src="ahaluska_files/image033.png"
 alt="A air hockey table in a garage&#10;&#10;Description automatically generated"
 v:shapes="Picture_x0020_1"><![endif]></span><span style='mso-ascii-font-family:
 Calibri;mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
@@ -4114,13 +3556,12 @@ mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
 <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
 margin-left:.5in;line-height:normal'><span style='font-family:"Times New Roman",serif;
 mso-fareast-font-family:"Times New Roman";color:black;mso-font-kerning:0pt;
-mso-ligatures:none'>In addition to this, I spent time researching potential cameras
-to be used for computer vision. With the goals of our project in mind, I
-decided to contribute the following camera choices to
-the&nbsp;teams&nbsp;options:</span><span style='mso-ascii-font-family:Calibri;
-mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
-mso-bidi-font-family:Calibri;color:black;mso-font-kerning:0pt;mso-ligatures:
-none'><o:p></o:p></span></p>
+mso-ligatures:none'>In addition to this, I spent time researching potential
+cameras to be used for computer vision. With the goals of our project in mind,
+I decided to contribute the following camera choices to the&nbsp;teams&nbsp;options:</span><span
+style='mso-ascii-font-family:Calibri;mso-fareast-font-family:"Times New Roman";
+mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;color:black;
+mso-font-kerning:0pt;mso-ligatures:none'><o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
 style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
