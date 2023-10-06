@@ -53,6 +53,44 @@ contact course staff.
 		<div id="content">
             <h2>Progress Report for Joey Collins</h2>
 
+            <h4>Week 7:</h4>
+            <b>Date:</b> 10/06/2023<br>
+            <b>Total Hours:</b> 8<br>
+            <b>Cumulative Hours:</b> 56<br>
+            <b>Description of Project Design Efforts:</b><br>
+            This week, I made the switch to live video analysis. Most of my time was spent fixing bugs that manifested due to the switch between the pre-recorded video and live video.<br><br>
+
+            <b>Color Matching</b><br>
+            One of the seemingly simple tasks this week ended up being on of the more time consuming tasks for me. In the software that I had written for the pre-recorded video, the puck is found using color detection. I had to set a range of color in the Hue, Saturation, Value (HSV) scale that the puck could be found in. This was quite easy because the puck 
+            was a vibrant red color and the lighting in the video was fairly constant so it did not change appearance much. However, after making the switch to live video I found that finding the range for our green puck to be quite difficult. Part of the problem came from my lack of understanding of how the HSV color scale actually works, so some of the testing was just guessing 
+            and checking. I also tried making use of a <a href="https://redketchup.io/color-picker">color picker</a> online. However, this did not work as well as I would have like as the software was still losing the puck quite frequently. I used the value that I got from the color picking website as a starting point and continued my guess and check method. It took several hours of testing until I was able to find a range that 
+            consistently matched the puck. Shown below is an image of the green puck being detected in the lab. <br><br>
+
+            <img src="Team\progress\colli384_files\live pic.png" width="530" height="310"><br>
+            <i>Green Puck Detection</i><br><br>
+
+            <b>Adjustments for Live Video</b><br>
+            After I was able to find the correct color range to find the puck, I decided to run my software that I developed for the pre-recorded video without changes on the live feed. Before I could do this, I had to mount the camera to the top of the table. To do this, I reattached the scoreboard that came with the table. This scoreboard conveniently sits right above the center of 
+            the table, so I was able to leave it there and connect the camera to it using zip ties. Unfortunately, I have the camera 90 degrees from the position it needs to be in to view the whole table, so I was working with a weird angle this week. Once the camera was in place, I went ahead and ran my software with the new color range. This is shown below. <br><br>
+
+            <video autoplay muted loop width="530" height="310"><source src="Team\progress\colli384_files\initial live.mp4" type="video/mp4"></video><br>
+            <i>Live Video with Initial Parameters</i><br>
+
+            I knew prior to this initial testing that the output would be far from what we wanted. The main problem that I needed to account for was the position of the walls within the video. Like I have said previously, I want to put certain colored stickers on the corners of the table that will indicate 
+            the positions and update over time in case the table moves between frames. For now, I am hard-coding the position of the walls in the new video. Due to the camera being oriented incorrectly, I also had to improvise and assume that the right side of the frame was the goal, but it was actually just a wall. This is fine for now, but 
+            I will have to adjust the camera soon to start working with the real situation. After fixing the wall locations, I started testing again. This time, the intersection locations of the puck seemed to be much more accurate and I was able to actually see the predictions being made, which were correct for the most part. However, it seemed to twitch more than I would 
+            like, so I adjusted some of the parameters for the number of frames in the history of previous intersections and the pixel tolerance for notifying about a new instance of the potential for a goal. This seemed to clean up some of the noise. Shown below is some live feed that was captured to demonstrate the software working with the right side of the table acting as the robot goal.<br><br>
+
+            
+            <video autoplay muted loop width="530" height="310"><source src="Team\progress\colli384_files\Live Feed.mp4" type="video/mp4"></video><br>
+            <i>Live Video with Updated Parameters</i><br>
+
+            I was quite happy to see that the transition from pre-recorded video to live video was not as horrific as I had thought. There is still a lot of cleaning up that needs to be done to allow for smooth motor movement, but I think the software is on the right track. 
+            This week I learned that we will definitely need to spend time perfecting the parameters and probably add some more algorithms that can lessen the amount of times the motors have to move the robot mallet. Looking forward, I would like to get the stickers to mark the end of the table and I would also like to 
+            get some kind of sticker that will indicate where exactly the mallet is located on the table so I can start to track both mallet and puck position at the same time. This will be useful because I will be able to send the microcontroller information about exactly the mallet needs to move, not where it needs to move to. This will decrease 
+            the amount of processing that the microcontroller needs to do, allowing for lower latency.<br><br>
+
+
             <h4>Week 6:</h4>
             <b>Date:</b> 09/29/2023<br>
             <b>Total Hours:</b> 8<br>
@@ -80,7 +118,7 @@ contact course staff.
             to optimize the puck detection process. I may have to spend many hours in the future doing some calibration once we move to a live feed.<br><br>
             
             I did not do any testing with live video this week because work is still being done on the table for the mechanical components. I hope that next week, we will be able to mount the camera at the top of the table to start testing live video. If this is not possible, 
-            I plan to begin developing a plan on the exact data to send to the microcontroller to move the motors. Unfortunately, this will require knowledge of where the robot mallet is located. In live feed, I was planning on doing this using color differentiation, but in the pre-recorded video the puck and mallets are the same color. I would have to write the code without being able to test it.
+            I plan to begin developing a plan on the exact data to send to the microcontroller to move the motors. Unfortunately, this will require knowledge of where the robot mallet is located. In live feed, I was planning on doing this using color differentiation, but in the pre-recorded video the puck and mallets are the same color. I would have to write the code without being able to test it.<br><br>
 
 
             <h4>Week 5:</h4>
