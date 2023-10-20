@@ -53,6 +53,46 @@ contact course staff.
 		<div id="content">
             <h2>Progress Report for Joey Collins</h2>
 
+            <h4>Weeks 8-9:</h4>
+            <b>Date:</b> 10/20/2023<br>
+            <b>Total Hours:</b> 14<br>
+            <b>Cumulative Hours:</b> 70<br>
+            <b>Description of Project Design Efforts:</b><br>
+            In week 8, a significant amount of time was dedicated to the Midterm Design Review Presentation. In week 9, I focused on working more on software. Specifically, I worked on some serial communication foundations with Abby and I developed a way to calibrate the color range for the 
+            puck in the scenario that the lighting or puck color changes.<br><br>
+
+            <b>Midterm Design Review Presentation</b><br>
+            As stated previously, the majority of week 8 was dedicated to the creation and fine-tuning of the presentation. I was in charge of the software development status section and the
+            project timeline section. For the software development status section, I created two charts to demonstrate the individual components of the software. The first chart covered the software that will be running on the PC. This included sub-components for visual analysis and data transfer. The other chart 
+            was dedicated to the software that will be running on the microcontroller. This chart included sub-components for output control, PC interfacing, and sensor interfacing. I also took the liberty of including videos to give a visual of the computer vision software that I have been working on. I think this helped give the reviewers a better understanding 
+            of what I was explaining. The other section that I covered was the project timeline information. This was not a very difficult task, as everyone is quite aware of the strict timeline that we are currently working with. I decided to use a Gantt chart to represent the components that we are working on and when we hope to have them completed. Overall, the presentation went fairly well. I think that we struggled 
+            a little bit with timing, but I am not too upset with that as we had a lot of information to cover with a project this involved.<br><br>
+
+            <b>Puck Dependent Motor Manipulation</b><br>
+            One of the more exciting components of the project that I worked on in week 9 dealt with controlling the motors based on information coming from the computer vision software. To do this, 
+            I worked closely with Abby and her data serialization software. This software is able to take data and convert it into a format that can be sent and received via UART. This is how we will be sending the data from the PC to the microcontroller. 
+            In order to begin working on this basic integration, I altered the software to provide a displacement. Every time the motor is requested to be at a new location, that location is cached. Upon the next request, the distance between the new request and the previous request is calculated and returned. This is the displacement that is being used in this example. 
+            Once a displacement is found, the data is serialized and sent to the microcontroller. To check to make sure the data can be translated into instructions for the motors, Abby and I decided to manipulate the direction of the motor spin based upon the sign of the displacement. For example, 
+            a positive displacement would result in clockwise spin, and a negative displacement would result in counter-clockwise spin. We did not work with any varying speeds or steps because at this point we only wanted to ensure that we were able to get data from the PC to the motors with no problems. Shown below is a video demonstrating this testing.<br><br>
+
+            <video autoplay muted loop width="530" height="310"><source src="Team\progress\ahaluska_files\IMG_1442.mp4" type="video/mp4"></video><br>
+            <i>Motor Control using Puck Data</i><br><br>
+
+            One of the disappointing parts of this testing was finding that the motor could not switch direction as frequently as the data was being sent. We were working with an older motor because our new motors were in the machine shop at that time. The hope is that the new motors are able to handle these frequencies better. If not, I will have to work more on smoothing out the detections 
+            and being more careful with how often I update the preferred mallet location. Going forward, I will keep this in mind as I continue writing code for the motors.<br><br>
+
+            <b>Color Calibration</b><br>
+            The other problem that I concentrated on this week was finding a way to determine the puck color without hard coding it in prior to runtime. This was necessary because of the fact that 
+            lighting plays such a large role in how the camera picks up the color of the puck. If the table were to be in a different location than the lab, the range for green that we had established would be completely useless. For example, 
+            when the table is transported to MSEE for the SPARK challenge, the lighting would be completely different and the puck would most likely not be found in the range that had been determined previously. To combat this, 
+            I have written a script that locates the center of the table (where the puck should be placed during initialization) and calculates an appropriate HSV color range for the color that appears in the middle of the table. I originally thought that I may have to implement some sort of color correction like the method found on <a href="https://pyimagesearch.com/2021/02/15/automatic-color-correction-with-opencv-and-python/">pyimagesearch</a>, but I did not have a persistent need for color correction. I 
+            just needed a one-time calculation for a color range.<br><br>
+            Looking forward, I would like to continue fine-tuning the data that we are sending out so hopefully we can send data less frequently. This will need to be done in conjunction with the implementation of mallet tracking as well, which I hope to start very soon.
+
+
+
+            <br><br>
+
             <h4>Week 7:</h4>
             <b>Date:</b> 10/06/2023<br>
             <b>Total Hours:</b> 8<br>
