@@ -60,6 +60,134 @@ div.WordSection1
 
 <div class=WordSection1>
 
+<p class=MsoNormal><b><u>Week 8-9 Progress Report</u></b></p>
+
+<p class=MsoNormal><b>Date:</b> 10/1-10/8/2023</p>
+
+<p class=MsoNormal><b>Total Hours:</b> 30</p>
+
+<p class=MsoNormal><b>Description of Design Efforts</b></p>
+
+<p class=MsoNormal>These two weeks were focused on finishing the PCB, presenting
+for the midterm design review, and finalizing the design for the mechanical
+systems. </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>PCB</b> – 20 hours</p>
+
+<p class=MsoNormal>After roughly 18 hours of work over week 8 and 9 the PCB
+went from the image in week 7 to this:</p>
+
+<p class=MsoNormal><img width=393 height=332 src="mccutchc_files/image001.png"
+alt="A circuit board with many wires and dots&#10;&#10;Description automatically generated"></p>
+
+<p class=MsoNormal>Upon writing this, the PCB design has been submitted to JLCPCB
+for manufacturing. </p>
+
+<p class=MsoNormal>Furthermore, the schematic landed on this: </p>
+
+<p class=MsoNormal><img width=431 height=299 src="mccutchc_files/image002.png"
+alt="A diagram of a computer&#10;&#10;Description automatically generated"></p>
+
+<p class=MsoNormal>Notable changes to this include the level translation for
+the SPI driver in the bottom left and the change to an F231-R USB to UART
+converter in the top right. </p>
+
+<p class=MsoNormal><b>Midterm design review </b>(5 hours)</p>
+
+<p class=MsoNormal>Spent roughly 5 hours in preparation of and partaking in the
+midterm presentations. Not a huge amount to say about this. All suggested
+changes to the PCB made by the course staff and other students were integrated
+into the design above. </p>
+
+<p class=MsoNormal><b>Mechanical Design/Fabrication </b>(5 hours)</p>
+
+<p class=MsoNormal>Spent roughly 5 hours designing and fabricating the initial stages
+of the gantry system. Currently this is the CAD model of the gantry system
+(without belts): <img width=513 height=321 src="mccutchc_files/image003.png"
+alt="A blue rectangular object with a yellow square object on it&#10;&#10;Description automatically generated"></p>
+
+<p class=MsoNormal>The belt anchor points on the corners have also been
+fabricated and re-attached to the table. </p>
+
+<b><u><span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span></u></b>
+
+<p class=MsoNormal><b><u><span style='text-decoration:none'>&nbsp;</span></u></b></p>
+
+<p class=MsoNormal><b><u>Week 7 Progress Report</u></b></p>
+
+<p class=MsoNormal><b>Date:</b> 10/1-10/8/2023</p>
+
+<p class=MsoNormal><b>Total Hours:</b> 15</p>
+
+<p class=MsoNormal><b>Description of Design Efforts</b></p>
+
+<p class=MsoNormal>This week was focused on the mechanical and PCB design
+elements of the project. Specifically for the mechanical design, this week was
+devoted to the design of the gantry system for the newly delivered linear rail
+bearings. </p>
+
+<p class=MsoNormal><b>PCB Design (12 hours)</b></p>
+
+<p class=MsoNormal>Schematic Redesign (5 hours)</p>
+
+<p class=MsoNormal>Among other things, this week necessitated some revisions to
+the schematic before moving into the layout portion of the system.
+Specifically, I made the change to a single IC for the level translation and
+away from the individual FET’s. The research for this ended up being much less
+straightforward than I expected. After 2 trips to the ECE shop to look at their
+box of loose IC’s (almost took a picture to attach here) I wasn’t able to find
+any surface mount packages that were readily available there. Unfortunately,
+this meant I had to search for a hand-solderable component online. Most 8
+channel level translators are only available in QFN and other no-lead packages.
+After roughly 2 hours of research trying to find an active component with an accessible
+KiCad footprint, I settled on the SN74AVC8T245 (which has a TSSOP 24 package).</p>
+
+<p class=MsoNormal>Additionally, I added some connectors to the gantry limit
+switches and IR sensors. </p>
+
+<p class=MsoNormal><img width=526 height=366 src="mccutchc_files/image004.png"
+alt="A computer screen shot of a computer&#10;&#10;Description automatically generated"></p>
+
+<p class=MsoNormal>PCB Layout (7 hours)</p>
+
+<p class=MsoNormal>Having done the (hopefully) final revisions to the schematic.
+I began the PCB layout with the known static components. Note that I have hidden
+the filled layers, but the front plane is 3.3V and the back is common ground. </p>
+
+<p class=MsoNormal><img width=624 height=514 src="mccutchc_files/image005.png"
+alt="A computer screen shot of a computer&#10;&#10;Description automatically generated"></p>
+
+<p class=MsoNormal>Pictured here are the STM32, the USB-&gt;UART converter, the
+barrel connector, and the micro-usb jack. </p>
+
+<p class=MsoNormal><b>Mechanical design (3 hours)</b></p>
+
+<p class=MsoNormal>With the linear rails delivered from Amazon, I began the gantry
+design process with Chuck. Started by modelling the linear rails in CAD and the
+grooves they will sit in on the table edges. </p>
+
+<p class=MsoNormal>Most of the time spent here was the back and forth with
+Chuck and others in the machine shop about the other work they are doing on the
+corner pieces.  </p>
+
+<p class=MsoNormal><img width=405 height=352 src="mccutchc_files/image006.png"
+alt="A blue metal rod with a black square&#10;&#10;Description automatically generated with medium confidence"></p>
+
+<p class=MsoNormal><img width=383 height=324 src="mccutchc_files/image007.png"
+alt="A blue long metal object with a square hole&#10;&#10;Description automatically generated with medium confidence"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<b><u><span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span></u></b>
+
+<p class=MsoNormal><b><u><span style='text-decoration:none'>&nbsp;</span></u></b></p>
+
 <p class=MsoNormal><b><u>Week 6 Progress Report</u></b></p>
 
 <p class=MsoNormal><b>Date:</b> 9/25-10/1/2023</p>
@@ -68,21 +196,21 @@ div.WordSection1
 
 <p class=MsoNormal><b>Description of Design Efforts</b></p>
 
-<p class=MsoNormal>This week was very light due to midterms and other elements outside
-of this class that I had to take care of. Other than some mechanical design,
-this week had no large time expenditure for design elements. </p>
+<p class=MsoNormal>This week was very light due to midterms and other elements
+outside of this class that I had to take care of. Other than some mechanical
+design, this week had no large time expenditure for design elements. </p>
 
 <p class=MsoNormal><b>Mechanical design and motor mounting</b></p>
 
 <p class=MsoNormal>5 of the 6 hours I had to spend on 477 this week were
-devoted to getting the pulley system operational. This meant drilling and cutting
-holes to accommodate the motor mountings done last week. These holes needed to
-be cut through the surface of the table (but under the silver edging). Unfortunately
-for me, the 85-degree angle of the sides of the table meant that channels
-needed to be carved out in addition to the holes drilled in the surface. Carving
-these channels took a significant amount of work (once again, destroying my
-forearms) to remove enough material with a chisel without compromising the
-integrity of the already weak particle board siding. </p>
+devoted to getting the pulley system operational. This meant drilling and
+cutting holes to accommodate the motor mountings done last week. These holes
+needed to be cut through the surface of the table (but under the silver
+edging). Unfortunately for me, the 85-degree angle of the sides of the table
+meant that channels needed to be carved out in addition to the holes drilled in
+the surface. Carving these channels took a significant amount of work (once
+again, destroying my forearms) to remove enough material with a chisel without
+compromising the integrity of the already weak particle board siding. </p>
 
 <p class=MsoNormal>In addition to getting the motors fully mounted on the side
 of the table, the corner connections for the pulley system needed to be drilled
@@ -92,11 +220,11 @@ strength to support the tension of the system. Ultimately, we ended up carving
 a channel for a large-bore (10mm) steel screw into the corners of the table.
 This bore was, of course, much too large for the inner diameter of the idler
 pulley, so we sunk a threaded hole into the middle of the large-bore screw.
-Unfortunately, upon writing this the machine shop still has these components due
-to a mis-drilling of the corner holes. A picture will be included for reference
-in the week 7 report. </p>
+Unfortunately, upon writing this the machine shop still has these components
+due to a mis-drilling of the corner holes. A picture will be included for
+reference in the week 7 report. </p>
 
-<p class=MsoNormal><img width=469 height=265 src="mccutchc_files/image001.jpg"
+<p class=MsoNormal><img width=469 height=265 src="mccutchc_files/image008.jpg"
 alt="H-bot simulation - Kangaroo - McNeel Forum"></p>
 
 <p class=MsoNormal><b>PCB design work</b></p>
@@ -106,7 +234,7 @@ erroneous elements of the PCB along with taking the suggestions professor made
 in lab. Top level perspective of the schematic looks relatively unchanged. But
 I will include it here despite that. </p>
 
-<p class=MsoNormal><img width=624 height=434 src="mccutchc_files/image002.png"
+<p class=MsoNormal><img width=624 height=434 src="mccutchc_files/image009.png"
 alt="A screenshot of a computer&#10;&#10;Description automatically generated"></p>
 
 <p class=MsoNormal>&nbsp;</p>
@@ -142,10 +270,10 @@ material will need to be removed from the table to accommodate this system. Belo
 is a drawing of the bracket system along with an image of what it will look
 like when mounted on the table edging. </p>
 
-<p class=MsoNormal><img width=267 height=242 src="mccutchc_files/image003.png"
+<p class=MsoNormal><img width=267 height=242 src="mccutchc_files/image010.png"
 alt="A grey metal piece with holes&#10;&#10;Description automatically generated with medium confidence"></p>
 
-<p class=MsoNormal><img width=260 height=227 src="mccutchc_files/image004.png"
+<p class=MsoNormal><img width=260 height=227 src="mccutchc_files/image011.png"
 alt="A blue object with a hole in the middle&#10;&#10;Description automatically generated"></p>
 
 <p class=MsoNormal>Where the bracket is in white, the edging is in blue, and
@@ -160,11 +288,11 @@ dimensions and constraints in mind. As of Friday afternoon when I am writing
 this, holes have been drilled in one side of the table edging and will
 hopefully be ready for pickup and remounting on Monday. </p>
 
-<p class=MsoNormal><img width=218 height=290 src="mccutchc_files/image005.jpg"
+<p class=MsoNormal><img width=218 height=290 src="mccutchc_files/image012.jpg"
 alt=Image></p>
 
 <p class=MsoNormal><img width=214 height=285 id="Picture 2"
-src="mccutchc_files/image006.jpg" alt=Image></p>
+src="mccutchc_files/image013.jpg" alt=Image></p>
 
 <p class=MsoNormal>Once again, I spent ~2 hours under the table unscrewing the
 siding. All 64 screws are now removed from the underside of the table. </p>
@@ -180,7 +308,7 @@ they cannot source enough current fast enough. We will most likely be using the
 DM13A or doing a transistor network to increase the current capacity of these
 systems. As such, the PCB currently sits in the following state. </p>
 
-<p class=MsoNormal><img width=625 height=278 src="mccutchc_files/image007.png"
+<p class=MsoNormal><img width=625 height=278 src="mccutchc_files/image014.png"
 alt="A computer graphics with numbers and lines&#10;&#10;Description automatically generated with medium confidence"></p>
 
 <p class=MsoNormal>&nbsp;</p>
@@ -206,12 +334,12 @@ reserved to accomplish this. </p>
 
 <p class=MsoNormal><b>PC to Microcontroller (USB to UART) (4 hours)</b></p>
 
-<p class=MsoNormal>Per Abby’s request, the PC would hopefully use the easily accessible
-USB ports on the side of whatever computer we end up going with (PowerPC?
-Powerful PC? Much debate on what we should call it). Abby seems to already have
-the data transfer set up using USB, and John had mentioned that he was using
-UART for another subsystem on the microcontroller so hopefully we can proto
-before finalizing the PCB. </p>
+<p class=MsoNormal>Per Abby’s request, the PC would hopefully use the easily
+accessible USB ports on the side of whatever computer we end up going with
+(PowerPC? Powerful PC? Much debate on what we should call it). Abby seems to
+already have the data transfer set up using USB, and John had mentioned that he
+was using UART for another subsystem on the microcontroller so hopefully we can
+proto before finalizing the PCB. </p>
 
 <p class=MsoNormal>All that to say, it fell on me to research and layout the
 USB <span style='font-family:Wingdings'>à</span> UART translator. My initial
@@ -229,7 +357,7 @@ hooked it up into the current iteration of the PCB schematic. Note that I’ve
 also added the JTAG programmer connection in the bottom right. </p>
 
 <p class=MsoNormal><img border=0 width=624 height=337
-src="mccutchc_files/image008.png"
+src="mccutchc_files/image015.png"
 alt="A diagram of a circuit board&#10;&#10;Description automatically generated"></p>
 
 <p class=MsoNormal>&nbsp;</p>
@@ -253,11 +381,11 @@ For the control of this, we will therefore be exploiting persistence of vision t
 briefly turn each display on in sequence in the required pattern for score
 display. </p>
 
-<p class=MsoNormal>To accomplish this, I have drawn up a simple SPI/shift register
-interface for the microcontroller. </p>
+<p class=MsoNormal>To accomplish this, I have drawn up a simple SPI/shift
+register interface for the microcontroller. </p>
 
 <p class=MsoNormal><img border=0 width=624 height=377
-src="mccutchc_files/image009.png"
+src="mccutchc_files/image016.png"
 alt="A screenshot of a computer&#10;&#10;Description automatically generated"></p>
 
 <p class=MsoNormal>Note that there will be an inverter after the display
@@ -280,7 +408,8 @@ spent roughly 3 hours on that over the course of the week. </p>
 <p class=MsoNormal>Sources Cited:</p>
 
 <p style='margin-left:28.35pt;text-indent:-28.35pt'>(No date) <i>Wevolver.com</i>.
-Available at: https://www.wevolver.com/article/baud-rates-the-most-common-baud-rates
+Available at:
+https://www.wevolver.com/article/baud-rates-the-most-common-baud-rates
 (Accessed: 15 September 2023). </p>
 
 <span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
@@ -315,7 +444,7 @@ crossings to be done over the play surface, the motors will be mounted near the
 center line of the table. </p>
 
 <p class=MsoNormal><img border=0 width=321 height=199
-src="mccutchc_files/image010.png"
+src="mccutchc_files/image017.png"
 alt="A diagram of a hockey game with Ice hockey rink in the background&#10;&#10;Description automatically generated"></p>
 
 <p class=MsoNormal>Unfortunately for me, that meant removing the siding on the
@@ -325,7 +454,7 @@ table, screws were inaccessible to a drill and had to be done manually. In
 total removing the sideboards took nearly 6 hours and an intense arm workout. </p>
 
 <p class=MsoNormal><img border=0 width=274 height=206
-src="mccutchc_files/image011.jpg"
+src="mccutchc_files/image018.jpg"
 alt="A table with tools on it&#10;&#10;Description automatically generated"></p>
 
 <p class=MsoNormal><b>PCB Progress</b></p>
@@ -344,7 +473,7 @@ slightly incorrectly. F091 seemingly has some issues with the pin length on the
 footprint. Will include in next week’s progress report once fixed. </p>
 
 <p class=MsoNormal><img border=0 width=288 height=332
-src="mccutchc_files/image012.png"
+src="mccutchc_files/image019.png"
 alt="A diagram of a circuit board&#10;&#10;Description automatically generated"></p>
 
 <p class=MsoNormal>&nbsp;</p>
@@ -383,7 +512,7 @@ rather than cables and cable spools. This should increase the XY motion
 accuracy of the system.</p>
 
 <p class=MsoNormal style='page-break-after:avoid'><img border=0 width=252
-height=262 id="Picture 1" src="mccutchc_files/image013.png"
+height=262 id="Picture 1" src="mccutchc_files/image020.png"
 alt="A diagram of a circuit&#10;&#10;Description automatically generated"></p>
 
 <p class=MsoCaption>Figure 1: CoreXY Motion Control Theory</p>
