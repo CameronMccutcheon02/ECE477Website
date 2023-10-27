@@ -53,6 +53,46 @@ contact course staff.
 		<div id="content">
             <h2>Progress Report for Joey Collins</h2>
 
+            <h4>Week 10:</h4>
+            <b>Date:</b> 10/27/2023<br>
+            <b>Total Hours:</b> 8<br>
+            <b>Cumulative Hours:</b> 78<br>
+            <b>Description of Project Design Efforts:</b><br>
+            This week, I worked on a lot of small components of the project. I continued work on the smoothing of the data being sent to the microcontroller and also fixed some bugs that 
+            were found during the testing of color calibration using live video. I also practiced soldering components onto a PCB as Abby and I will be the ones assembling the PCB for the team.<br><br>
+
+            <b>Data Smoothing</b><br>
+            Last week, it was mentioned that it seemed like the computer vision software might be sending too much data too frequently. This was quite apparent when we ran some test code on old motors. The old motors did not have a frequency 
+            high enough to handle the rapid requests being made. In order to fix this problem, I have once again tried working more on sending less data. I am struggling to think of more ways to do this without losing accuracy. This week, I worked more with doing a version of boxcar 
+            averaging the data to be sent so the requested locations are closer together. However, this seems dangerous to me because if we lose the puck and it appears somewhere else very quickly, then the boxcar averaging will take several frames to catch up to this location because 
+            it is averaging it with several other old locations nowhere near the new location. I think this is something that will have to be tested using the actual gantry system in the future in order to more accurately assess the issue. I also think that because the table is so long, we should have more 
+            time than we have in our tests to determine the final location, which could solve some of the problems.<br><br>
+        
+            <b>Color Calibration Bug Fixes</b><br>
+            Last week, I worked on creating a system that will automatically generate a color range for the puck no matter what lighting it is in. To do this, it analyzes the pixels in the middle of the initial 
+            frame and determines an optimal range that those colors fit into. During the creation of this algorithm, I did my testing with a pre-recorded video. When I came into lab to test this software with live video, 
+            it failed. Initially, I was very confused as to why the software was failing to generate a color range that the puck fell into. However, after spending an embarrassing amount of time troubleshooting, I was able to solve the problem. The fix ended up relating to how OpenCV 
+            treats the HSV scale. <a href="https://cvexplained.wordpress.com/2020/04/28/color-detection-hsv/#:~:text=In%20OpenCV%2C%20Hue%20has%20values,255%2C%200%2D255).">These notes</a> did a good job of explaining the HSV scale in OpenCV. I am still not quite sure why the original algorithm I used 
+            worked on pre-recorded video and not live video. The live video is the important aspect, so I am content with how the color calibration software is now. Shown below is a demonstration of the color calibration. In the first half, the initial frame has green, so the green puck can be tracked. In 
+            the second half of the video, the initial frame is a blue puck, so it tracks the blue puck.<br><br>
+
+            <video autoplay muted loop width="530" height="310"><source src="Team\progress\colli384_files\colorCalibration.mp4" type="video/mp4"></video><br>
+            <i>Color Calibration</i><br><br>
+            In the section of the video where the blue puck is being tracked, it can be seen that the blue area on the table is momentarily tracked. This would be a problem if we were to be using a blue puck. However, we chose the color green for the puck 
+            for this reason exactly. We should not have any instances where two objects of the same color are present on the table.<br><br>
+
+            <b>Soldering Practice</b><br>
+            Prior to this week, I had only soldered once in my entire life. This week, I focused on improving my skills in this area because I do not want to mess up any of our components or our PCB. Joe was nice enough to 
+            give me and Abby a very helpful tutorial in soldering quad flat pack components and also in removing solder. We practiced ourselves and the first couple of attempts were not very pretty. However, we did learn what not to do in some situations. We also learned 
+            that when in doubt, use more flux! I am still trying to figure out how quickly and how much pressure I should apply when using the drag technique. I am also not very good at fixing any bridges that I make in the process of soldering. I am going to continue practicing before I 
+            move on to assembling our actual PCB.<br><br>
+
+            Next week, the goal is to have the gantry system mostly assembled upon the table. I hope to begin working with some motor control to determine any kind of limits I should place upon the software. For example, I want to implement some safety features where 
+            if the computer realizes that it is about to send the system beyond where it can physically reach, it cancels that instruction. I think next week will be lots of integration and PCB assembly.<br><br>
+
+
+
+
             <h4>Weeks 8-9:</h4>
             <b>Date:</b> 10/20/2023<br>
             <b>Total Hours:</b> 14<br>
