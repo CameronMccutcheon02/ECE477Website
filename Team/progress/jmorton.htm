@@ -25,15 +25,15 @@ w\:* {behavior:url(#default#VML);}
   <o:Template>Normal</o:Template>
   <o:LastAuthor>Morton, Jonathon Scott</o:LastAuthor>
   <o:Revision>2</o:Revision>
-  <o:TotalTime>10027</o:TotalTime>
-  <o:Created>2023-10-21T01:59:00Z</o:Created>
-  <o:LastSaved>2023-10-21T01:59:00Z</o:LastSaved>
+  <o:TotalTime>1</o:TotalTime>
+  <o:Created>2023-10-28T00:10:00Z</o:Created>
+  <o:LastSaved>2023-10-28T00:10:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
-  <o:Words>3065</o:Words>
-  <o:Characters>17474</o:Characters>
-  <o:Lines>145</o:Lines>
-  <o:Paragraphs>40</o:Paragraphs>
-  <o:CharactersWithSpaces>20499</o:CharactersWithSpaces>
+  <o:Words>3528</o:Words>
+  <o:Characters>20111</o:Characters>
+  <o:Lines>167</o:Lines>
+  <o:Paragraphs>47</o:Paragraphs>
+  <o:CharactersWithSpaces>23592</o:CharactersWithSpaces>
   <o:Version>16.00</o:Version>
  </o:DocumentProperties>
  <o:CustomDocumentProperties>
@@ -798,18 +798,23 @@ word-wrap:break-word'>
 
 <p class=MsoNormal><b>Name: </b>John Morton<b><o:p></o:p></b></p>
 
-<p class=MsoNormal><b>WEEK: </b>9</p>
+<p class=MsoNormal><b>WEEK: </b>10</p>
 
-<p class=MsoNormal><b>Date Reported: </b><span class=GramE>10/20/2023</span><b><o:p></o:p></b></p>
+<p class=MsoNormal><b>Date Reported: </b><span class=GramE>10/27/2023</span><b><o:p></o:p></b></p>
 
-<p class=MsoNormal><b>Project Hours Since Last Report: </b>10<b><o:p></o:p></b></p>
+<p class=MsoNormal><b>Project Hours Since Last Report: </b>12<b><o:p></o:p></b></p>
 
-<p class=MsoNormal><b>Cumulative Semester Project Hours: </b>85</p>
+<p class=MsoNormal><b>Cumulative Semester Project Hours: </b>97</p>
 
-<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
-style='mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
- coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
- filled="f" stroked="f">
+<p class=MsoNormal>This week is going to be focused on rounding out some
+extraneous tasks and continuing on ahead with the mechanical design for the
+gantry system. I plan to tackle the problem of the LED brightness once and for
+all to get that sorted out and get some practice with soldering for when our
+PCBs arrive.</p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
  <v:stroke joinstyle="miter"/>
  <v:formulas>
   <v:f eqn="if lineDrawn pixelLineWidth 0"/>
@@ -827,11 +832,102 @@ style='mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
  </v:formulas>
  <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
  <o:lock v:ext="edit" aspectratio="t"/>
-</v:shapetype><v:shape id="_x0000_i1062" type="#_x0000_t75" alt="A computer chip with many different colored parts&#10;&#10;Description automatically generated"
+</v:shapetype><v:shape id="_x0000_i1066" type="#_x0000_t75" alt="A circuit board with wires and a box&#10;&#10;Description automatically generated with medium confidence"
+ style='width:256.8pt;height:342pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="jmorton_files/image001.jpg" o:title="A circuit board with wires and a box&#10;&#10;Description automatically generated with medium confidence"/>
+</v:shape><![endif]--><![if !vml]><img width=342 height=456
+src="jmorton_files/image002.jpg"
+alt="A circuit board with wires and a box&#10;&#10;Description automatically generated with medium confidence"
+v:shapes="_x0000_i1066"><![endif]></span><span
+style='mso-spacerun:yes'> </span><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1065" type="#_x0000_t75" alt="A close-up of a circuit board&#10;&#10;Description automatically generated"
+ style='width:258pt;height:343.2pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="jmorton_files/image003.jpg" o:title="A close-up of a circuit board&#10;&#10;Description automatically generated"/>
+</v:shape><![endif]--><![if !vml]><img width=344 height=458
+src="jmorton_files/image004.jpg"
+alt="A close-up of a circuit board&#10;&#10;Description automatically generated"
+v:shapes="_x0000_i1065"><![endif]></span></p>
+
+<p class=MsoNormal>I finally got LEDs to have consistent brightness across
+every single display. This MAX6971ANG (<a
+href="https://www.mouser.com/datasheet/2/609/MAX6971-3130829.pdf">https://www.mouser.com/datasheet/2/609/MAX6971-3130829.pdf</a>)
+LED driver was something that we attempted to use early on, but couldn’t quite
+figure out why it didn’t work. I started with where we left off and tried a few
+different approaches. I added a decoupling capacitor to the voltage input and
+had to readjust our SPI test code to get it to work with the latch timing of
+this chip to start out with, but that didn’t seem to work. I then used an
+oscilloscope to try and gleam some kind of information about the inputs and
+outputs of the signals coming from the driver. One thing I figured out was that
+the outputs are being driven out correctly by the chip, but the LEDs just
+weren’t turning on. The voltage reading on the oscilloscope would go from HI-Z
+to 0V and that told me that some kind of output was being driven. I figured out
+that the chip was just outputting current and not voltage. So, I added some
+pull up resistors and that turned on the LEDs, but that was only for the LED
+selector side of the pins because the segment selectors worked just fine
+without any voltage. This reduced the number of ICs from 5 in the previous
+design down to just this one, but that also renders the SPI PCBs completely
+useless. Going to look into a protoboard design for something like this since
+it is literally just a set of inputs into one IC and then outputs.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1064" type="#_x0000_t75" alt="A black and white object with a black edge&#10;&#10;Description automatically generated with medium confidence"
+ style='width:304.8pt;height:405.6pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="jmorton_files/image005.jpg" o:title="A black and white object with a black edge&#10;&#10;Description automatically generated with medium confidence"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=406 height=541
+src="jmorton_files/image006.jpg"
+alt="A black and white object with a black edge&#10;&#10;Description automatically generated with medium confidence"
+v:shapes="_x0000_i1064"><![endif]></span></p>
+
+<p class=MsoNormal>Cameron and I cut out the edges for the rails to sit in. He
+used a circular saw to cut through the edges and I held a vacuum up to collect
+any saw dust in the air. Sparks flew around when he hit a staple, but it worked
+out fine. We used a chisel and a rounder to flatten out the cuts and smooth
+everything out. We did encounter an issue with the side of the rail coming
+loose, so I just put some wood glue on there to hold it in place. I was going
+to cut the plastic on the corners, but the jigsaw blade was broken, and I
+couldn't do it. I could have gotten something from Chuck, but I couldn’t get
+anything from him. </p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1063" type="#_x0000_t75" alt="A metal table with tools on it&#10;&#10;Description automatically generated"
+ style='width:474.6pt;height:357.6pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="jmorton_files/image007.jpg" o:title="A metal table with tools on it&#10;&#10;Description automatically generated"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=633 height=477
+src="jmorton_files/image008.jpg"
+alt="A metal table with tools on it&#10;&#10;Description automatically generated"
+v:shapes="_x0000_i1063"><![endif]></span></p>
+
+<p class=MsoNormal>I got the rails cut for the table. I measured out both ends
+of the table for each rail, and they were both about 33 inches, generously. I
+marked the rails for 33 1/8 inch to give them a bit of extra leeway. I took
+them to Chuck, and he had a metal cutter sawblade to get them cut down. Sparks
+went flying everywhere! The ends of the rail were sharp from the cuts, so I
+filled them down a bit to smooth them out. The rails sat pretty well in the
+grooves on the table, but the plastic end pieces still need to be cut.</p>
+
+<p class=MsoNormal><b><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal><b><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal><b>Name: </b>John Morton<b><o:p></o:p></b></p>
+
+<p class=MsoNormal><b>WEEK: </b>9</p>
+
+<p class=MsoNormal><b>Date Reported: </b><span class=GramE>10/20/2023</span><b><o:p></o:p></b></p>
+
+<p class=MsoNormal><b>Project Hours Since Last Report: </b>10<b><o:p></o:p></b></p>
+
+<p class=MsoNormal><b>Cumulative Semester Project Hours: </b>85</p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="_x0000_i1062" type="#_x0000_t75"
+ alt="A computer chip with many different colored parts&#10;&#10;Description automatically generated"
  style='width:468pt;height:442.8pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="jmorton_files/image001.png" o:title="A computer chip with many different colored parts&#10;&#10;Description automatically generated"/>
-</v:shape><![endif]--><![if !vml]><img width=624 height=590
-src="jmorton_files/image002.png"
+ <v:imagedata src="jmorton_files/image009.png" o:title="A computer chip with many different colored parts&#10;&#10;Description automatically generated"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=624 height=590
+src="jmorton_files/image010.png"
 alt="A computer chip with many different colored parts&#10;&#10;Description automatically generated"
 v:shapes="_x0000_i1062"><![endif]></span><span style='mso-bidi-font-weight:
 bold'><o:p></o:p></span></b></p>
@@ -845,9 +941,9 @@ signals to send to the motor. <i><o:p></o:p></i></p>
 <p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
  id="_x0000_i1061" type="#_x0000_t75" alt="A black object in a window&#10;&#10;Description automatically generated"
  style='width:246pt;height:327pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="jmorton_files/image003.jpg" o:title="A black object in a window&#10;&#10;Description automatically generated"/>
-</v:shape><![endif]--><![if !vml]><img width=328 height=436
-src="jmorton_files/image004.jpg"
+ <v:imagedata src="jmorton_files/image011.jpg" o:title="A black object in a window&#10;&#10;Description automatically generated"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=328 height=436
+src="jmorton_files/image012.jpg"
 alt="A black object in a window&#10;&#10;Description automatically generated"
 v:shapes="_x0000_i1061"><![endif]></span><b><o:p></o:p></b></p>
 
@@ -865,17 +961,17 @@ and motors.</p>
 <p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
  id="_x0000_i1060" type="#_x0000_t75" alt="A close-up of a circuit board&#10;&#10;Description automatically generated"
  style='width:193.2pt;height:256.8pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="jmorton_files/image005.jpg" o:title="A close-up of a circuit board&#10;&#10;Description automatically generated"/>
-</v:shape><![endif]--><![if !vml]><img width=258 height=342
-src="jmorton_files/image006.jpg"
+ <v:imagedata src="jmorton_files/image013.jpg" o:title="A close-up of a circuit board&#10;&#10;Description automatically generated"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=258 height=342
+src="jmorton_files/image014.jpg"
 alt="A close-up of a circuit board&#10;&#10;Description automatically generated"
 v:shapes="_x0000_i1060"><![endif]></span><span
 style='mso-spacerun:yes'> </span><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
  id="_x0000_i1059" type="#_x0000_t75" alt="A circuit board with wires and wires&#10;&#10;Description automatically generated"
  style='width:268.2pt;height:202.2pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="jmorton_files/image007.jpg" o:title="A circuit board with wires and wires&#10;&#10;Description automatically generated"/>
-</v:shape><![endif]--><![if !vml]><img width=358 height=270
-src="jmorton_files/image008.jpg"
+ <v:imagedata src="jmorton_files/image015.jpg" o:title="A circuit board with wires and wires&#10;&#10;Description automatically generated"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=358 height=270
+src="jmorton_files/image016.jpg"
 alt="A circuit board with wires and wires&#10;&#10;Description automatically generated"
 v:shapes="_x0000_i1059"><![endif]></span></p>
 
@@ -910,9 +1006,9 @@ and finalize some designs with the packaging.</p>
 <p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
  id="_x0000_i1058" type="#_x0000_t75" alt="A computer screen shot of a circuit board&#10;&#10;Description automatically generated"
  style='width:468pt;height:298.2pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="jmorton_files/image009.png" o:title="A computer screen shot of a circuit board&#10;&#10;Description automatically generated"/>
-</v:shape><![endif]--><![if !vml]><img width=624 height=398
-src="jmorton_files/image010.png"
+ <v:imagedata src="jmorton_files/image017.png" o:title="A computer screen shot of a circuit board&#10;&#10;Description automatically generated"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=624 height=398
+src="jmorton_files/image018.png"
 alt="A computer screen shot of a circuit board&#10;&#10;Description automatically generated"
 v:shapes="_x0000_i1058"><![endif]></span></p>
 
@@ -931,9 +1027,9 @@ to make the layout for the PCB much cleaner.</p>
 style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="_x0000_i1057" type="#_x0000_t75"
  alt="A computer screen shot of a circuit board&#10;&#10;Description automatically generated"
  style='width:468pt;height:366pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="jmorton_files/image011.png" o:title="A computer screen shot of a circuit board&#10;&#10;Description automatically generated"/>
-</v:shape><![endif]--><![if !vml]><img width=624 height=488
-src="jmorton_files/image012.png"
+ <v:imagedata src="jmorton_files/image019.png" o:title="A computer screen shot of a circuit board&#10;&#10;Description automatically generated"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=624 height=488
+src="jmorton_files/image020.png"
 alt="A computer screen shot of a circuit board&#10;&#10;Description automatically generated"
 v:shapes="_x0000_i1057"><![endif]></span><span style='mso-bidi-font-weight:
 bold'><o:p></o:p></span></b></p>
@@ -952,9 +1048,9 @@ presentation itself.</p>
 <p class=MsoNormal>&nbsp;<span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
  id="_x0000_i1056" type="#_x0000_t75" alt="A close up of a table&#10;&#10;Description automatically generated"
  style='width:417pt;height:315.6pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="jmorton_files/image013.png" o:title="A close up of a table&#10;&#10;Description automatically generated"/>
-</v:shape><![endif]--><![if !vml]><img width=556 height=421
-src="jmorton_files/image014.png"
+ <v:imagedata src="jmorton_files/image021.png" o:title="A close up of a table&#10;&#10;Description automatically generated"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=556 height=421
+src="jmorton_files/image022.png"
 alt="A close up of a table&#10;&#10;Description automatically generated"
 v:shapes="_x0000_i1056"><![endif]></span></p>
 
@@ -964,50 +1060,50 @@ style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_10"
  style='width:291pt;height:219pt;visibility:visible;mso-wrap-style:square'
  o:bordertopcolor="yellow pure" o:borderleftcolor="yellow pure"
  o:borderbottomcolor="yellow pure" o:borderrightcolor="yellow pure">
- <v:imagedata src="jmorton_files/image015.png" o:title="A computer equipment with wires and wires&#10;&#10;Description automatically generated with medium confidence"/>
+ <v:imagedata src="jmorton_files/image023.png" o:title="A computer equipment with wires and wires&#10;&#10;Description automatically generated with medium confidence"/>
  <w:bordertop type="single" width="18"/>
  <w:borderleft type="single" width="18"/>
  <w:borderbottom type="single" width="18"/>
  <w:borderright type="single" width="18"/>
-</v:shape><![endif]--><![if !vml]><img width=393 height=297
-src="jmorton_files/image016.png"
+</v:shape><![endif]--><![if !vml]><img border=0 width=393 height=297
+src="jmorton_files/image024.png"
 alt="A computer equipment with wires and wires&#10;&#10;Description automatically generated with medium confidence"
 v:shapes="Picture_x0020_10"><![endif]><span style='mso-spacerun:yes'> </span><!--[if gte vml 1]><v:shape
  id="_x0000_i1054" type="#_x0000_t75" alt="A close up of a machine&#10;&#10;Description automatically generated"
  style='width:386.4pt;height:291pt;visibility:visible;mso-wrap-style:square'
  o:bordertopcolor="yellow pure" o:borderleftcolor="yellow pure"
  o:borderbottomcolor="yellow pure" o:borderrightcolor="yellow pure">
- <v:imagedata src="jmorton_files/image017.png" o:title="A close up of a machine&#10;&#10;Description automatically generated"/>
+ <v:imagedata src="jmorton_files/image025.png" o:title="A close up of a machine&#10;&#10;Description automatically generated"/>
  <w:bordertop type="single" width="18"/>
  <w:borderleft type="single" width="18"/>
  <w:borderbottom type="single" width="18"/>
  <w:borderright type="single" width="18"/>
-</v:shape><![endif]--><![if !vml]><img width=520 height=393
-src="jmorton_files/image018.png"
+</v:shape><![endif]--><![if !vml]><img border=0 width=520 height=393
+src="jmorton_files/image026.png"
 alt="A close up of a machine&#10;&#10;Description automatically generated"
 v:shapes="_x0000_i1054"><![endif]><o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
  id="Picture_x0020_8" o:spid="_x0000_i1053" type="#_x0000_t75" alt="A white board with green lines and circles&#10;&#10;Description automatically generated"
  style='width:467.4pt;height:249pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="jmorton_files/image019.png" o:title="A white board with green lines and circles&#10;&#10;Description automatically generated"/>
-</v:shape><![endif]--><![if !vml]><img width=623 height=332
-src="jmorton_files/image020.png"
+ <v:imagedata src="jmorton_files/image027.png" o:title="A white board with green lines and circles&#10;&#10;Description automatically generated"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=623 height=332
+src="jmorton_files/image028.png"
 alt="A white board with green lines and circles&#10;&#10;Description automatically generated"
 v:shapes="Picture_x0020_8"><![endif]><span style='mso-spacerun:yes'> </span><!--[if gte vml 1]><v:shape
  id="_x0000_i1052" type="#_x0000_t75" alt="A close up of a device&#10;&#10;Description automatically generated"
  style='width:468pt;height:391.8pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="jmorton_files/image021.png" o:title="A close up of a device&#10;&#10;Description automatically generated"/>
-</v:shape><![endif]--><![if !vml]><img width=624 height=522
-src="jmorton_files/image022.png"
+ <v:imagedata src="jmorton_files/image029.png" o:title="A close up of a device&#10;&#10;Description automatically generated"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=624 height=522
+src="jmorton_files/image030.png"
 alt="A close up of a device&#10;&#10;Description automatically generated"
 v:shapes="_x0000_i1052"><![endif]><o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='mso-no-proof:yes'>These are some of the
 packaging drawings I made for the presentation after we had decided where key
 components are going to go on the table. It’s pretty subject to change, but
-this is the general Idea on where things are going to go. The most notable
-thing is that we have to redesign how the puck retrival system works, since our
+this is the general Idea on where things are going to go. The most notable thing
+is that we have to redesign how the puck retrival system works, since our
 current design proved to be flawed during testing.<o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='mso-no-proof:yes'>The presentation itself went
@@ -1034,32 +1130,33 @@ driver. </p>
  id="_x0000_i1051" type="#_x0000_t75" alt="A hand holding a yellow object&#10;&#10;Description automatically generated"
  style='width:211.2pt;height:280.8pt;flip:x;visibility:visible;
  mso-wrap-style:square'>
- <v:imagedata src="jmorton_files/image023.jpg" o:title="A hand holding a yellow object&#10;&#10;Description automatically generated"/>
-</v:shape><![endif]--><![if !vml]><img width=282 height=374
-src="jmorton_files/image024.jpg"
+ <v:imagedata src="jmorton_files/image031.jpg" o:title="A hand holding a yellow object&#10;&#10;Description automatically generated"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=282 height=374
+src="jmorton_files/image032.jpg"
 alt="A hand holding a yellow object&#10;&#10;Description automatically generated"
 v:shapes="_x0000_i1051"><![endif]></span><span
 style='mso-spacerun:yes'> </span><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
  id="_x0000_i1050" type="#_x0000_t75" alt="A hand holding a yellow rectangular object with wires&#10;&#10;Description automatically generated"
  style='width:210.6pt;height:280.2pt;flip:x;visibility:visible;
  mso-wrap-style:square'>
- <v:imagedata src="jmorton_files/image025.jpg" o:title="A hand holding a yellow rectangular object with wires&#10;&#10;Description automatically generated"/>
-</v:shape><![endif]--><![if !vml]><img width=281 height=374
-src="jmorton_files/image026.jpg"
+ <v:imagedata src="jmorton_files/image033.jpg" o:title="A hand holding a yellow rectangular object with wires&#10;&#10;Description automatically generated"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=281 height=374
+src="jmorton_files/image034.jpg"
 alt="A hand holding a yellow rectangular object with wires&#10;&#10;Description automatically generated"
 v:shapes="_x0000_i1050"><![endif]></span></p>
 
 <p class=MsoNormal>Here, Cameron and I made a little prototype of how the IR
 sensors are going to be mounted to muck retrieval system. After drilling a hole
-to screw the sensors in place, the sensors fit quite nicely. However, a few problems
-came to our attention after doing this. Most notably, the pucks got stuck with
-the current setup, since the angle wasn’t steep enough for the puck to slide
-through the gap every time. The retrieval system needs to be redesigned so this
-doesn’t happen. A simple solution would be to increase the angle to around 45 <span
-class=GramE>degrees</span> so the puck slides through every time, but space
-issues arise as well as needing to redesign the puck collection part. A newer
-system will have to be redesigned in the future, but there are more pressing
-matters like the PCB and motor drivers that need to be addressed this week.</p>
+to screw the sensors in place, the sensors fit quite nicely. However, a few
+problems came to our attention after doing this. Most notably, the pucks got
+stuck with the current setup, since the angle wasn’t steep enough for the puck
+to slide through the gap every time. The retrieval system needs to be
+redesigned so this doesn’t happen. A simple solution would be to increase the
+angle to around 45 <span class=GramE>degrees</span> so the puck slides through
+every time, but space issues arise as well as needing to redesign the puck
+collection part. A newer system will have to be redesigned in the future, but
+there are more pressing matters like the PCB and motor drivers that need to be
+addressed this week.</p>
 
 <p class=MsoNormal><a
 href="https://www.youtube.com/embed/Xew_0AwlPKw?feature=oembed"><span
@@ -1068,9 +1165,9 @@ none'><!--[if gte vml 1]><v:shape id="_x0000_i1049" type="#_x0000_t75" alt="STM3
  href="https://www.youtube.com/embed/Xew_0AwlPKw?feature=oembed" style='width:5in;
  height:270pt;visibility:visible;mso-wrap-style:square' o:button="t">
  <v:fill o:detectmouseclick="t"/>
- <v:imagedata src="jmorton_files/image027.jpg" o:title="STM32 motro driver"/>
+ <v:imagedata src="jmorton_files/image035.jpg" o:title="STM32 motro driver"/>
 </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'><img
-border=0 width=480 height=360 src="jmorton_files/image027.jpg"
+border=0 width=480 height=360 src="jmorton_files/image035.jpg"
 alt="STM32 motro driver" v:shapes="_x0000_i1049"></span><![endif]></span></a></p>
 
 <p class=MsoNormal><a href="https://youtube.com/shorts/Xew_0AwlPKw">https://youtube.com/shorts/Xew_0AwlPKw</a></p>
@@ -1117,16 +1214,16 @@ for what signals to send general setup. </p>
 <p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
  id="_x0000_i1048" type="#_x0000_t75" alt="A wood plank on a wall&#10;&#10;Description automatically generated"
  style='width:212.4pt;height:282.6pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="jmorton_files/image028.jpg" o:title="A wood plank on a wall&#10;&#10;Description automatically generated"/>
+ <v:imagedata src="jmorton_files/image036.jpg" o:title="A wood plank on a wall&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=283 height=377
-src="jmorton_files/image029.jpg"
+src="jmorton_files/image037.jpg"
 alt="A wood plank on a wall&#10;&#10;Description automatically generated"
 v:shapes="_x0000_i1048"><![endif]><!--[if gte vml 1]><v:shape id="_x0000_i1047"
  type="#_x0000_t75" alt="A white and blue surface with a blue surface&#10;&#10;Description automatically generated"
  style='width:212.4pt;height:282pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="jmorton_files/image030.jpg" o:title="A white and blue surface with a blue surface&#10;&#10;Description automatically generated"/>
+ <v:imagedata src="jmorton_files/image038.jpg" o:title="A white and blue surface with a blue surface&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=283 height=376
-src="jmorton_files/image031.jpg"
+src="jmorton_files/image039.jpg"
 alt="A white and blue surface with a blue surface&#10;&#10;Description automatically generated"
 v:shapes="_x0000_i1047"><![endif]></span></p>
 
@@ -1143,9 +1240,9 @@ sure they won’t fall out.</p>
 <p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
  id="_x0000_i1046" type="#_x0000_t75" alt="A white background with black text&#10;&#10;Description automatically generated"
  style='width:468pt;height:169.2pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="jmorton_files/image032.png" o:title="A white background with black text&#10;&#10;Description automatically generated"/>
+ <v:imagedata src="jmorton_files/image040.png" o:title="A white background with black text&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=624 height=226
-src="jmorton_files/image033.png"
+src="jmorton_files/image041.png"
 alt="A white background with black text&#10;&#10;Description automatically generated"
 v:shapes="_x0000_i1046"><![endif]></span></p>
 
@@ -1168,9 +1265,9 @@ yes;text-decoration:none;text-underline:none'><!--[if gte vml 1]><v:shape id="Vi
  href="https://www.youtube.com/embed/tsyN5orJhHM?feature=oembed" style='width:5in;
  height:270pt;visibility:visible;mso-wrap-style:square' o:button="t">
  <v:fill o:detectmouseclick="t"/>
- <v:imagedata src="jmorton_files/image034.jpg" o:title="Motor spinning"/>
+ <v:imagedata src="jmorton_files/image042.jpg" o:title="Motor spinning"/>
 </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'><img
-border=0 width=480 height=360 src="jmorton_files/image034.jpg"
+border=0 width=480 height=360 src="jmorton_files/image042.jpg"
 alt="Motor spinning" v:shapes="Video_x0020_4"></span><![endif]></span></b></a><b><o:p></o:p></b></p>
 
 <p class=MsoNormal>Here is a video of the motor spinning. These two documents
@@ -1183,9 +1280,9 @@ especially in regard to what connections to make to the Arduino.</p>
 <p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
  id="_x0000_i1044" type="#_x0000_t75" alt="A diagram of a circuit&#10;&#10;Description automatically generated"
  style='width:765pt;height:474.6pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="jmorton_files/image035.png" o:title="A diagram of a circuit&#10;&#10;Description automatically generated"/>
+ <v:imagedata src="jmorton_files/image043.png" o:title="A diagram of a circuit&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=1020 height=633
-src="jmorton_files/image035.png"
+src="jmorton_files/image043.png"
 alt="A diagram of a circuit&#10;&#10;Description automatically generated"
 v:shapes="_x0000_i1044"><![endif]></span></p>
 
@@ -1221,9 +1318,9 @@ and it will take some work to figure out how to do the motor controller.</p>
 style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="_x0000_i1043" type="#_x0000_t75"
  alt="A diagram of a circuit board&#10;&#10;Description automatically generated"
  style='width:468pt;height:313.8pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="jmorton_files/image036.png" o:title="A diagram of a circuit board&#10;&#10;Description automatically generated"/>
+ <v:imagedata src="jmorton_files/image044.png" o:title="A diagram of a circuit board&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=624 height=418
-src="jmorton_files/image037.png"
+src="jmorton_files/image045.png"
 alt="A diagram of a circuit board&#10;&#10;Description automatically generated"
 v:shapes="_x0000_i1043"><![endif]></span><span style='mso-bidi-font-weight:
 bold'><o:p></o:p></span></b></p>
@@ -1244,10 +1341,10 @@ sake of connections.</p>
 <p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
  id="_x0000_i1042" type="#_x0000_t75" alt="A close-up of a piece of wood&#10;&#10;Description automatically generated"
  style='width:468pt;height:330.6pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="jmorton_files/image038.jpg" o:title="A close-up of a piece of wood&#10;&#10;Description automatically generated"
+ <v:imagedata src="jmorton_files/image046.jpg" o:title="A close-up of a piece of wood&#10;&#10;Description automatically generated"
   croptop="26545f" cropbottom="4103f"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=624 height=441
-src="jmorton_files/image039.jpg"
+src="jmorton_files/image047.jpg"
 alt="A close-up of a piece of wood&#10;&#10;Description automatically generated"
 v:shapes="_x0000_i1042"><![endif]></span></p>
 
@@ -1261,20 +1358,20 @@ begin.</p>
 <p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
  id="_x0000_i1041" type="#_x0000_t75" alt="A close up of a shelf&#10;&#10;Description automatically generated"
  style='width:468pt;height:223.8pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="jmorton_files/image040.jpg" o:title="A close up of a shelf&#10;&#10;Description automatically generated"
+ <v:imagedata src="jmorton_files/image048.jpg" o:title="A close up of a shelf&#10;&#10;Description automatically generated"
   croptop="14837f" cropbottom="9090f" cropleft="-252f" cropright="252f"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=624 height=298
-src="jmorton_files/image041.jpg"
+src="jmorton_files/image049.jpg"
 alt="A close up of a shelf&#10;&#10;Description automatically generated"
 v:shapes="_x0000_i1041"><![endif]></span></p>
 
 <p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
  id="_x0000_i1040" type="#_x0000_t75" alt="A close up of a table&#10;&#10;Description automatically generated"
  style='width:468pt;height:176.4pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="jmorton_files/image042.jpg" o:title="A close up of a table&#10;&#10;Description automatically generated"
+ <v:imagedata src="jmorton_files/image050.jpg" o:title="A close up of a table&#10;&#10;Description automatically generated"
   croptop="13721f" cropbottom="19019f"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=624 height=235
-src="jmorton_files/image043.jpg"
+src="jmorton_files/image051.jpg"
 alt="A close up of a table&#10;&#10;Description automatically generated"
 v:shapes="_x0000_i1040"><![endif]></span></p>
 
@@ -1290,16 +1387,16 @@ into the other edge pieces.</p>
 <p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
  id="_x0000_i1039" type="#_x0000_t75" alt="A black and green electronic device&#10;&#10;Description automatically generated"
  style='width:199.2pt;height:266.4pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="jmorton_files/image044.png" o:title="A black and green electronic device&#10;&#10;Description automatically generated"/>
+ <v:imagedata src="jmorton_files/image052.png" o:title="A black and green electronic device&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=266 height=355
-src="jmorton_files/image045.png"
+src="jmorton_files/image053.png"
 alt="A black and green electronic device&#10;&#10;Description automatically generated"
 v:shapes="_x0000_i1039"><![endif]><!--[if gte vml 1]><v:shape id="_x0000_i1038"
  type="#_x0000_t75" alt="Nema 23 Stepper Motor Bipolar 1.8 Deg 1.9Nm (269oz.in) 2.8A 3.2V 57x57x76mm 4 Wires (23HS30-2804S)"
  style='width:262.2pt;height:262.2pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="jmorton_files/image046.jpg" o:title="Nema 23 Stepper Motor Bipolar 1.8 Deg 1.9Nm (269oz.in) 2.8A 3"/>
+ <v:imagedata src="jmorton_files/image054.jpg" o:title="Nema 23 Stepper Motor Bipolar 1.8 Deg 1.9Nm (269oz.in) 2.8A 3"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=350 height=350
-src="jmorton_files/image047.jpg"
+src="jmorton_files/image055.jpg"
 alt="Nema 23 Stepper Motor Bipolar 1.8 Deg 1.9Nm (269oz.in) 2.8A 3.2V 57x57x76mm 4 Wires (23HS30-2804S)"
 v:shapes="_x0000_i1038"><![endif]></span></p>
 
@@ -1334,10 +1431,10 @@ motor controller’s pins.</p>
 <p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
  id="_x0000_i1037" type="#_x0000_t75" alt="A hand holding a small green and black device&#10;&#10;Description automatically generated"
  style='width:210.6pt;height:147.6pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="jmorton_files/image048.jpg" o:title="A hand holding a small green and black device&#10;&#10;Description automatically generated"
+ <v:imagedata src="jmorton_files/image056.jpg" o:title="A hand holding a small green and black device&#10;&#10;Description automatically generated"
   croptop="16117f" cropbottom="20048f" cropleft="4921f" cropright="4886f"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=281 height=197
-src="jmorton_files/image049.jpg"
+src="jmorton_files/image057.jpg"
 alt="A hand holding a small green and black device&#10;&#10;Description automatically generated"
 v:shapes="_x0000_i1037"><![endif]></span><b><o:p></o:p></b></p>
 
@@ -1364,9 +1461,9 @@ something from windows via ethernet, so that was a bust.</p>
 <p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
  id="_x0000_i1036" type="#_x0000_t75" alt="A close up of a circuit board&#10;&#10;Description automatically generated"
  style='width:245.4pt;height:326.4pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="jmorton_files/image050.jpg" o:title="A close up of a circuit board&#10;&#10;Description automatically generated"/>
+ <v:imagedata src="jmorton_files/image058.jpg" o:title="A close up of a circuit board&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=327 height=435
-src="jmorton_files/image051.jpg"
+src="jmorton_files/image059.jpg"
 alt="A close up of a circuit board&#10;&#10;Description automatically generated"
 v:shapes="_x0000_i1036"><![endif]></span></p>
 
@@ -1385,9 +1482,9 @@ dissect this.</p>
 <p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
  id="_x0000_i1035" type="#_x0000_t75" alt="A screen shot of a computer&#10;&#10;Description automatically generated"
  style='width:468pt;height:146.4pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="jmorton_files/image052.png" o:title="A screen shot of a computer&#10;&#10;Description automatically generated"/>
+ <v:imagedata src="jmorton_files/image060.png" o:title="A screen shot of a computer&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=624 height=195
-src="jmorton_files/image053.jpg"
+src="jmorton_files/image061.jpg"
 alt="A screen shot of a computer&#10;&#10;Description automatically generated"
 v:shapes="_x0000_i1035"><![endif]></span><b><o:p></o:p></b></p>
 
@@ -1396,9 +1493,9 @@ v:shapes="_x0000_i1035"><![endif]></span><b><o:p></o:p></b></p>
 <p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
  id="_x0000_i1034" type="#_x0000_t75" alt="A screenshot of a computer&#10;&#10;Description automatically generated"
  style='width:468pt;height:146.4pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="jmorton_files/image054.png" o:title="A screenshot of a computer&#10;&#10;Description automatically generated"/>
+ <v:imagedata src="jmorton_files/image062.png" o:title="A screenshot of a computer&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=624 height=195
-src="jmorton_files/image055.jpg"
+src="jmorton_files/image063.jpg"
 alt="A screenshot of a computer&#10;&#10;Description automatically generated"
 v:shapes="_x0000_i1034"><![endif]></span><b><o:p></o:p></b></p>
 
@@ -1432,9 +1529,9 @@ but it will act like it because of the LED).</p>
 <p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
  id="Picture_x0020_2" o:spid="_x0000_i1033" type="#_x0000_t75" alt="DIY IR Sensor Module Circuit Diagram"
  style='width:361.2pt;height:205.8pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="jmorton_files/image056.gif" o:title="DIY IR Sensor Module Circuit Diagram"/>
+ <v:imagedata src="jmorton_files/image064.gif" o:title="DIY IR Sensor Module Circuit Diagram"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=482 height=274
-src="jmorton_files/image057.jpg" alt="DIY IR Sensor Module Circuit Diagram"
+src="jmorton_files/image065.jpg" alt="DIY IR Sensor Module Circuit Diagram"
 v:shapes="Picture_x0020_2"><![endif]></span><b><o:p></o:p></b></p>
 
 <p class=MsoNormal>Source: <a
@@ -1444,10 +1541,10 @@ href="https://circuitdigest.com/electronic-circuits/ir-sensor-circuit-diagram">h
 <p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
  id="_x0000_i1032" type="#_x0000_t75" alt="A close up of a circuit board&#10;&#10;Description automatically generated"
  style='width:366.6pt;height:210pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="jmorton_files/image058.jpg" o:title="A close up of a circuit board&#10;&#10;Description automatically generated"
+ <v:imagedata src="jmorton_files/image066.jpg" o:title="A close up of a circuit board&#10;&#10;Description automatically generated"
   croptop="16083f" cropbottom="21164f"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=489 height=280
-src="jmorton_files/image059.jpg"
+src="jmorton_files/image067.jpg"
 alt="A close up of a circuit board&#10;&#10;Description automatically generated"
 v:shapes="_x0000_i1032"><![endif]></span><b><o:p></o:p></b></p>
 
@@ -1460,9 +1557,9 @@ some voltage measurements to see how the sensor works.</p>
 <p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
  id="_x0000_i1031" type="#_x0000_t75" alt="A screen shot of a computer&#10;&#10;Description automatically generated"
  style='width:467.4pt;height:120.6pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="jmorton_files/image060.png" o:title="A screen shot of a computer&#10;&#10;Description automatically generated"/>
+ <v:imagedata src="jmorton_files/image068.png" o:title="A screen shot of a computer&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=623 height=161
-src="jmorton_files/image061.jpg"
+src="jmorton_files/image069.jpg"
 alt="A screen shot of a computer&#10;&#10;Description automatically generated"
 v:shapes="_x0000_i1031"><![endif]></span></p>
 
@@ -1473,9 +1570,9 @@ voltage is what is passed into the op amp.</p>
 <p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
  id="_x0000_i1030" type="#_x0000_t75" alt="A screenshot of a computer&#10;&#10;Description automatically generated"
  style='width:467.4pt;height:120.6pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="jmorton_files/image062.png" o:title="A screenshot of a computer&#10;&#10;Description automatically generated"/>
+ <v:imagedata src="jmorton_files/image070.png" o:title="A screenshot of a computer&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=623 height=161
-src="jmorton_files/image063.jpg"
+src="jmorton_files/image071.jpg"
 alt="A screenshot of a computer&#10;&#10;Description automatically generated"
 v:shapes="_x0000_i1030"><![endif]></span></p>
 
@@ -1493,9 +1590,9 @@ none'><!--[if gte vml 1]><v:shape id="Video_x0020_3" o:spid="_x0000_i1029"
  href="https://www.youtube.com/embed/tsyN5orJhHM?feature=oembed" style='width:5in;
  height:270pt;visibility:visible;mso-wrap-style:square' o:button="t">
  <v:fill o:detectmouseclick="t"/>
- <v:imagedata src="jmorton_files/image034.jpg" o:title="Motor spinning"/>
+ <v:imagedata src="jmorton_files/image042.jpg" o:title="Motor spinning"/>
 </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'><img
-border=0 width=480 height=360 src="jmorton_files/image034.jpg"
+border=0 width=480 height=360 src="jmorton_files/image042.jpg"
 alt="Motor spinning" v:shapes="Video_x0020_3"></span><![endif]></span></a><span
 style='mso-spacerun:yes'> </span>of IR sensor in action with the wave form in
 the background. This was the farthest I could get the sensor range to
@@ -1511,9 +1608,9 @@ designing a PCB for this design.</p>
 <p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
  id="Picture_x0020_4" o:spid="_x0000_i1028" type="#_x0000_t75" alt="A table with a game board&#10;&#10;Description automatically generated with medium confidence"
  style='width:468pt;height:352.8pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="jmorton_files/image064.jpg" o:title="A table with a game board&#10;&#10;Description automatically generated with medium confidence"/>
+ <v:imagedata src="jmorton_files/image072.jpg" o:title="A table with a game board&#10;&#10;Description automatically generated with medium confidence"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=624 height=470
-src="jmorton_files/image065.jpg"
+src="jmorton_files/image073.jpg"
 alt="A table with a game board&#10;&#10;Description automatically generated with medium confidence"
 v:shapes="Picture_x0020_4"><![endif]></span></p>
 
@@ -1539,9 +1636,9 @@ especially once I have the PCB design done.</p>
 <p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
  id="Picture_x0020_5" o:spid="_x0000_i1027" type="#_x0000_t75" alt="A circuit board with a number and numbers on it&#10;&#10;Description automatically generated"
  style='width:468pt;height:352.8pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="jmorton_files/image066.jpg" o:title="A circuit board with a number and numbers on it&#10;&#10;Description automatically generated"/>
+ <v:imagedata src="jmorton_files/image074.jpg" o:title="A circuit board with a number and numbers on it&#10;&#10;Description automatically generated"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=624 height=470
-src="jmorton_files/image067.jpg"
+src="jmorton_files/image075.jpg"
 alt="A circuit board with a number and numbers on it&#10;&#10;Description automatically generated"
 v:shapes="Picture_x0020_5"><![endif]></span></p>
 
@@ -1586,9 +1683,9 @@ this is a fairly simple circuit.</p>
 <p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
  id="Picture_x0020_1" o:spid="_x0000_i1026" type="#_x0000_t75" alt="How the Circuit Works"
  style='width:450pt;height:300pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="jmorton_files/image068.jpg" o:title="How the Circuit Works"/>
+ <v:imagedata src="jmorton_files/image076.jpg" o:title="How the Circuit Works"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=600 height=400
-src="jmorton_files/image068.jpg" alt="How the Circuit Works" v:shapes="Picture_x0020_1"><![endif]></span></p>
+src="jmorton_files/image076.jpg" alt="How the Circuit Works" v:shapes="Picture_x0020_1"><![endif]></span></p>
 
 <p class=MsoNormal><a href="https://www.instructables.com/Laser-Tripwire-Alarm/">https://www.instructables.com/Laser-Tripwire-Alarm/</a>
 </p>
@@ -1607,9 +1704,9 @@ a multipoint scoring game.<br>
 <span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_3"
  o:spid="_x0000_i1025" type="#_x0000_t75" style='width:468pt;height:199.8pt;
  visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="jmorton_files/image069.png" o:title=""/>
+ <v:imagedata src="jmorton_files/image077.png" o:title=""/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=624 height=266
-src="jmorton_files/image070.png" v:shapes="Picture_x0020_3"><![endif]></span></p>
+src="jmorton_files/image078.png" v:shapes="Picture_x0020_3"><![endif]></span></p>
 
 <p class=MsoNormal>Designed this layout for the scoring detection system. The
 input voltage into the microcontroller will drop when the light is blocked, and
