@@ -53,6 +53,41 @@ contact course staff.
 		<div id="content">
             <h2>Progress Report for Joey Collins</h2>
 
+            <h4>Week 11:</h4>
+            <b>Date:</b> 11/03/2023<br>
+            <b>Total Hours:</b> 9<br>
+            <b>Cumulative Hours:</b> 87<br>
+            <b>Description of Project Design Efforts:</b><br>
+            This week, I worked on components of the project related to PCB assembly. Most notably, I spent a large chunk of time practicing my soldering technique. 
+            The PCB assembly was started, but will be finished this weekend. In addition to assembly, I also started looking into getting rid of the radial effect that our camera creates at large distances from the table. 
+            This may not be a major concern depending on how drastic the radial effect is. This will likely be something that is addressed once we start prototyping. Finally, this week I attended a workshop for the finals of the Moonshot pitch competition.<br><br>
+
+            <b>PCB Assembly</b><br>
+            Abby and I spent time this week continuing to practice the techniques necessary to assemble our PCB. Most of the practice I did was with the drag soldering technique used on components like our microcontroller and various ICs. 
+            I used the practice boards and empty QFP components to do this. I found that I was able to get solder on each of the pins, but would form bridges at the edge that I started at most times. I think this might be due to the amount of time/pressure I apply 
+            when I start, but I am not completely sure. I got better at removing these bridges by taking the knife edge of the iron and "dragging" it from the top of the pin to the bottom, away from the chip. This seems to work often, even if it does take multiple tries. I also practiced 
+            removing solder using the desoldering material. Abby and I also practiced with some discrete components like resistors and capacitors. For some reason, I found these to be more difficult than components that I can use drag soldering on. I had problems with either 
+            using too much solder or too little. Abby was quite good at doing these, however. We decided that it would probably be best for me to do chips and for her to do discrete components. On 11/3, Cameron assembled and tested the power-related components, so Abby and I will be assembling the micro-related components on 11/4.<br><br>
+
+            <b>Radial Distortion</b><br>
+            This week, we were able to finish designing and printing the mount that holds the camera above the table. Once we placed the camera in the mount, we realized that there were a couple of problems. We incorrectly estimated the height that we would need to raise the scoreboard 
+            to view the entirety of the table. We will have to reprint the height extenders that we have been using. The second problem we noticed was a significant amount of radial distortion as the camera is moved farther away from the object of interest. Shown below is an image depicting the radial effect.<br><br>
+
+            <img src="Team\progress\colli384_files\fisheye.png" width="530" height="310"><br>
+            <i>Radial Distortion</i><br><br>
+
+            Unfortunately, this distortion could potentially cause problems because the tracking algorithm I developed assumes that the walls of the air hockey table are straight lines. This is clearly not the case once radial distortion is introduced. This weekend, I will test to see how big of an effect 
+            the distortion has on the predicted path of the puck. If there is not a major impact on accuracy, then I will not focus on this problem at the moment. However, if there is a major impact, I will begin fixing it. I have done some preliminary research into methods that 
+            OpenCV recommends for fixing radial distortion. <a href="https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_calib3d/py_calibration/py_calibration.html#calibration">This tutorial</a> seems to be quite helpful for this. It appears that the camera should be calibrated before each use, in order to make sure that the distortion matrices are accurate for each session. This could be done 
+            in a similar fashion to how the color calibration is done. The chess board could be part of the initial setup, or even drawn straight onto the table.<br><br>
+
+            <b>Moonshot Pitch Preparation</b><br>
+            Recently, the team applied to compete in the <a href="https://purdueincubator.org/moonshot-pitch-challenge/">Purdue Innovates Moonshot Pitch Challenge</a>. This is an ideation-focused competition that invites pitches for concepts that will solve real-world problems. Abby was quite creative and marketed our table as a way to 
+            educate young students on electrical and computer engineering topics. We were fortunate enough to be named a finalist in the social category for the competition, which means that we get to do a live pitch next week. Purdue Innovates was kind enough to host a workshop to help the participants prepare for the event. Abby and I spent around 2 hours at this workshop and were able to get some good 
+            information. Hopefully next week we will be able to write about a winning pitch in the progress report. Next week, we plan on having the entire gantry system in place. This is a crucial step in our prototyping progress, as we should have the PCB done as well. This is when the integration process really begins. I am excited to start getting meaningful information sent to the motors and seeing some movement on the table.<br><br>
+
+
+
             <h4>Week 10:</h4>
             <b>Date:</b> 10/27/2023<br>
             <b>Total Hours:</b> 8<br>
