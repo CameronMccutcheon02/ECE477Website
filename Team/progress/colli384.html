@@ -53,6 +53,51 @@ contact course staff.
 		<div id="content">
             <h2>Progress Report for Joey Collins</h2>
 
+            <h4>Week 12:</h4>
+            <b>Date:</b> 11/10/2023<br>
+            <b>Total Hours:</b> 12<br>
+            <b>Cumulative Hours:</b> 99<br>
+            <b>Description of Project Design Efforts:</b><br>
+            This week, I spent some time soldering some ICs on our PCB. After I moved on from PCB assembly, I began some preliminary work on getting rid of the radial distortion in our camera. 
+            In addition to physical work on the project, I also participated in the Moonshot Pitch challenge to try to secure more funding for the team.<br><br>
+
+            <b>PCB Assembly</b><br>
+            This past weekend, Abby and I spent several hours in the lab preparing for solder components onto our PCB. We decided that it would be best if she did the discrete components and I focused on the various chips. 
+            Eventually, we decided that we were ready to begin working on our final PCB. Abby started off by doing some of the decoupling caps for the power to the microcontroller and various other resistors and capacitors. After testing our power subsystem, we decided to move on to the micro and the UART-to-TTL chip. 
+            I started off with the UART chip. I was able to get all of the pins on the pads by using the drag soldering technique we learned in lecture. Unfortunately, a couple of bridges were formed during the process. I tried removing them by sucking the solder up with the iron by dragging it from the top of the pin to the bottom. However, 
+            I ended up burning off several of the pads on the board. This was quite frustrating, as Cameron and Abby had already spent so much time assembling other components on the board and we would have to start over. Abby and I instantly started work on our second board. This time, I had more luck with soldering the UART-to-TTL and the microcontroller. I did leave a couple of bridges, but I did not attempt to remove them this time, 
+            as I clearly did not do very well on my previous attempt. Shown below is an image of the second PCB after I left the bridges.<br><br>
+
+            <img src="Team\progress\colli384_files\pcb.jpg" width="530" height="310"><br>
+            <i>Unfinished PCB</i><br><br>
+                   
+            Cameron was nice enough to help me out and remove those. The microcontroller ended up working after doing our systematic testing, which was a relief. We did have some problems getting the UART to work, but we had issues. The team had overlooked an issue with the way the PCB was designed, which meant that we had to flywire the UART-to-TTL board we used in 362. Luckily, this worked well and we have established successful UART communication between a computer and the microcontroller.<br><br>
+
+            <b>Distortion Alleviation</b><br>
+            This week I spent some time looking into a method to remove some of the radial distortion intrinsic to the camera. Luckily, <a href="https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_calib3d/py_calibration/py_calibration.html#calibration">OpenCV</a> has methods for fixing problems like this, so I did not have to consult other external libraries. Their recommendation includes 
+            the calibration of the camera by taking several control pictures that have a standard chessboard in the frame. I printed out this chessboard and wrote the code to make use of the calibration photos. The whole idea behind this method is that OpenCV knows how large each of the squares on the board are and 
+            how far apart they are supposed to be. Using this information, they can use several different pictures with the chessboard displayed at different angles to determine a matrix that represents the distortion caused by the camera. It can then use this matrix to invert the distortion and create a clean image without the distortion. Shown below is a video of the code processing several control images and then displaying an original image and a fixed image.<br><br>
+
+            <video autoplay muted loop width="530" height="310"><source src="Team\progress\colli384_files\undistortion.mp4" type="video/mp4"></video><br>
+            <i>Distortion Removal</i><br><br>
+
+            There are several problems that could arise from the use of distortion removal in this project. The first of which is the fact that when radial distortion is removed, the field of view is sacrificed. This means that we would have to mount the camera even higher to get the same field of view that we had before removing distortion. Shown below are two images. The first of which is the distorted image and the second is the fixed image. It is clear to see that the fixed image has been cut off in several locations.<br><br>
+
+            <img src="Team\progress\colli384_files\WIN_20231109_14_37_07_Pro.jpg" width="530" height="310"><br>
+            <i>Original Image</i><br><br>
+
+            <img src="Team\progress\colli384_files\calibresult.png" width="530" height="310"><br>
+            <i>Fixed Image</i><br><br>
+
+            The second problem that could potentially arise is the fact that for live video, each frame would have to be fixed before calculations could be done on puck location. I am not currently sure about how much latency this would introduce. After this value is determined, the team will have to decide on what has priority: speed or accuracy. Hopefully, the introduced latency is not of a massive magnitude and no sacrifices will have to be made.<br><br>
+
+            <b>Moonshot Pitch Challenge</b><br>
+            As mentioned last week, the team was fortunate enough to be selected to participate in the finals of the <a href="https://purdueincubator.org/moonshot-pitch-challenge/">Purdue Innovates Moonshot Pitch Challenge</a>. Abby prepared an excellent script and slides for us to pitch to the panel of judges. We were placed in the social category of this competition, as our table was advertised as a product that could teach students about STEM. Our team was eligible for 3 different rewards: best social pitch, best overall pitch, and crowd favorite. These rewards had values of $1500, $500, and $500, respectively. Unfortunately, we were not successful in winning in any of these categories, so we went home with no extra funding for the table.<br><br>
+
+            This weekend, the table should be fully constructed from a mechanical standpoint, so a lot of new testing will be able to commence. I am quite looking forward to integrating the components we have been working on.
+
+
+
             <h4>Week 11:</h4>
             <b>Date:</b> 11/03/2023<br>
             <b>Total Hours:</b> 9<br>
