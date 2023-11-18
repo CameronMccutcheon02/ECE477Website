@@ -53,6 +53,41 @@ contact course staff.
 		<div id="content">
             <h2>Progress Report for Joey Collins</h2>
 
+            <h4>Week 13:</h4>
+            <b>Date:</b> 11/17/2023<br>
+            <b>Total Hours:</b> 15<br>
+            <b>Cumulative Hours:</b> 114<br>
+            <b>Description of Project Design Efforts:</b><br>
+            This week, I was able to begin work on integrating the computer vision software into our physical design. This consisted of doing some calibration, but for the most part I 
+            worked on methods to slowly introduce new functionality without the possibility of destroying the table. There is a great level of caution required as we do not have limit switches mounted.<br><br>
+
+            <b>Reformatting Code</b><br>
+            In order to prepare for the moment when integration could finally begin, I worked to rewrite the computer vision software to be more modular. This was done to have more control over how 
+            I am executing the program to ease the debugging process. I should now have more flexibility with how processes are done, so I can test individual components of the algorithm.<br><br>
+
+            <b>Distortion Removal</b><br>
+            This week, I was able to test how effective the radial distortion removal was in live video. With the test photos, it was quite clear that the curved lines were straightened out to allow for more accurate depictions of the table. 
+            Unfortunately, the distortion removal behaved as I expected with live video. As each frame had to be individually processed, quite a bit of latency was introduced. With this discovery, the team has decided to sacrfice accuracy for speed and remove the distortion removal functionality.<br><br>
+
+            <b>Direction Detection</b><br>
+            In order to begin work on telling our motors how to move in order to reach a point, I wrote some code that took the position of the puck and the position of the mallet into account. I recently wrote the code that determines the position of the mallet in the same fashion that the position of the puck is determined. We have taped a temporary post-it note onto the top of the gantry, 
+            but we plan on placing a permanent purple sticker on the top, as there exist no similar colors on the table. Shown below is a video of the direction detection software. The terminal prints the direction. The output "ur" stands for up and right, "dr" stands for down and right, "ul" stands for up and left, and "dr" stands for down and right.<br><br>
+
+            <video autoplay muted loop width="530" height="310"><source src="Team\progress\colli384_files\direction.mp4" type="video/mp4"></video><br>
+            <i>Direction Detection</i><br>
+
+            Once this was completed, I worked with Abby to convert this instructions into motor movement. She wrote good code that serialized these instructions and sent them to the corresponding motors. Shown below 
+            is a video of the mallet and puck constantly being tracked while the mallet attempts to reach the location of the puck. We are moving the motors at a slow speed as we are just testing and did not want to break the table.<br><br>
+
+            <video autoplay muted loop width="530" height="310"><source src="Team\progress\colli384_files\primitiveTrack.mp4" type="video/mp4"></video><br>
+            <i>Puck Following</i><br>
+
+            Next week, I will continue working on getting the speeds up and determining exaclty what point I want to send to the motors. I have not yet determined the optimal location to send and how often to send it. I will also need to make software limit switches to ensure that the mallet does not 
+            ram into the walls of the table. I will be working closely with Abby to get the robot functional in the near future.<br><br>
+            
+
+
+
             <h4>Week 12:</h4>
             <b>Date:</b> 11/10/2023<br>
             <b>Total Hours:</b> 12<br>
