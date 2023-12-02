@@ -53,6 +53,38 @@ contact course staff.
 		<div id="content">
             <h2>Progress Report for Joey Collins</h2>
 
+            <h4>Weeks 14-15:</h4>
+            <b>Date:</b> 12/01/2023<br>
+            <b>Total Hours:</b> 40<br>
+            <b>Cumulative Hours:</b> 154<br>
+            <b>Description of Project Design Efforts:</b><br>
+            These past 2 weeks were spent on finalizing the project. In addition to a significant amount of time that went into integration, there was also an unexpectedly large amount of debugging that presented itself the week of the demo.<br><br>
+
+            <b>Robot Logic</b><br>
+            In order to implement the code for the robot to defend the goal, a bit of planning had to go into the way it would move. Several methods were thought of and discussed, but I eventually landed on a system that split the table into two sections. The user side of the table is inaccessible to the robot due to physical limitations and game rules. 
+            In order to combat the lack of things the robot can do while the user plays with the puck on their side, I wrote code that will "shadow" the puck's movements on the user side of the table while staying as far back as possible. This also prevented the mallet from ramming into the motors. Once the puck crossed from the user side to the robot side, the mallet was free to move towards the puck.<br><br>
+
+            <b>Shadowing and Puck Interception</b><br>
+            After working with direction detection last week, I was confident in adding some extra functionality to the system. I decided that in order to lessen the distance that the robot needs to travel to intercept the puck, it should "shadow" the puck's movements on the user side of the table while staying as far back as possible. 
+            This functionality turned out to be relatively easy to implement. It also seemed to improve the ability of the robot to reach the puck with the current motor speeds. Once shadowing was implemented, I worked on code to intercept the puck on the robot side of the table. This checked for the current location of the puck and gave the motors one of the following instructions: {up, down, right, left, ur, ul, dr, dl}. The logic for this is accurate, but the accuracy in gameplay is completely dependent on the abilities of the motors.<br><br>
+            
+            <b>Motor Speed Adjustments</b><br>
+            One of the problems that presented itself while testing this game code was the stalling and/or failure of the motors. Previously, we had run the motors from 0 to max speed instantly, but found that this rapid change in speed could stall the motors and would render them useless. In order to combat this, Abby and I worked on code that accelerated and decelerated the motors using a timer on the microcontroller. This made the stalling less frequent, but did not completely solve the issue. We believe that this issue could be a mechanical and/or electrical issue. In order to treat the problem for demonstration purposes, we slowed down the motors.<br><br>
+
+            <b>Miscellaneous Debugging</b><br>
+            Abby and I spent a significant amount of time the week of the demo trying to solve random issues that did not present themselves until the last minute. Most of the time went towards fine-tuning the settings on the motors and addressing some errors with the 7-segment displays. They were displaying the wrong digits at some points in time, so we had to sweep through the micro code to find a small bug that created that problem. 
+            We also had issues with the clock used for SPI on the 7-segments affecting the motors. We had to flash our 7-segments at a lower rate in order to ensure the motors were being updated with instructions as quickly as they were received from the PC doing the visual analysis. Finally, the red logo on the table was causing some problems with the color detection of the mallet, so I went ahead and spray painted it white.<br><br>
+
+            <b>Demonstration</b><br>
+            The final part of these two weeks was the demonstration. We were able to get all of our PSDRs checked off and were very proud to have accomplished what we did during this semester. I learned a lot of things that I would never be able to gain from other types of classes because of the amount of hands-on work I did. I would like to thank Phil, Joe, and Andjey for all of the help that we received this semester and for being great mentors. Shown below is the final state of the table as shown in the demonstration!<br><br>
+
+            <video autoplay muted loop width="530" height="310"><source src="Team\progress\colli384_files\userFinal.mp4" type="video/mp4"></video><br>
+            <i>User POV</i><br><br>
+
+            <video autoplay muted loop width="530" height="310"><source src="Team\progress\colli384_files\robotFinal.mp4" type="video/mp4"></video><br>
+            <i>Camera POV</i><br><br>
+
+
             <h4>Week 13:</h4>
             <b>Date:</b> 11/17/2023<br>
             <b>Total Hours:</b> 15<br>
